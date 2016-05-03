@@ -1,10 +1,18 @@
 # Web Dev Course
 
-> Guideline for Tongji University Course "Script Programming Design". (同济大学《脚本程序设计》)
+> Initially for Tongji University Course "Script Programming Design". (同济大学《脚本程序设计》)
 
-Directories:
+当笔者开始写这份web开发教程时, 有几件有趣的事情同时发生着:
 
-* `examples`, examples source code 
+* 在母校同济大学开设的"Web Programming"选修课即将开始了, 需要准备教案
+* 在公司中, 正在开发动态化框架[Weex](https://github.com/alibaba/weex), 希望组内iOS/Android开发能够更多接触到Web开发(加深理解前端的真实需求) 
+* 移动互联网已经是主力, 单纯的PC Web恐怕不够
+* 市场上前端框架非常多, 如何选择呢?
+* ...
+
+能在互联网中搜索到大量前端开发资料和教程, 但是如何满足上面的需求, 给出一份足够简炼有效的教程就成为了一个比较紧迫的事情.
+在试着为同济大三的同学讲解了几节web开发课程后, 我对原有的大纲做了一些调整, 期待结果...
+
 
 ## Welcome to real web development 
 
