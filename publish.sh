@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
 
-if ! [ _book/.git ]; then
+if ! [ -e _book/.git ]; then
   rm -rf _book
   git clone git@github.com:luics/web-dev.git _book
-  git fetch gh-pages
-  git checkout gh-pages
+  cd _book
+  git checkout -b gh-pages --track origin/gh-pages
+  cd ..
 fi
 
 gitbook build
 cd _book
 git add .
-git commit -am 'update book'
+git commit -am 'published by publish.sh'
 git push origin gh-pages
 cd ..
