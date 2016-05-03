@@ -11,6 +11,6 @@ fi
 gitbook build
 cd _book
 git add .
-git commit -am 'update book'
+git commit -am 'published by publish.sh'
 git push origin gh-pages
 cd ..
