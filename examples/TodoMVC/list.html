@@ -1,36 +1,5 @@
-# Basic TodoMVC
-
-## Add
-
-0. input todo msg
-
-[source code](https://github.com/luics/web-dev/tree/master/examples/TodoMVC/add.html)
-
-```html
-<body>
-<input type="text" id="todo" value="">
-<button type="button" id="add">Add Todo Item</button>
-
-<script type="text/javascript">
-  function $(id) {
-    return document.getElementById(id);
-  }
-  $('add').addEventListener('click', function() {
-    var todo = $('todo');
-    console.log(todo.value);
-  }, false);
-</script>
-</body>
-```
-
-### input
-
-## List
-
-0. display items
-0. display quantity of active items
-
-```html
+<!DOCTYPE html>
+<html>
 <body>
 <input type="text" id="todo" value="">
 <button type="button" id="add">Add Todo Item</button>
@@ -69,15 +38,4 @@
   }, false);
 </script>
 </body>
-```
-
-## Delete
-
-0. delete single item
-0. delete completed items
-
-## Update
-
-0. complete single item
-0. complete all items
-0. edit an item msg
+</html>
