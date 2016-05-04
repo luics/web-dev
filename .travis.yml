@@ -1,0 +1,14 @@
+language: node_js
+
+node_js:
+  - "stable"
+
+script:
+  - echo pass
+
+before_deploy:
+  # Install Gitbook
+  - npm install gitbook-cli -g
+  - gitbook install
+  - gitbook build
+  - ./publish.sh
