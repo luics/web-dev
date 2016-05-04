@@ -1,8 +1,8 @@
 # TodoMVC
 
 [TodoMVC](http://todomvc.com/) 是一个开源项目，实现了一个Todo Application，广泛用于 `MV*` 框架的选择，大量一线框架、语言（编译为JS）实现了自己的 TodoMVC 版本：
-* 框架类：ReactJS、AngularJS、Backbone、VueJS 等
-* 语言类：Elm、Dart、GWT、TypeScript 等
+* 框架类：ReactJS、AngularJS、Backbone、VueJS ...
+* 语言类：Elm、Dart、GWT、TypeScript ...
 
 此外，还有大量框架的下一代版本和一些实验性框架也实现了 TodoMVC，在 [github repo](https://github.com/tastejs/todomvc/tree/master/examples) 中能看到大量 demo。
 
