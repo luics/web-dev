@@ -1,0 +1,24 @@
+{
+  "name": "web-dev",
+  "version": "0.0.1",
+  "description": "A quick web development course",
+  "scripts": {
+    "serve": "serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luics/web-dev.git"
+  },
+  "keywords": [
+    "web",
+    "course"
+  ],
+  "author": "luics",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luics/web-dev/issues"
+  },
+  "devDependencies": {
+    "serve": "^1.4.0"
+  }
+}
