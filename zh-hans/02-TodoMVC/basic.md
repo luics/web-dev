@@ -2,82 +2,41 @@
 
 ## Add
 
+features:
 0. input todo msg
 
 [source code](https://github.com/luics/web-dev/tree/master/examples/TodoMVC/add.html)
 
-```html
-<body>
-<input type="text" id="todo" value="">
-<button type="button" id="add">Add Todo Item</button>
+Code analysis:
 
-<script type="text/javascript">
-  function $(id) {
-    return document.getElementById(id);
-  }
-  $('add').addEventListener('click', function() {
-    var todo = $('todo');
-    console.log(todo.value);
-  }, false);
-</script>
-</body>
-```
-
-### input
+* input
+  * `type="text"`, input 有众多类型, 如 radio, checkbox, datetime, email...
+  * `id="todo"`, 通过 `document.getElementById('todo')` 获取 dom node 
+  * `placeholder=""`, 占位信息 
+  * [更多 input 信息](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
+* button
+  * 普通按钮, 触发 `click` 事件
 
 ## List
 
+features:
 0. display items
 0. display quantity of active items
 
-```html
-<body>
-<input type="text" id="todo" value="">
-<button type="button" id="add">Add Todo Item</button>
-<div id="list"></div>
-<div id="left"></div>
-
-<script type="text/javascript">
-  function $(id) {
-    return document.getElementById(id);
-  }
-
-  var quantity = 0;
-  function addTodo() {
-    var todo = $('todo');
-    var msg = todo.value;
-    var list = $('list');
-    var left = $('left');
-    if (msg == '') {
-      console.warn('msg is empty');
-      return;
-    }
-    var node = document.createElement('div');
-    node.innerHTML = msg;
-    list.insertBefore(node, list.childNodes[0]);
-
-    quantity++;
-    left.innerHTML = quantity + ' items left';
-    todo.value = '';
-  }
-
-  $('add').addEventListener('click', addTodo, false);
-  $('todo').addEventListener('keyup', function(event) {
-    //console.log(event.keyCode);
-    if (event.keyCode != 13) return;
-    addTodo();
-  }, false);
-</script>
-</body>
-```
+[source code](https://github.com/luics/web-dev/tree/master/examples/TodoMVC/list.html)
 
 ## Delete
 
+features:
 0. delete single item
-0. delete completed items
+
+[source code](https://github.com/luics/web-dev/tree/master/examples/TodoMVC/list.html)
 
 ## Update
 
+features:
 0. complete single item
 0. complete all items
-0. edit an item msg
+
+[source code](https://github.com/luics/web-dev/tree/master/examples/TodoMVC/update.html)
+
