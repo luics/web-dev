@@ -8,6 +8,7 @@ function doCompile {
   npm install gitbook-cli -g
   gitbook install
   gitbook build . ./out
+  cp deploy_key ./out
   cp deploy_key.enc ./out
 }
 
