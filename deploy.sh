@@ -8,6 +8,7 @@ function doCompile {
   npm install gitbook-cli -g
   gitbook install
   gitbook build . ./out
+  cp deploy_key.enc ./out
 }
 
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
