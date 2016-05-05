@@ -1,10 +1,17 @@
 language: node_js
 
 node_js:
-  - "stable"
+  - "4"
 
-script:
+branches:
+  only:
+    - master
+    - gh-pages
+    
+install:
   - npm install gitbook-cli -g
   - gitbook install
+  
+script:
   - gitbook build
-  - ./deploy.sh
+  - ./publish.sh
