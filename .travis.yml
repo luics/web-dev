@@ -3,7 +3,7 @@ before_install:
 script: bash ./deploy.sh
 env:
   global:
-  - ENCRYPTION_LABEL: 5ebd09854806
+  - ENCRYPTION_LABEL: 237e6e9123a6
 language: node_js
 node_js:
   - "4"
