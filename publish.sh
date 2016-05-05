@@ -8,6 +8,6 @@ fi
 gitbook build
 cd _book
 git add -f .
-git commit -am 'published in CI'
+git commit -am 'by publish.sh'
 git push -f origin gh-pages
 cd ..
