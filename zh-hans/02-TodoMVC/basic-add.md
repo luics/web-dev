@@ -9,9 +9,8 @@ features:
 Code analysis:
 
 * input
-  * `type="text"`, input 有众多类型, 如 radio, checkbox, datetime, email...
-  * `id="todo"`, 通过 `document.getElementById('todo')` 获取 dom node 
-  * `placeholder=""`, 占位信息 
-  * [更多 input 信息](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
+    * `type="text"`, input 有众多类型, 如 radio, checkbox, datetime, email...
+    * `id="todo"`, 通过 `document.getElementById('todo')` 获取 dom node 
+    * `placeholder=""`, 占位信息 
 * button
   * 普通按钮, 触发 `click` 事件
