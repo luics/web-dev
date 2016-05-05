@@ -7,8 +7,7 @@ TARGET_BRANCH="gh-pages"
 function doCompile {
   npm install gitbook-cli -g
   gitbook install
-  gitbook build
-  cp -rf _book/**/* out/
+  gitbook build . ./out
 }
 
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
