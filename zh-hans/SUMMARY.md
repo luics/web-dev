@@ -17,3 +17,14 @@
         0. [Update](02-TodoMVC/basic-update.md) 
     0. [TodoMVC Full](02-TodoMVC/full.md)
 0. [Data](./03-data/index.md)
+    0. memory
+    0. localStorage
+    0. sessionStorage
+    0. DB
+    0. Ajax
+    0. JSONP
+    0. cookie
+0. Common
+    0. [input](common/input.md) 
+    0. [event](common/event.md) 
+    0. [this](common/this.md)
