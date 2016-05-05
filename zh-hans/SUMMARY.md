@@ -11,7 +11,7 @@
     0. [TodoMVC Basic](02-TodoMVC/basic.md)
         0. [Add](02-TodoMVC/basic-add.md) 
             0. [input](common/input.md) 
-            0. [button](common/button.md) 
+            0. [event](common/event.md) 
         0. [List](02-TodoMVC/basic-list.md) 
         0. [Delete](02-TodoMVC/basic-delete.md) 
         0. [Update](02-TodoMVC/basic-update.md) 
