@@ -2,15 +2,12 @@
 
 if ! [ -e _book/.git ]; then
   rm -rf _book
-  git clone git@github.com:luics/web-dev.git _book
-  cd _book
-  git checkout -b gh-pages --track origin/gh-pages
-  cd ..
+  git clone --branch=gh-pages git@github.com:luics/web-dev.git _book
 fi
 
 gitbook build
 cd _book
-git add .
-git commit -am 'published by publish.sh'
-git push origin gh-pages
+git add -f .
+git commit -am 'published in CI'
+git push -f origin gh-pages
 cd ..
