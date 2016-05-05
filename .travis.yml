@@ -1,9 +1,4 @@
-before_install: 
-  - openssl aes-256-cbc -K $encrypted_237e6e9123a6_key -iv $encrypted_237e6e9123a6_iv -in deploy_key.enc -out deploy_key -d
 script: bash ./deploy.sh
-env:
-  global:
-  - ENCRYPTION_LABEL: 237e6e9123a6
 language: node_js
 node_js:
   - "4"
