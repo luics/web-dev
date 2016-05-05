@@ -1,21 +1,7 @@
+script: bash ./deploy.sh
+env:
+  global:
+  - ENCRYPTION_LABEL: 5ebd09854806
 language: node_js
-
 node_js:
   - "4"
-
-branches:
-  only:
-    - master
-    - gh-pages
-    
-install:
-  - npm install gitbook-cli -g
-  - gitbook install
-  
-script:
-  - gitbook build
-  - git fetch origin gh-pages
-  - # git checkout -b gh-pages --track origin/gh-pages
-  - git checkout gh-pages
-  - git branch
-  - git status
