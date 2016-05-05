@@ -1,6 +1,7 @@
 slides/
 _book/
 out/
+deploy_key
 
 # Logs
 logs
