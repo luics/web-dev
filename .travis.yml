@@ -14,7 +14,8 @@ install:
   
 script:
   - gitbook build
+  - git fetch origin gh-pages
+  - git checkout -b gh-pages --track origin/gh-pages
   - git branch
-  - git checkout gh-pages
   - git status
   - echo 'hit'
