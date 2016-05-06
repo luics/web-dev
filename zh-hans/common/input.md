@@ -1,4 +1,4 @@
-# input
+# Element input
 
 > https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
 
