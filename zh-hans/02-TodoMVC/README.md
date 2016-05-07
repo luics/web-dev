@@ -1,17 +1,18 @@
 # TodoMVC
 
+<img src="http://gtms03.alicdn.com/tps/i3/TB1agKNJFXXXXbQXpXX5wG_NXXX-607-538.gif" width="400" />  
+图 - TodoMVC
+
 [TodoMVC](http://todomvc.com/) 是一个开源项目，实现了一个Todo Application，广泛用于 `MV*` 框架的选择，大量一线框架、语言（编译为JS）实现了自己的 TodoMVC 版本：
 * 框架类：ReactJS、AngularJS、Backbone、VueJS ...
 * 语言类：Elm、Dart、GWT、TypeScript ...
 
 此外，还有大量框架的下一代版本和一些实验性框架也实现了 TodoMVC，在 [github repo](https://github.com/tastejs/todomvc/tree/master/examples) 中能看到大量 demo。
 
-下图展示了 TodoMVC 的基本功能：
+<img src="http://gtms04.alicdn.com/tps/i4/TB1NsYGJFXXXXXcXXXXBkGNGpXX-700-327.png" width="400" />  
+图 - 部分实现了 TodoMVC 的 JS lib
 
-<img src="http://gtms03.alicdn.com/tps/i3/TB1agKNJFXXXXbQXpXX5wG_NXXX-607-538.gif" />  
-图 - TodoMVC
-
-## Why TodoMVC?
+## 为什么是 TodoMVC?
 
 选择 TodoMVC 有几个原因:
 
@@ -35,37 +36,3 @@
         0. 分解模块
 
 更为一般的项目开发流程会稍复杂一些，比如会有交互、视觉评审、技术设计评审、测试等，但“需求-设计-开发”真的也就是大部分项目的核心流程了。
-
-### 需求
-
-对 TodoMVC 的核心功能进行简单地拆解:
-
-<img src="http://gtms02.alicdn.com/tps/i2/TB15D1RJFXXXXaEXFXX6QFS3VXX-1430-814.png" width="715" />
-
-0. Add
-    0. input todo item msg
-0. List
-    0. display items
-    0. [left] display quantity of active items
-    0. [filter] display all/active/completed items
-0. Delete
-    0. delete single item
-    0. [clear] delete completed items
-0. Update
-    0. complete single item
-    0. [all] complete all items
-    0. [edit] edit an item msg
-
-### 设计
-
-需求分析的结果让我们清晰地看到:
-
-0. TodoMVC 的核心功能之间存在一个渐进依存的关系，可以依次开发: Add，List，Delete，Update 中的核心功能
-0. 部分复杂的功能（如`[filter]`）可以稍晚开发
-
-因为还不涉及网络交互，本地数据存储，也未考虑更复杂的功能，这个简单的设计已经足够支撑开发一个基本版的 TodoMVC。
-
-### 开发
-
-0. [基础版本实现](./basic-all.html)
-0. [完整版本实现](./full.html)

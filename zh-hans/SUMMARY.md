@@ -8,14 +8,16 @@
     0. [Tools](01-web-dev/tools.md)
     0. [Debug](01-web-dev/debug.md)-->
 0. [TodoMVC](02-TodoMVC/README.md)
-    0. [TodoMVC 基本版](02-TodoMVC/basic.md)
+    0. [需求分解](02-TodoMVC/requirements.md)
+    0. [基础版](02-TodoMVC/basic.md)
         0. [Add](02-TodoMVC/basic-add.md) 
             0. [input](common/input.md) 
             0. [event](common/event.md) 
         0. [List](02-TodoMVC/basic-list.md) 
         0. [Delete](02-TodoMVC/basic-delete.md) 
         0. [Update](02-TodoMVC/basic-update.md) 
-    0. [TodoMVC 完整版](02-TodoMVC/full.md)
+    0. [完整版](02-TodoMVC/full.md)
+    0. [练习](02-TodoMVC/exercise.md)
 0. [Data](./03-data/index.md)
     0. memory
     0. localStorage
