@@ -33,5 +33,3 @@
 
 0. [开发基础版](./basic.html)
 0. [开发完整版](./full.html)
-
-{% include "../common/comment.html" %}

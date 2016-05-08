@@ -1,7 +1,15 @@
 {
-    "title": "Web Dev Course",
-    "description": "",
-    "author": "luics",
-    "language": "zh-hans",
-    "gitbook":">= 2.6.7"
+  "title": "Web Dev Course",
+  "description": "",
+  "author": "luics",
+  "language": "zh-hans",
+  "gitbook": ">= 2.6.7",
+  "plugins": [
+    "disqus"
+  ],
+  "pluginsConfig": {
+    "disqus": {
+      "shortName": "web-dev12"
+    }
+  }
 }

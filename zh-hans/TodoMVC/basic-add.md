@@ -15,5 +15,3 @@ Code analysis:
 * button
   * 普通按钮, 触发 `click` 事件
   
-
-{% include "../common/comment.html" %}

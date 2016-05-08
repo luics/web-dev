@@ -4,5 +4,3 @@
 
 接下来我们对几个特别重要 Web 特性逐一分析。
 
-
-{% include "../common/comment.html" %}
