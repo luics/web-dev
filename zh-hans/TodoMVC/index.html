@@ -21,6 +21,10 @@
     <link rel="stylesheet" href="../gitbook/style.css">
     
         
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-disqus/plugin.css">
+        
+    
+        
         <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
         
     
@@ -53,7 +57,7 @@
         data-chapter-title="TodoMVC"
         data-filepath="TodoMVC/README.md"
         data-basepath=".."
-        data-revision="Sun May 08 2016 02:55:54 GMT+0000 (UTC)"
+        data-revision="Sun May 08 2016 03:06:39 GMT+0000 (UTC)"
         data-innerlanguage="zh-hans">
     
 
@@ -450,33 +454,6 @@
 </li>
 </ol>
 <p>&#x66F4;&#x4E3A;&#x4E00;&#x822C;&#x7684;&#x9879;&#x76EE;&#x5F00;&#x53D1;&#x6D41;&#x7A0B;&#x4F1A;&#x7A0D;&#x590D;&#x6742;&#x4E00;&#x4E9B;&#xFF0C;&#x6BD4;&#x5982;&#x4F1A;&#x6709;&#x4EA4;&#x4E92;&#x3001;&#x89C6;&#x89C9;&#x8BC4;&#x5BA1;&#x3001;&#x6280;&#x672F;&#x8BBE;&#x8BA1;&#x8BC4;&#x5BA1;&#x3001;&#x6D4B;&#x8BD5;&#x7B49;&#xFF0C;&#x4F46;&#x201C;&#x9700;&#x6C42;-&#x8BBE;&#x8BA1;-&#x5F00;&#x53D1;&#x201D;&#x771F;&#x7684;&#x4E5F;&#x5C31;&#x662F;&#x5927;&#x90E8;&#x5206;&#x9879;&#x76EE;&#x7684;&#x6838;&#x5FC3;&#x6D41;&#x7A0B;&#x4E86;&#x3002;</p>
-<html>
-<body>
-
-<div id="disqus_thread"></div>
-<script>
-  /**
-   * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-   * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-   */
-  var disqus_config = function() {
-    this.page.url = 'http://luics.com/web-dev'; // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = 'web-dev'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-  };
-
-  (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-
-    s.src = '//web-dev12.disqus.com/embed.js';
-
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-  })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow" target="_blank">comments powered by Disqus.</a></noscript>
-
-</body>
-</html>
 
                     
                     </section>
@@ -499,6 +476,14 @@
 <script src="../gitbook/app.js"></script>
 
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-disqus/plugin.js"></script>
+    
+
+    
     <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
     
 
@@ -516,7 +501,7 @@
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    var config = {"disqus":{"shortName":"web-dev12","useIdentifier":false},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
     gitbook.start(config);
 });
 </script>
