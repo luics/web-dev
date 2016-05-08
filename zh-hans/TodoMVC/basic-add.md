@@ -14,3 +14,6 @@ Code analysis:
     * `placeholder=""`, 占位信息 
 * button
   * 普通按钮, 触发 `click` 事件
+  
+
+{% include "../common/comment.html" %}

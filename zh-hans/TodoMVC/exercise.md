@@ -4,3 +4,5 @@
 
 ## Full TodoMVC
 
+
+{% include "../common/comment.html" %}

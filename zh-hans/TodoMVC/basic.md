@@ -11,3 +11,6 @@
     0. delete single item
 0. Update
     0. complete single item
+    
+
+{% include "../common/comment.html" %}
