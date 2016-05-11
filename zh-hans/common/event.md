@@ -18,7 +18,7 @@ See [Event Capturing and Bubbling in JavaScript](https://www.kirupa.com/html5/ev
 
 ## EventLoop
 
-<p data-height="265" data-theme-id="0" data-slug-hash="oxVoqK" data-default-tab="result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/oxVoqK/">event-queue</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="265" data-theme-id="0" data-slug-hash="oxVoqK" data-default-tab="js,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/oxVoqK/">event-queue</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>  
 
 See [EventLoop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop) for deep sight.
