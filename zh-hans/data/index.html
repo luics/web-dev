@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Data | Web Dev Course</title>
+        <title>Data Persistence | Web Dev Course</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -41,7 +41,7 @@
         
     
     
-    <link rel="next" href="../common/this.html" />
+    <link rel="next" href="../data/memory.html" />
     
     
     <link rel="prev" href="../TodoMVC/exercise.html" />
@@ -54,10 +54,10 @@
         
     <div class="book"
         data-level="2"
-        data-chapter-title="Data"
+        data-chapter-title="Data Persistence"
         data-filepath="data/index.md"
         data-basepath=".."
-        data-revision="Thu May 12 2016 02:30:19 GMT+0000 (UTC)"
+        data-revision="Thu May 12 2016 16:42:45 GMT+0000 (UTC)"
         data-innerlanguage="zh-hans">
     
 
@@ -293,59 +293,113 @@
                         
                             <b>2.</b>
                         
-                        Data
+                        Data Persistence
                     </a>
             
             
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.1" >
+        <li class="chapter " data-level="2.1" data-path="data/memory.html">
             
-            <span><b>2.1.</b> memory</span>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="2.2" >
-            
-            <span><b>2.2.</b> localStorage</span>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="2.3" >
-            
-            <span><b>2.3.</b> sessionStorage</span>
+                
+                    <a href="../data/memory.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        改造 TodoMVC
+                    </a>
             
             
         </li>
     
-        <li class="chapter " data-level="2.4" >
+        <li class="chapter " data-level="2.2" data-path="data/localStorage.html">
             
-            <span><b>2.4.</b> DB</span>
+                
+                    <a href="../data/localStorage.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        localStorage
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="data/db.html">
+            
+                
+                    <a href="../data/db.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Web SQL Database
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="data/cookie.html">
+            
+                
+                    <a href="../data/cookie.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        cookie
+                    </a>
             
             
         </li>
     
         <li class="chapter " data-level="2.5" >
             
-            <span><b>2.5.</b> Ajax</span>
+            <span><b>2.5.</b> Network</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="data/ajax.html">
+            
+                
+                    <a href="../data/ajax.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.1.</b>
+                        
+                        Ajax
+                    </a>
             
             
         </li>
     
-        <li class="chapter " data-level="2.6" >
+        <li class="chapter " data-level="2.5.2" data-path="data/jsonp.html">
             
-            <span><b>2.6.</b> JSONP</span>
+                
+                    <a href="../data/jsonp.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.2.</b>
+                        
+                        JSONP
+                    </a>
             
             
         </li>
     
-        <li class="chapter " data-level="2.7" >
-            
-            <span><b>2.7.</b> cookie</span>
-            
+
+            </ul>
             
         </li>
     
@@ -415,7 +469,8 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="data">Data</h1>
+                        <h1 id="&#x6570;&#x636E;&#x6301;&#x4E45;&#x5316;">&#x6570;&#x636E;&#x6301;&#x4E45;&#x5316;</h1>
+<p>&#x4E0A;&#x4E00;&#x7AE0;&#xFF0C;&#x6211;&#x4EEC;&#x5B9E;&#x73B0;&#x4E86;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684; TodoMVC&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;&#x4E00;&#x4E9B; item&#xFF0C;&#x7136;&#x540E;&#x5237;&#x65B0;&#x9875;&#x9762;&#x5C31;&#x6D88;&#x5931;&#x4E86;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x5E76;&#x6CA1;&#x6709;&#x5C06;&#x6570;&#x636E;&#x4FDD;&#x5B58;&#x4E0B;&#x6765;&#x3002;&#x8FD9;&#x4E00;&#x7AE0;&#x6211;&#x4EEC;&#x5C06;&#x6570;&#x636E;&#x4FDD;&#x5B58;&#x5728;&#x672C;&#x5730;&#x6216;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5B9E;&#x73B0;&#x5237;&#x65B0; TodoMVC &#x540E;&#x4E5F;&#x80FD;&#x770B;&#x5230;&#x66F4;&#x65B0;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5373;&#x5B9E;&#x73B0;&#x4E86; TodoMVC &#x7684;&#x6570;&#x636E;&#x6301;&#x4E45;&#x5316;&#x3002;</p>
 
                     
                     </section>
@@ -429,7 +484,7 @@
         <a href="../TodoMVC/exercise.html" class="navigation navigation-prev " aria-label="Previous page: 练习"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../common/this.html" class="navigation navigation-next " aria-label="Next page: this"><i class="fa fa-angle-right"></i></a>
+        <a href="../data/memory.html" class="navigation navigation-next " aria-label="Next page: 改造 TodoMVC"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
