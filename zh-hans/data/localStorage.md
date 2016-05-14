@@ -27,3 +27,9 @@
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 [查看 localStorage 完整信息](https://developer.mozilla.org/en-US/docs/Web/API/Storage)。
+
+## sessionStorage
+
+功能和接口与 localStorage 一致
+
+[查看 localStorage 完整信息](https://developer.mozilla.org/en-US/docs/Web/API/Storage)。
