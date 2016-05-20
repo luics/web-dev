@@ -16,18 +16,11 @@ var CL_COMPLETED = 'completed';
 var CL_SELECTED = 'selected';
 var CL_EDITING = 'editing';
 
-var data = {
-  items: [
-    // {msg:'', completed: false}
-  ],
-  msg: '',
-  filter: 'Active'
-};
-
 function update() {
   var todoList = $('.todo-list');
   var activeCount = 0;
-
+  var data = window.model.data;
+  
   todoList.innerHTML = '';
   data.items.forEach(function(itemData, index) {
     if (!itemData.completed) activeCount++;
@@ -121,52 +114,56 @@ function update() {
   });
 }
 
-window.onload = function init() {
-  var newTodo = $('.new-todo');
-  newTodo.addEventListener('keyup', function() {
-    data.msg = newTodo.value;
-  });
-
-  newTodo.addEventListener('keyup', function(ev) {
-    if (ev.keyCode != 13) return; // Enter
-
-    if (data.msg == '') {
-      console.warn('input msg is empty');
-      return;
-    }
-    data.items.push({msg: data.msg, completed: false});
-    data.msg = '';
-    update();
-  }, false);
-
-  var clearCompleted = $('.clear-completed');
-  clearCompleted.addEventListener('click', function() {
-    data.items.forEach(function(itemData, index) {
-      if (itemData.completed) data.items.splice(index, 1);
+window.onload = function() {
+  model.init(function(){
+    var data = model.data;
+    
+    var newTodo = $('.new-todo');
+    newTodo.addEventListener('keyup', function() {
+      data.msg = newTodo.value;
     });
-    update();
-  }, false);
 
-  var toggleAll = $('.toggle-all');
-  toggleAll.addEventListener('change', function() {
-    var completed = toggleAll.checked;
-    data.items.forEach(function(itemData) {
-      itemData.completed = completed;
-    });
-    update();
-  }, false);
+    newTodo.addEventListener('keyup', function(ev) {
+      if (ev.keyCode != 13) return; // Enter
 
-  var filters = makeArray($All('.filters li a'));
-  filters.forEach(function(filter) {
-    filter.addEventListener('click', function() {
-      data.filter = filter.innerHTML;
-      filters.forEach(function(filter) {
-        filter.classList.remove(CL_SELECTED);
-      });
-      filter.classList.add(CL_SELECTED);
+      if (data.msg == '') {
+        console.warn('input msg is empty');
+        return;
+      }
+      data.items.push({msg: data.msg, completed: false});
+      data.msg = '';
       update();
     }, false);
-  });
 
-  update();
+    var clearCompleted = $('.clear-completed');
+    clearCompleted.addEventListener('click', function() {
+      data.items.forEach(function(itemData, index) {
+        if (itemData.completed) data.items.splice(index, 1);
+      });
+      update();
+    }, false);
+
+    var toggleAll = $('.toggle-all');
+    toggleAll.addEventListener('change', function() {
+      var completed = toggleAll.checked;
+      data.items.forEach(function(itemData) {
+        itemData.completed = completed;
+      });
+      update();
+    }, false);
+
+    var filters = makeArray($All('.filters li a'));
+    filters.forEach(function(filter) {
+      filter.addEventListener('click', function() {
+        data.filter = filter.innerHTML;
+        filters.forEach(function(filter) {
+          filter.classList.remove(CL_SELECTED);
+        });
+        filter.classList.add(CL_SELECTED);
+        update();
+      }, false);
+    });
+
+    update();
+  });
 };
