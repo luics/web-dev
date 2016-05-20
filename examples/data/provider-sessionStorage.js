@@ -1,7 +1,7 @@
 (function() {
   var model = window.model;
-  var storage = window.localStorage;
-  
+  var storage = window.sessionStorage;
+
   Object.assign(model, {
     init: function(callback) {
       var data = storage.getItem(model.TOKEN);
