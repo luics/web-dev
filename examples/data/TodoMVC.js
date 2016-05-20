@@ -4,182 +4,169 @@ var $ = function(sel) {
 var $All = function(sel) {
   return document.querySelectorAll(sel);
 };
+var makeArray = function(likeArray) {
+  var array = [];
+  for (var i = 0; i < likeArray.length; ++i) {
+    array.push(likeArray[i]);
+  }
+  return array;
+};
 var guid = 0;
 var CL_COMPLETED = 'completed';
 var CL_SELECTED = 'selected';
 var CL_EDITING = 'editing';
 
+var data = {
+  items: [
+    // {msg:'', completed: false}
+  ],
+  msg: '',
+  filter: 'All'
+};
+
 function update() {
-  var items = $All('.todo-list li');
-  var filter = $('.filters li a.selected').innerHTML;
-  var leftNum = 0;
-  var item, i, display;
+  var todoList = $('.todo-list');
+  var activeCount = 0;
 
-  for (i = 0; i < items.length; ++i) {
-    item = items[i];
-    if (!item.classList.contains(CL_COMPLETED)) leftNum++;
+  todoList.innerHTML = '';
+  data.items.forEach(function(itemData, index) {
+    if (!itemData.completed) activeCount++;
 
-    // filters
-    display = 'none';
-    if (filter == 'All' || (filter == 'Active' && !item.classList.contains(CL_COMPLETED)) || (filter == 'Completed' && item.classList.contains(CL_COMPLETED))) {
+    if (
+      data.filter == 'All'
+      || (data.filter == 'Active' && !itemData.completed)
+      || (data.filter == 'Completed' && itemData.completed)
+    ) {
+      var item = document.createElement('li');
+      var id = 'item' + guid++;
+      item.setAttribute('id', id);
+      if (itemData.completed) item.classList.add(CL_COMPLETED);
+      item.innerHTML = [
+        '<div class="view">',
+        '  <input class="toggle" type="checkbox">',
+        '  <label class="todo-label">' + itemData.msg + '</label>',
+        '  <button class="destroy"></button>',
+        '</div>'
+      ].join('');
 
-      display = '';
+      var label = item.querySelector('.todo-label');
+      label.addEventListener('dblclick', function() {
+        item.classList.add(CL_EDITING);
+
+        var edit = document.createElement('input');
+        var finished = false;
+        edit.setAttribute('type', 'text');
+        edit.setAttribute('class', 'edit');
+        edit.setAttribute('value', label.innerHTML);
+
+        function finish() {
+          if (finished) return;
+          finished = true;
+          item.removeChild(edit);
+          item.classList.remove(CL_EDITING);
+        }
+
+        edit.addEventListener('blur', function() {
+          finish();
+        }, false);
+
+        edit.addEventListener('keyup', function(ev) {
+          if (ev.keyCode == 27) { // Esc
+            finish();
+          }
+          else if (ev.keyCode == 13) {
+            label.innerHTML = this.value;
+            finish();
+          }
+        }, false);
+
+        item.appendChild(edit);
+        edit.focus();
+      }, false);
+
+      var itemToggle = item.querySelector('.toggle');
+      itemToggle.checked = itemData.completed;
+      itemToggle.addEventListener('change', function() {
+        itemData.completed = !itemData.completed;
+        update();
+      }, false);
+
+      item.querySelector('.destroy').addEventListener('click', function() {
+        data.items.splice(index, 1);
+        update();
+      }, false);
+
+      todoList.insertBefore(item, todoList.firstChild);
     }
-    item.style.display = display;
-  }
+  });
 
-  var completedNum = items.length - leftNum;
+  var newTodo = $('.new-todo');
+  newTodo.value = data.msg;
+
+  var completedCount = data.items.length - activeCount;
   var count = $('.todo-count');
-  count.innerHTML = (leftNum || 'No') + (leftNum > 1 ? ' items' : ' item') + ' left';
+  count.innerHTML = (activeCount || 'No') + (activeCount > 1 ? ' items' : ' item') + ' left';
 
   var clearCompleted = $('.clear-completed');
-  clearCompleted.style.visibility = completedNum > 0 ? 'visible' : 'hidden';
+  clearCompleted.style.visibility = completedCount > 0 ? 'visible' : 'hidden';
 
   var toggleAll = $('.toggle-all');
-  toggleAll.style.visibility = items.length > 0 ? 'visible' : 'hidden';
-  toggleAll.checked = items.length == completedNum;
-}
+  toggleAll.style.visibility = data.items.length > 0 ? 'visible' : 'hidden';
+  toggleAll.checked = data.items.length == completedCount;
 
-function addTodo(msg) {
-  var todoList = $('.todo-list');
-
-  var item = document.createElement('li');
-  var id = 'item' + guid++;
-  item.setAttribute('id', id);
-  item.innerHTML = [
-    '<div class="view">',
-    '  <input class="toggle" type="checkbox">',
-    '  <label class="todo-label">' + msg + '</label>',
-    '  <button class="destroy"></button>',
-    '</div>'
-  ].join('');
-
-  var label = item.querySelector('.todo-label');
-  label.addEventListener('dblclick', function() {
-    item.classList.add(CL_EDITING);
-
-    var edit = document.createElement('input');
-    var finished = false;
-    edit.setAttribute('type', 'text');
-    edit.setAttribute('class', 'edit');
-    edit.setAttribute('value', label.innerHTML);
-
-    function finish() {
-      if (finished) return;
-      finished = true;
-      item.removeChild(edit);
-      item.classList.remove(CL_EDITING);
-    }
-
-    edit.addEventListener('blur', function() {
-      finish();
-    }, false);
-
-    edit.addEventListener('keyup', function(ev) {
-      if (ev.keyCode == 27) { // Esc
-        finish();
-      } else if (ev.keyCode == 13) {
-        label.innerHTML = this.value;
-        finish();
-      }
-    }, false);
-
-    item.appendChild(edit);
-    edit.focus();
-  }, false);
-
-  item.querySelector('.toggle').addEventListener('change', function() {
-    updateTodo(id, this.checked);
-  }, false);
-
-  item.querySelector('.destroy').addEventListener('click', function() {
-    removeTodo(id);
-  }, false);
-
-  todoList.insertBefore(item, todoList.firstChild);
-  update();
-}
-
-function updateTodo(itemId, done) {
-  var item = $('#' + itemId);
-  if (done) item.classList.add(CL_COMPLETED);
-  else item.classList.remove(CL_COMPLETED);
-  update();
-}
-
-function removeTodo(itemId) {
-  var todoList = $('.todo-list');
-  var item = $('#' + itemId);
-  todoList.removeChild(item);
-  update();
-}
-
-function clearCompletedTodoList() {
-  var todoList = $('.todo-list');
-  var items = todoList.querySelectorAll('li');
-  for (var i = items.length - 1; i >= 0; --i) {
-    var item = items[i];
-    if (item.classList.contains(CL_COMPLETED)) {
-      todoList.removeChild(item);
-    }
-  }
-  update();
-}
-
-function toggleAllTodoList() {
-  var items = $All('.todo-list li');
-  var toggleAll = $('.toggle-all');
-  var checked = toggleAll.checked;
-  for (var i = 0; i < items.length; ++i) {
-    var item = items[i];
-    var toggle = item.querySelector('.toggle');
-    if (toggle.checked != checked) {
-      toggle.checked = checked;
-      if (checked) item.classList.add(CL_COMPLETED);
-      else item.classList.remove(CL_COMPLETED);
-    }
-  }
-  update();
+  var filters = makeArray($All('.filters li a'));
+  filters.forEach(function(filter) {
+    if (data.filter == filter.innerHTML) filter.classList.add(CL_SELECTED);
+    else filter.classList.remove(CL_SELECTED);
+  });
 }
 
 window.onload = function init() {
   var newTodo = $('.new-todo');
-  newTodo.addEventListener('keyup', function(ev) {
-    // Enter
-    if (ev.keyCode != 13) return;
+  newTodo.addEventListener('keyup', function() {
+    data.msg = newTodo.value;
+  });
 
-    var msg = newTodo.value;
-    if (msg == '') {
-      console.warn('msg is empty');
+  newTodo.addEventListener('keyup', function(ev) {
+    if (ev.keyCode != 13) return; // Enter
+
+    if (data.msg == '') {
+      console.warn('input msg is empty');
       return;
     }
-
-    addTodo(msg);
-    newTodo.value = '';
+    data.items.push({msg: data.msg, completed: false});
+    data.msg = '';
+    update();
   }, false);
 
   var clearCompleted = $('.clear-completed');
   clearCompleted.addEventListener('click', function() {
-    clearCompletedTodoList();
+    data.items.forEach(function(itemData, index) {
+      if (itemData.completed) data.items.splice(index, 1);
+    });
+    update();
   }, false);
 
   var toggleAll = $('.toggle-all');
   toggleAll.addEventListener('change', function() {
-    toggleAllTodoList();
+    var completed = toggleAll.checked;
+    data.items.forEach(function(itemData) {
+      itemData.completed = completed;
+    });
+    update();
   }, false);
 
-  var filters = $All('.filters li a');
-  for (var i = 0; i < filters.length; ++i) {
-    (function(filter) {
-      filter.addEventListener('click', function() {
-        for (var j = 0; j < filters.length; ++j) {
-          filters[j].classList.remove(CL_SELECTED);
-        }
-        filter.classList.add(CL_SELECTED);
-        update();
-      }, false);
-    })(filters[i])
-  }
+  var filters = makeArray($All('.filters li a'));
+  filters.forEach(function(filter) {
+    filter.addEventListener('click', function() {
+      data.filter = filter.innerHTML;
+      filters.forEach(function(filter) {
+        filter.classList.remove(CL_SELECTED);
+      });
+      filter.classList.add(CL_SELECTED);
+      update();
+    }, false);
+  });
 
   update();
 };
