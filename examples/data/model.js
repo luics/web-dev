@@ -5,7 +5,8 @@ window.model = {
     ],
     msg: '',
     filter: 'All'
-  }
+  },
+  TOKEN: 'TodoMVC'
   // data provider
   // init: null
   // flush: null

@@ -17,10 +17,11 @@ var CL_SELECTED = 'selected';
 var CL_EDITING = 'editing';
 
 function update() {
-  var todoList = $('.todo-list');
-  var activeCount = 0;
-  var data = window.model.data;
+  model.flush();
+  var data = model.data;
   
+  var activeCount = 0;
+  var todoList = $('.todo-list');
   todoList.innerHTML = '';
   data.items.forEach(function(itemData, index) {
     if (!itemData.completed) activeCount++;
