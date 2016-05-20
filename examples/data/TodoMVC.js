@@ -21,7 +21,7 @@ var data = {
     // {msg:'', completed: false}
   ],
   msg: '',
-  filter: 'All'
+  filter: 'Active'
 };
 
 function update() {
