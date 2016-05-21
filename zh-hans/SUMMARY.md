@@ -24,7 +24,9 @@
 0. [数据持久化](data/index.md)
     0. [改造 TodoMVC](data/memory.md)
     0. [localStorage](data/localStorage.md)
-    0. [Web SQL Database](data/db.md)
+    0. [sessionStorage](data/sessionStorage.md)
+    0. [Web SQL Database](data/websql.md)
+    0. [IndexedDB](data/idb.md)
     0. [Cookie](data/cookie.md)
     0. Network
         0. [Ajax](data/ajax.md)
