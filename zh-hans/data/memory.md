@@ -13,3 +13,40 @@
 详见[代码](https://github.com/luics/web-dev/blob/master/examples/data/TodoMVC-memory.html)。
 
 引入 `model` 层统一数据层, 不同的 `provider` (localStorage, database 等)实现 `model` 中的 `provider` 接口(init, flush)。  
+
+代码 - model
+```js
+window.model = {
+  data: {
+    items: [
+      // {msg:'', completed: false}
+    ],
+    msg: '',
+    filter: 'All'
+  },
+  TOKEN: 'TodoMVC'
+  
+  // data provider interface
+  // init: null
+  // flush: null
+};
+```
+
+代码 - memory provider
+```js
+(function() {
+  var model = window.model;
+  Object.assign(model, {
+    init: function(callback) {
+      // do nothing
+      if (callback) callback();
+    },
+    flush: function(callback) {
+      // do nothing
+      if (callback) callback();
+    }
+  });
+})();
+```
+
+ 

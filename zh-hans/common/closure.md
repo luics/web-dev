@@ -15,9 +15,15 @@
 
 ### 作用域
 
+TODO
+
 ### 作用域链
 
+TODO
+
 ### 实例分析
+
+TODO
 
 实例 1
 
@@ -25,11 +31,15 @@
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 
+TODO
+
 实例 2
 
 <p data-height="265" data-theme-id="0" data-slug-hash="VaJOaa" data-default-tab="js,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/VaJOaa/">closure-func</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
+
+TODO
 
 常见错误
 

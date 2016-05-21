@@ -7,7 +7,8 @@ window.model = {
     filter: 'All'
   },
   TOKEN: 'TodoMVC'
-  // data provider
+  
+  // data provider interface
   // init: null
   // flush: null
 };
