@@ -9,6 +9,7 @@
         if (data) model.data = JSON.parse(data);
       }
       catch (e) {
+        storage.setItem(model.TOKEN, '');
         console.error(e);
       }
 

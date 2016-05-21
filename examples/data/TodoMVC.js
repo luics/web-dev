@@ -120,7 +120,7 @@ window.onload = function() {
     var data = model.data;
     
     var newTodo = $('.new-todo');
-    newTodo.addEventListener('keyup', function() {
+    newTodo.addEventListener('keyup', function() { // input
       data.msg = newTodo.value;
       model.flush();
     });
