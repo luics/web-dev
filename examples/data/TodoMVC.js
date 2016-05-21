@@ -70,7 +70,8 @@ function update() {
           }
           else if (ev.keyCode == 13) {
             label.innerHTML = this.value;
-            finish();
+            itemData.msg = this.value;
+            update();
           }
         }, false);
 
