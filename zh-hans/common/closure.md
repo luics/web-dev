@@ -1,6 +1,6 @@
-# Closure
+# 闭包
 
-有一段对闭包的精辟注解：
+有一段对闭包(Closure)的精辟注解：
 
 > A closure is a special kind of object that combines two things: a function, and the environment in which that function was created.  (from [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures#Closure))
 
@@ -13,22 +13,31 @@
 
 ## 原理
 
+### 作用域
+
 ### 作用域链
 
-基础示例
+### 实例分析
 
-<p data-height="265" data-theme-id="0" data-slug-hash="jqjoBv" data-default-tab="result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/jqjoBv/">closure-basic</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+实例 1
+
+<p data-height="265" data-theme-id="0" data-slug-hash="jqjoBv" data-default-tab="js" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/jqjoBv/">closure-basic</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 
-基础示例 (event)
+实例 2
 
-<p data-height="265" data-theme-id="0" data-slug-hash="VaJOaa" data-default-tab="result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/VaJOaa/">closure-func</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="265" data-theme-id="0" data-slug-hash="VaJOaa" data-default-tab="js,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/VaJOaa/">closure-func</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
-时间绑定
 
-<p data-height="265" data-theme-id="0" data-slug-hash="KzjLvr" data-default-tab="result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/KzjLvr/">closure-error</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+常见错误
+
+<p data-height="265" data-theme-id="0" data-slug-hash="KzjLvr" data-default-tab="js,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/KzjLvr/">closure-error</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 ## 应用
+
+### 模块
+
+### 私有成员
