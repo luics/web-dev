@@ -28,7 +28,7 @@
     0. [Web SQL Database](data/websql.md)
     0. [IndexedDB](data/idb.md)
     0. [Cookie](data/cookie.md)
-    0. Network
+    0. [Server](data/server.md)
         0. [Ajax](data/ajax.md)
         0. [JSONP](data/jsonp.md)
 0. Common

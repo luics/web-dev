@@ -2,7 +2,7 @@
 
 ## IndexedDB
 
-详见 [文档](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)。
+详见 [文档](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)。
 
 ## 改造 TodoMVC
 

@@ -1,4 +1,3 @@
-// @see https://dev.w3.org/html5/webdatabase/
 (function() {
   var model = window.model;
   var db;
