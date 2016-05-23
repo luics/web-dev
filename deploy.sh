@@ -5,7 +5,7 @@ SOURCE_BRANCH="master"
 TARGET_BRANCH="gh-pages"
 
 function doCompile {
-  npm install gitbook-cli -g
+  npm install -g gitbook-cli@2.1.2
   gitbook install
   gitbook build . ./out
 }
