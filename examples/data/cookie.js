@@ -1,10 +1,3 @@
-# Cookie
-
-***请不要滥用 Cookie***
-
-## Cookie
-
-```js
 (function() {
   /**
    * Cookie
@@ -51,8 +44,3 @@
     }
   };
 })();
-```
-
-## 改造 TodoMVC
-
-
