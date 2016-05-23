@@ -4,6 +4,11 @@
 
 ## Cookie
 
+详见[文档](https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie)。
+
+
+代码 - [Cookie](https://github.com/luics/web-dev/blob/master/examples/data/cookie.js)
+
 ```js
 (function() {
   /**
@@ -55,4 +60,5 @@
 
 ## 改造 TodoMVC
 
+详见[代码](https://github.com/luics/web-dev/blob/master/examples/data/TodoMVC-cookie.html)。
 
