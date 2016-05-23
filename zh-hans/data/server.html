@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Event | Web Dev Course</title>
+        <title>Server | Web Dev Course</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -41,10 +41,10 @@
         
     
     
-    <link rel="next" href="../common/closure.html" />
+    <link rel="next" href="../data/ajax.html" />
     
     
-    <link rel="prev" href="../common/input.html" />
+    <link rel="prev" href="../data/cookie.html" />
     
 
         
@@ -53,9 +53,9 @@
         
         
     <div class="book"
-        data-level="1.4.2"
-        data-chapter-title="Event"
-        data-filepath="common/event.md"
+        data-level="2.7"
+        data-chapter-title="Server"
+        data-filepath="data/server.md"
         data-basepath=".."
         data-revision="Mon May 23 2016 14:32:37 GMT+0000 (UTC)"
         data-innerlanguage="zh-hans">
@@ -244,7 +244,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.2" data-path="common/event.html">
+        <li class="chapter " data-level="1.4.2" data-path="common/event.html">
             
                 
                     <a href="../common/event.html">
@@ -420,7 +420,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.7" data-path="data/server.html">
+        <li class="chapter active" data-level="2.7" data-path="data/server.html">
             
                 
                     <a href="../data/server.html">
@@ -516,22 +516,9 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="event">Event</h1>
-<h2 id="addremoveeventlistener">add/removeEventListener</h2>
-<p></p><p data-height="300" data-theme-id="0" data-slug-hash="grZzbe" data-default-tab="js,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/grZzbe/" target="_blank">event</a> by luics (<a href="http://codepen.io/luics" target="_blank">@luics</a>) on <a href="http://codepen.io" target="_blank">CodePen</a>.</p><p></p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>  
-
-<p>See <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget" target="_blank">EventTarget</a> for more details.</p>
-<h2 id="capturing-vs-bubbling">Capturing vs Bubbling</h2>
-<p></p><p data-height="400" data-theme-id="0" data-slug-hash="ONrZoq" data-default-tab="js,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/ONrZoq/" target="_blank">event-capture-bubble</a> by luics (<a href="http://codepen.io/luics" target="_blank">@luics</a>) on <a href="http://codepen.io" target="_blank">CodePen</a>.</p>  <p></p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>  
-
-<p>See <a href="https://www.kirupa.com/html5/event_capturing_bubbling_javascript.htm" target="_blank">Event Capturing and Bubbling in JavaScript</a> for more details.</p>
-<h2 id="eventloop">EventLoop</h2>
-<p></p><p data-height="265" data-theme-id="0" data-slug-hash="oxVoqK" data-default-tab="js,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/oxVoqK/" target="_blank">event-queue</a> by luics (<a href="http://codepen.io/luics" target="_blank">@luics</a>) on <a href="http://codepen.io" target="_blank">CodePen</a>.</p><p></p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>  
-
-<p>See <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop" target="_blank">EventLoop</a> for deep sight.</p>
+                        <h1 id="server">Server</h1>
+<p>&#x53EF;&#x80FD;&#x5927;&#x5BB6;&#x4F1A;&#x6709;&#x7591;&#x60D1;: Server &#x4E3A;&#x4EC0;&#x4E48;&#x51FA;&#x73B0;&#x5728;&#x4E86;&#x8FD9;&#x4E00;&#x7AE0;?</p>
+<p>&#x7B14;&#x8005;&#x4E60;&#x60EF;&#x5C06; Server &#x770B;&#x505A;&#x662F;&#x4E00;&#x79CD;&quot;&#x6570;&#x636E;&#x6E90;&quot;, &#x8FD9;&#x79CD;&quot;&#x6570;&#x636E;&#x6E90;&quot;&#x5728;&#x6570;&#x636E;&#x7684;&#x589E;&#x5220;&#x6539;&#x67E5;&#x4E0A;&#x548C; localStorage, cookie, db &#x6CA1;&#x6709;&#x672C;&#x8D28;&#x533A;&#x522B;, &#x53EA;&#x4E0D;&#x8FC7;&#x591A;&#x4E86;&#x7F51;&#x7EDC;&#x901A;&#x4FE1;(AJAX, JSONP)&#x7684;&#x8FC7;&#x7A0B;&#x3002;&#x5F53;&#x7136;, &#x771F;&#x5B9E;&#x4E16;&#x754C;&#x7684; server &#x7AEF;&#x8FDC;&#x6BD4;&#x6570;&#x636E;&#x7684;&#x589E;&#x5220;&#x6539;&#x67E5;&#x8981;&#x590D;&#x6742;&#x5F97;&#x591A;, &#x53EA;&#x662F;&#x5728;&#x8FD9;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x89C6;&#x89D2;&#x4E0B;, &#x7B14;&#x8005;&#x8BA4;&#x4E3A; Server &#x4E5F;&#x662F;&#x4E00;&#x79CD;&#x6570;&#x636E;&#x6E90;&#x3002;</p>
 
                     
                     </section>
@@ -542,10 +529,10 @@
         </div>
 
         
-        <a href="../common/input.html" class="navigation navigation-prev " aria-label="Previous page: Input"><i class="fa fa-angle-left"></i></a>
+        <a href="../data/cookie.html" class="navigation navigation-prev " aria-label="Previous page: Cookie"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../common/closure.html" class="navigation navigation-next " aria-label="Next page: closure"><i class="fa fa-angle-right"></i></a>
+        <a href="../data/ajax.html" class="navigation navigation-next " aria-label="Next page: Ajax"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
