@@ -44,7 +44,7 @@
     <link rel="next" href="../data/ajax.html" />
     
     
-    <link rel="prev" href="../data/db.html" />
+    <link rel="prev" href="../data/idb.html" />
     
 
         
@@ -53,11 +53,11 @@
         
         
     <div class="book"
-        data-level="2.4"
+        data-level="2.6"
         data-chapter-title="Cookie"
         data-filepath="data/cookie.md"
         data-basepath=".."
-        data-revision="Fri May 20 2016 13:56:20 GMT+0000 (UTC)"
+        data-revision="Mon May 23 2016 12:27:38 GMT+0000 (UTC)"
         data-innerlanguage="zh-hans">
     
 
@@ -360,14 +360,29 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="data/db.html">
+        <li class="chapter " data-level="2.3" data-path="data/sessionStorage.html">
             
                 
-                    <a href="../data/db.html">
+                    <a href="../data/sessionStorage.html">
                 
                         <i class="fa fa-check"></i>
                         
                             <b>2.3.</b>
+                        
+                        sessionStorage
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="data/websql.html">
+            
+                
+                    <a href="../data/websql.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
                         
                         Web SQL Database
                     </a>
@@ -375,14 +390,29 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.4" data-path="data/cookie.html">
+        <li class="chapter " data-level="2.5" data-path="data/idb.html">
+            
+                
+                    <a href="../data/idb.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        IndexedDB
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.6" data-path="data/cookie.html">
             
                 
                     <a href="../data/cookie.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.4.</b>
+                            <b>2.6.</b>
                         
                         Cookie
                     </a>
@@ -390,22 +420,22 @@
             
         </li>
     
-        <li class="chapter " data-level="2.5" >
+        <li class="chapter " data-level="2.7" >
             
-            <span><b>2.5.</b> Network</span>
+            <span><b>2.7.</b> Network</span>
             
             
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.5.1" data-path="data/ajax.html">
+        <li class="chapter " data-level="2.7.1" data-path="data/ajax.html">
             
                 
                     <a href="../data/ajax.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.5.1.</b>
+                            <b>2.7.1.</b>
                         
                         Ajax
                     </a>
@@ -413,14 +443,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.5.2" data-path="data/jsonp.html">
+        <li class="chapter " data-level="2.7.2" data-path="data/jsonp.html">
             
                 
                     <a href="../data/jsonp.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.5.2.</b>
+                            <b>2.7.2.</b>
                         
                         JSONP
                     </a>
@@ -479,9 +509,59 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="cookie">Cookie</h1>
-<h2 id="&#x8BF7;&#x4E0D;&#x8981;&#x6EE5;&#x7528;-cookie">&#x8BF7;&#x4E0D;&#x8981;&#x6EE5;&#x7528; Cookie</h2>
-<p>cookie &#x662F;&#x4EC0;&#x4E48;&#xFF1F;</p>
+<p><strong><em>&#x8BF7;&#x4E0D;&#x8981;&#x6EE5;&#x7528; Cookie</em></strong></p>
+<h2 id="cookie">Cookie</h2>
+<p>&#x8BE6;&#x89C1;<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie" target="_blank">&#x6587;&#x6863;</a>&#x3002;</p>
+<p>&#x4EE3;&#x7801; - <a href="https://github.com/luics/web-dev/blob/master/examples/data/cookie.js" target="_blank">Cookie</a></p>
+<pre><code class="lang-js">(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">/**
+   * Cookie
+   * @see https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie#Syntax
+   */</span>
+  <span class="hljs-keyword">var</span> Cookie = <span class="hljs-built_in">window</span>.Cookie = {
+    <span class="hljs-comment">/**
+     * @param key {String}
+     * @returns {String}
+     *
+     */</span>
+    getItem: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">key</span>) </span>{
+      <span class="hljs-keyword">var</span> pattern = <span class="hljs-string">&apos;(?:(?:^|.*;\\s*)&apos;</span> + key + <span class="hljs-string">&apos;\\s*\\=\\s*([^;]*).*$)|^.*$&apos;</span>;
+      <span class="hljs-keyword">return</span> <span class="hljs-built_in">decodeURIComponent</span>(<span class="hljs-built_in">document</span>.cookie.replace(<span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(pattern), <span class="hljs-string">&quot;$1&quot;</span>));
+    },
+    <span class="hljs-comment">/**
+     * @param key {String}
+     */</span>
+    removeItem: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">key</span>) </span>{
+      Cookie.setItem(key, <span class="hljs-string">&apos;&apos;</span>, {maxAge: -<span class="hljs-number">1</span>});
+    },
+    <span class="hljs-comment">/**
+     * @param key {String}
+     * @param value {String}
+     * @param [opt] {Object}
+     * @param [opt.path] {String}
+     * @param [opt.domain] {String}
+     * @param [opt.maxAge] {Number} unit is second
+     * @param [opt.expires] {Date}
+     * @param [opt.secure] {Boolean}
+     */</span>
+    setItem: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">key, value, opt</span>) </span>{
+      opt = opt || {};
+      <span class="hljs-keyword">var</span> buf = [key, <span class="hljs-string">&apos;=&apos;</span>, <span class="hljs-built_in">encodeURIComponent</span>(value)];
+      <span class="hljs-keyword">if</span> (opt.path) buf.push(<span class="hljs-string">&apos;;path=&apos;</span> + opt.path);
+      <span class="hljs-keyword">if</span> (opt.domain) buf.push(<span class="hljs-string">&apos;;domain=&apos;</span> + opt.domain);
+      <span class="hljs-keyword">if</span> (opt.maxAge) buf.push(<span class="hljs-string">&apos;;max-age=&apos;</span> + opt.maxAge);
+      <span class="hljs-keyword">if</span> (opt.expires) buf.push(<span class="hljs-string">&apos;;expires=&apos;</span> + opt.expires.toUTCString());
+      <span class="hljs-keyword">if</span> (opt.secure) buf.push(<span class="hljs-string">&apos;;secure&apos;</span>);
+
+      <span class="hljs-keyword">var</span> str = buf.join(<span class="hljs-string">&apos;&apos;</span>);
+      <span class="hljs-built_in">document</span>.cookie = str;
+      <span class="hljs-keyword">return</span> str;
+    }
+  };
+})();
+</code></pre>
 <h2 id="&#x6539;&#x9020;-todomvc">&#x6539;&#x9020; TodoMVC</h2>
+<p>&#x8BE6;&#x89C1;<a href="https://github.com/luics/web-dev/blob/master/examples/data/TodoMVC-cookie.html" target="_blank">&#x4EE3;&#x7801;</a>&#x3002;</p>
 
                     
                     </section>
@@ -492,7 +572,7 @@
         </div>
 
         
-        <a href="../data/db.html" class="navigation navigation-prev " aria-label="Previous page: Web SQL Database"><i class="fa fa-angle-left"></i></a>
+        <a href="../data/idb.html" class="navigation navigation-prev " aria-label="Previous page: IndexedDB"><i class="fa fa-angle-left"></i></a>
         
         
         <a href="../data/ajax.html" class="navigation navigation-next " aria-label="Next page: Ajax"><i class="fa fa-angle-right"></i></a>

@@ -57,7 +57,7 @@
         data-chapter-title="改造 TodoMVC"
         data-filepath="data/memory.md"
         data-basepath=".."
-        data-revision="Fri May 20 2016 13:56:20 GMT+0000 (UTC)"
+        data-revision="Mon May 23 2016 12:27:38 GMT+0000 (UTC)"
         data-innerlanguage="zh-hans">
     
 
@@ -360,14 +360,29 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="data/db.html">
+        <li class="chapter " data-level="2.3" data-path="data/sessionStorage.html">
             
                 
-                    <a href="../data/db.html">
+                    <a href="../data/sessionStorage.html">
                 
                         <i class="fa fa-check"></i>
                         
                             <b>2.3.</b>
+                        
+                        sessionStorage
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="data/websql.html">
+            
+                
+                    <a href="../data/websql.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
                         
                         Web SQL Database
                     </a>
@@ -375,14 +390,29 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="data/cookie.html">
+        <li class="chapter " data-level="2.5" data-path="data/idb.html">
+            
+                
+                    <a href="../data/idb.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        IndexedDB
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="data/cookie.html">
             
                 
                     <a href="../data/cookie.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.4.</b>
+                            <b>2.6.</b>
                         
                         Cookie
                     </a>
@@ -390,22 +420,22 @@
             
         </li>
     
-        <li class="chapter " data-level="2.5" >
+        <li class="chapter " data-level="2.7" >
             
-            <span><b>2.5.</b> Network</span>
+            <span><b>2.7.</b> Network</span>
             
             
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.5.1" data-path="data/ajax.html">
+        <li class="chapter " data-level="2.7.1" data-path="data/ajax.html">
             
                 
                     <a href="../data/ajax.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.5.1.</b>
+                            <b>2.7.1.</b>
                         
                         Ajax
                     </a>
@@ -413,14 +443,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.5.2" data-path="data/jsonp.html">
+        <li class="chapter " data-level="2.7.2" data-path="data/jsonp.html">
             
                 
                     <a href="../data/jsonp.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.5.2.</b>
+                            <b>2.7.2.</b>
                         
                         JSONP
                     </a>
@@ -479,12 +509,49 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="&#x6539;&#x9020;-todomvc">&#x6539;&#x9020; TodoMVC</h1>
+<h2 id="&#x6539;&#x9020;-todomvc-&#x57FA;&#x7840;&#x7248;">&#x6539;&#x9020; TodoMVC &#x57FA;&#x7840;&#x7248;</h2>
 <ul>
 <li>&#x4F7F;&#x7528;<code>items</code>&#x4FDD;&#x5B58;&#x6240;&#x6709; Todo item &#x7684;&#x6570;&#x636E;&#xFF0C;&#x6BCF;&#x4E2A; item &#x6570;&#x636E;&#x683C;&#x5F0F;&#x662F; <code>{msg:&apos;&apos;, completed:false}</code></li>
 <li>&#x6539;&#x53D8; item &#x72B6;&#x6001;&#x6216;&#x5220;&#x9664; item &#x65F6;&#x5747;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#xFF0C;&#x7136;&#x540E;&#x89E6;&#x53D1;<code>update</code></li>
 </ul>
 <p></p><p data-height="500" data-theme-id="0" data-slug-hash="LNawRV" data-default-tab="js,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/LNawRV/" target="_blank">data-memory</a> by luics (<a href="http://codepen.io/luics" target="_blank">@luics</a>) on <a href="http://codepen.io" target="_blank">CodePen</a>.</p><p></p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<h2 id="&#x6539;&#x9020;-todomvc-&#x5B8C;&#x6574;&#x7248;">&#x6539;&#x9020; TodoMVC &#x5B8C;&#x6574;&#x7248;</h2>
+<p>&#x8BE6;&#x89C1;<a href="https://github.com/luics/web-dev/blob/master/examples/data/TodoMVC-memory.html" target="_blank">&#x4EE3;&#x7801;</a>&#x3002;</p>
+<p>&#x5F15;&#x5165; <code>model</code> &#x5C42;&#x7EDF;&#x4E00;&#x6570;&#x636E;&#x5C42;, &#x4E0D;&#x540C;&#x7684; <code>provider</code> (localStorage, database &#x7B49;)&#x5B9E;&#x73B0; <code>model</code> &#x4E2D;&#x7684; <code>provider</code> &#x63A5;&#x53E3;(init, flush)&#x3002;  </p>
+<p>&#x4EE3;&#x7801; - model</p>
+<pre><code class="lang-js"><span class="hljs-built_in">window</span>.model = {
+  data: {
+    items: [
+      <span class="hljs-comment">// {msg:&apos;&apos;, completed: false}</span>
+    ],
+    msg: <span class="hljs-string">&apos;&apos;</span>,
+    filter: <span class="hljs-string">&apos;All&apos;</span>
+  },
+  TOKEN: <span class="hljs-string">&apos;TodoMVC&apos;</span>
+
+  <span class="hljs-comment">// data provider interface</span>
+  <span class="hljs-comment">// init: null</span>
+  <span class="hljs-comment">// flush: null</span>
+};
+</code></pre>
+<p>&#x4EE3;&#x7801; - memory provider</p>
+<pre><code class="lang-js">(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">var</span> model = <span class="hljs-built_in">window</span>.model;
+  <span class="hljs-built_in">Object</span>.assign(model, {
+    init: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">callback</span>) </span>{
+      <span class="hljs-comment">// do nothing</span>
+      <span class="hljs-keyword">if</span> (callback) callback();
+    },
+    flush: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">callback</span>) </span>{
+      <span class="hljs-comment">// do nothing</span>
+      <span class="hljs-keyword">if</span> (callback) callback();
+    }
+  });
+})();
+</code></pre>
+
                     
                     </section>
                 
