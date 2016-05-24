@@ -10,7 +10,7 @@
 0. 大部分 API 都是异步的
 0. 遵守同源策略, 不能从其他源存取数据
 
-详见 [文档](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)。
+详见[使用文档](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB), 以及[所有 API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)。
 
 ## 改造 TodoMVC
 

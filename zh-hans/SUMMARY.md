@@ -31,12 +31,12 @@
     0. [Server](data/server.md)
         0. [Ajax](data/ajax.md)
         0. [JSONP](data/jsonp.md)
-0. [Mobile](mobile/index.md)
+<!--0. [Mobile](mobile/index.md)
     0. [viewport](data/viewport.md)
     0. [click 延迟](data/click.md)
     0. [改造 TodoMVC](data/mobile.md)
     0. 扩展知识
-        0. [Responsive Web Design](data/rwd.md)
+        0. [Responsive Web Design](data/rwd.md)-->
 0. Common
     0. [input](common/input.md)
     0. [event](common/event.md)
