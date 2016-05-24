@@ -17,6 +17,10 @@
 <p data-height="500" data-theme-id="0" data-slug-hash="KzOGaR" data-default-tab="js" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/KzOGaR/">data-idb</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
+DevTools 中可以看到类似的变化:
+
+<img src="http://gtms03.alicdn.com/tps/i3/TB1mukPJVXXXXcaXVXXRzC09FXX-1550-272.png" width="775">
+
 ## 改造 TodoMVC
 
 详见[代码](https://github.com/luics/web-dev/blob/master/examples/data/TodoMVC-idb.html)。

@@ -2,7 +2,7 @@
 
 ## sessionStorage
 
-功能和接口与 localStorage 一致, [查看 sessionStorage 完整信息](https://developer.mozilla.org/en-US/docs/Web/API/Storage)。
+功能和接口与 localStorage 一致, [查看 sessionStorage API](https://developer.mozilla.org/en-US/docs/Web/API/Storage)。
 
 ## 改造 TodoMVC
 

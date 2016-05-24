@@ -27,7 +27,7 @@ db.transaction(
 );
 ```
 
-上面的代码在浏览器中运行后, 可以在 Dev Tools 中查看结果:
+DevTools 中可以看到类似的变化:
 
 <img src="http://gtms03.alicdn.com/tps/i3/TB1fGgUJVXXXXchXXXXKUPqZpXX-1494-276.png" width="700">
 
