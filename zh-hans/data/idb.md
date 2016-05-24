@@ -2,6 +2,14 @@
 
 ## IndexedDB
 
+几个[重要概念](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#concepts):
+
+0. IndexedDB 数据库存储键值对(k-v pairs), 并且是对象数据库(不同于 mysql 这类关系数据库)
+0. 几乎所有操作都在 transaction(事务)中执行。
+    * 事务: 就是将一组操作看做原子操作, 要么全部成功, 否则如有一个失败则整体失败, 这对数据的完备性很重要
+0. 大部分 API 都是异步的
+0. 遵守同源策略, 不能从其他源存取数据
+
 详见 [文档](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)。
 
 ## 改造 TodoMVC

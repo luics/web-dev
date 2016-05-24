@@ -15,7 +15,7 @@
         0. [Delete](TodoMVC/basic-delete.md)
         0. [Update](TodoMVC/basic-update.md)
     0. [完整版](TodoMVC/full.md)
-    0. [扩展知识](TodoMVC/extension.md)
+    0. 扩展知识
         0. [Input](common/input.md)
         0. [Event](common/event.md)
         0. [closure](common/closure.md)
@@ -31,6 +31,12 @@
     0. [Server](data/server.md)
         0. [Ajax](data/ajax.md)
         0. [JSONP](data/jsonp.md)
+0. [Mobile](mobile/index.md)
+    0. [viewport](data/viewport.md)
+    0. [click 延迟](data/click.md)
+    0. [改造 TodoMVC](data/mobile.md)
+    0. 扩展知识
+        0. [Responsive Web Design](data/rwd.md)
 0. Common
     0. [input](common/input.md)
     0. [event](common/event.md)
