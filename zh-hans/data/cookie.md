@@ -1,14 +1,33 @@
 # Cookie
 
-***请不要滥用 Cookie***
+***请不要滥用 Cookie, 除非你很了解 Cookie 存在的意义***
 
 ## Cookie
 
-详见[文档](https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie)。
+在任意页面中执行如下代码:
 
-TODO 原理
+```js
+document.cookie = 'id=1';
+```
 
-原生 Cookie 存取操作非常不方便, 所以提供了一个简单的 Cookie 库。
+刷新页面, 通过抓包软件或 Dev Tools Network, 获取到的 HTTP Request 类似:
+
+```
+GET /index.html HTTP/1.1
+Host: 127.0.0.1:3001
+Cookie: id=1
+```
+
+`Cookie: id=1` 出现在了请求 HEADER 中, 同时还出现在了 Response 中, 继续刷新页面 `Cookie: id=1` 仍然存在; 换个角度理解: `Cookie: id=1` 好比是 HTTP 通信过程中的一个状态数据, 比如 `id=1` 可以标记一个用户或一台设备。Cookie 为无状态的 (Stateless) HTTP 添加了状态, 这就是 Cookie 存在的意义。
+
+使用 Cookie 来存储数据并不常见, 通常是针对非登录用户的, 如购物类站点存储购物车中的商品列表。但是更多的场景下我们并不使用 Cookie 来存储数据, 原因是:
+ 
+ 0. Cookie 存储容量是有上限的, 不同浏览器有差异, 典型值是 4KB, 容量非常小
+ 0. Cookie 在其生命周期内总是被添加到 HTTP 请求和响应中(HTML/JS/CSS/IMG 等), 这会增大请求的数据量。如果按照每天 10 亿 pv 计算，1 byte cookie 大约会增加 5.590 G 的流量，1 KB cookie 就 会增加 5.590 T 流量。 ***Cookie 不适合作为存储载体***
+ 
+尽管如此, Cookie 用来存储必要的状态数据仍然是被广泛应用的, 比如用户的登录状态(ID, Nickname 等)。
+
+原生 Cookie 存取详见[文档](https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie)。由于原生 Cookie 存取非常繁琐, 这里提供了一个简单的 Cookie 库, 简化存取操作。
 
 代码 - [Cookie](https://github.com/luics/web-dev/blob/master/examples/data/cookie.js)
 
