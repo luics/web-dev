@@ -6,6 +6,9 @@
 
 详见[文档](https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie)。
 
+TODO 原理
+
+原生 Cookie 存取操作非常不方便, 所以提供了一个简单的 Cookie 库。
 
 代码 - [Cookie](https://github.com/luics/web-dev/blob/master/examples/data/cookie.js)
 

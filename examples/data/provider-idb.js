@@ -12,7 +12,7 @@
 
   Object.assign(model, {
     init: function(callback) {
-      var request = window.indexedDB.open(model.TOKEN + 4, 1);
+      var request = window.indexedDB.open(model.TOKEN, 1);
       request.onerror = function(event) {
         console.error('Database error: ' + event.target.errorCode);
       };
@@ -23,7 +23,6 @@
         KEYS.forEach(function(key) {
           var request = objectStore.get(key);
           request.onsuccess = function(event) {
-            //console.log(request.result);
             model.data[key] = request.result.value;
           };
         });
@@ -34,7 +33,7 @@
       };
       request.onupgradeneeded = function(event) {
         console.log('onupgradeneeded', event);
-        var db = event.target.result;
+        db = event.target.result;
 
         var objectStore = db.createObjectStore(CONF, {keyPath: 'key'});
         objectStore.createIndex('key', 'key', {unique: true});

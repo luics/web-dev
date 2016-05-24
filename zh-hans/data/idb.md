@@ -12,6 +12,11 @@
 
 详见[使用文档](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB), 以及[所有 API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)。
 
+TODO 一个完整的例子
+
+<p data-height="500" data-theme-id="0" data-slug-hash="KzOGaR" data-default-tab="js" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/KzOGaR/">data-idb</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
 ## 改造 TodoMVC
 
 详见[代码](https://github.com/luics/web-dev/blob/master/examples/data/TodoMVC-idb.html)。
