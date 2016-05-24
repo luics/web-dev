@@ -121,8 +121,10 @@ window.onload = function() {
     var data = model.data;
     
     var newTodo = $('.new-todo');
-    newTodo.addEventListener('keyup', function() { // input
+    newTodo.addEventListener('keyup', function() {
       data.msg = newTodo.value;
+    });
+    newTodo.addEventListener('change', function() {
       model.flush();
     });
     newTodo.addEventListener('keyup', function(ev) {

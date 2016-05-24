@@ -6,12 +6,16 @@ const PORT = 3476;
 
 var data = '{}';
 const server = http.createServer(function(req, res) {
-
+  console.log(req.url);
+  
   var urlObj = url.parse(req.url);
   var pathname = urlObj.pathname;
+  
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, GET');
   if (pathname == '/' || pathname == '/init') {
     res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/json');
+    res.setHeader('Content-Type', 'application/json');
     res.end(data + '\n');
   }
   else if (pathname == '/flush') {
