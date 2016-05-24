@@ -38,4 +38,6 @@
     0. [click 延迟](data/click.md)
     0. [改造 TodoMVC](data/mobile.md)
     0. 扩展知识
-        0. [Responsive Web Design](data/rwd.md)-->
+        0. [Responsive Web Design](data/rwd.md)
+        0. [Flexbox](data/flexbox.md)
+        -->
