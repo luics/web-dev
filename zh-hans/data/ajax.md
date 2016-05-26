@@ -2,6 +2,8 @@
 
 ## ***AJAX == HTTP Request***
 
+TODO 给出 HTTP 通信过程
+
 AJAX (Asynchronous JavaScript and XML) 就是 HTTP 网络请求。早年 Web 没有 AJAX 时, 通常是整体刷新页面的, 局部刷新需要通过 iframe 等 tricky 方式实现。AJAX 出现后以 Gmail 为代表的站点触发了大规模的页面体验改造 (史称"Web 2.0")。
 
 代码 - AJAX 简易封装

@@ -7,23 +7,18 @@
 
   Object.assign(model, {
     init: function(callback) {
-      Ajax.get(URL + '/init', function(res) {
-        console.log('inited', res);
-        try {
-          var data = JSON.parse(res);
-          KEYS.forEach(function(key) {
-            if (key in data) model.data[key] = data[key];
-          });
-        } catch (e) {
-          console.error(e);
-        }
+      Ajax.get(URL + '/init', function(data) {
+        console.log('inited', data);
+        KEYS.forEach(function(key) {
+          if (key in data) model.data[key] = data[key];
+        });
         if (callback) callback();
       }, function() {
         console.error(MSG);
       });
     },
     flush: function(callback) {
-      Ajax.get(URL + '/flush?' + encodeURIComponent(JSON.stringify(model.data)), function(res) {
+      Ajax.get(URL + '/flush?data=' + encodeURIComponent(JSON.stringify(model.data)), function(res) {
         console.log('flushed');
         if (callback) callback();
       }, function() {
