@@ -12,7 +12,7 @@ document.cookie = 'id=1';
 
 刷新页面, 通过 Dev Tools Network 或抓包软件 (Windows Fiddler, Mac Charles) 获取到的 HTTP Request 类似:
 
-```shell
+```bash
 GET /index.html HTTP/1.1
 Host: 127.0.0.1:3001
 Cookie: id=1
@@ -54,8 +54,7 @@ document.cookie.replace(/(?:(?:^|.*;\s*)id\s*\=\s*([^;]*).*$)|^.*$/, "$1"); // "
 
 由于原生 Cookie API 非常繁琐, 这里提供了一个简单的 Cookie 库, 简化存取操作。
 
-代码 - [Cookie](https://github.com/luics/web-dev/blob/master/examples/data/cookie.js)
-
+代码 - Cookie 基础封装
 ```js
 (function() {
   /**
@@ -66,6 +65,7 @@ document.cookie.replace(/(?:(?:^|.*;\s*)id\s*\=\s*([^;]*).*$)|^.*$/, "$1"); // "
     /**
      * @param key {String}
      * @returns {String}
+     *
      */
     getItem: function(key) {
       var pattern = '(?:(?:^|.*;\\s*)' + key + '\\s*\\=\\s*([^;]*).*$)|^.*$';

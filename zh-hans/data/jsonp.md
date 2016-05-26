@@ -16,36 +16,7 @@
 
 TODO 给出 JSONP 通信过程
 
-代码 - JSONP 简易封装
-```js
-(function() {
-  var guid = 0;
-  /**
-   * Basic JSONP
-   * @param url {String}
-   * @param [opt] {Object}
-   * @param [opt.onSuccess] {Function}
-   * @param [opt.onFailure] {Function}
-   */
-  window.JSONP = function(url, opt) {
-    opt = opt || {};
-    var script = document.createElement('script');
-    var id = guid++;
-    var jsonp = '__jsonp_' + id;
-    window[jsonp] = function(res) {
-      if (opt.onSuccess) opt.onSuccess(res);
-      // define error & use opt.onFailure
-    };
-    script.onload = function() {
-      document.body.removeChild(script);
-      delete window[jsonp];
-    };
-
-    url += (url.indexOf('?') > -1 ? '&' : '?') + 'jsonp=' + jsonp;
-    script.setAttribute('src', url);
-    document.body.appendChild(script);
-  };
-})();
-```
+代码 - JSONP 基础封装
+[import](../../examples/data/jsonp.js)
 
 主流框架(如 JQuery，Zepto) 都提供了 JSONP 支持，很多时候无需写原生的 JSONP 请求，但是仍然应该了解它的工作原理，否则你会对“JSONP 只支持 GET 请求”这类问题感到费解。
