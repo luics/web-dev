@@ -7,51 +7,7 @@ TODO 给出 HTTP 通信过程
 AJAX (Asynchronous JavaScript and XML) 就是 HTTP 网络请求。早年 Web 没有 AJAX 时, 通常是整体刷新页面的, 局部刷新需要通过 iframe 等 tricky 方式实现。AJAX 出现后以 Gmail 为代表的站点触发了大规模的页面体验改造 (史称"Web 2.0")。
 
 代码 - AJAX 简易封装
-```js
-(function() {
-  var GET = 'get';
-  window.Ajax = {
-    /**
-     * Basic Ajax
-     * @param url {String}
-     * @param [opt] {Object}
-     * @param [opt.onSuccess] {Function}
-     * @param [opt.onFailure] {Function}
-     * @param [opt.cached] {Boolean}
-     */
-    get: function(url, opt) {
-      opt = opt || {};
-      if (opt.cached) {
-        url += (url.indexOf('?') > -1 ? '&' : '?') + new Date().getTime() + 'r';
-      }
-      var request = new XMLHttpRequest();
-      request.onreadystatechange = function() {
-        if (request.readyState === XMLHttpRequest.DONE) {
-          if (request.status >= 200 && request.status < 400) {
-            var ret = request.responseText;
-            var contentType = request.getResponseHeader('content-type');
-            if (contentType == 'application/json' || contentType == 'text/json') {
-              try {
-                ret = JSON.parse(ret);
-              } catch (e) {
-                console.error(e);
-                if (opt.onFailure) opt.onFailure(e);
-              }
-            }
-            if (opt.onSuccess) opt.onSuccess(ret);
-          }
-          else {
-            if (opt.onFailure) opt.onFailure();
-          }
-        }
-      };
-
-      request.open(GET, url, true);
-      request.send(null);
-    }
-  }
-})();
-```
+[import](../../examples/data/ajax.js)
 
 ## 跨域与 CORS
 
@@ -62,7 +18,7 @@ AJAX (Asynchronous JavaScript and XML) 就是 HTTP 网络请求。早年 Web 没
 
 浏览器会阻止 AJAX 请求非同源资源, 除非服务端给出合适的 CORS (Cross Origin Resource Sharing) Header, 比如:
 
-```
+```bash
 HTTP/1.1 200 OK
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST, GET

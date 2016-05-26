@@ -5,11 +5,28 @@
   "language": "zh-hans",
   "gitbook": "2.6.7",
   "plugins": [
-    "disqus"
+    "disqus",
+    "github",
+    "include-codeblock",
+    "editlink"
   ],
   "pluginsConfig": {
     "disqus": {
       "shortName": "web-dev12"
+    },
+    "github": {
+      "url": "https://github.com/luics/web-dev"
+    },
+    "github-buttons": {
+      "repo": "luics/web-dev",
+      "types": [
+        "star",
+        "fork"
+      ]
+    },
+    "editlink": {
+      "base": "https://github.com/luics/web-dev/blob/master/zh-hans",
+      "label": ""
     }
   }
 }
