@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input type="text" id="todo" placeholder="to do something">
+<button type="button" id="add">Add Todo Item</button>
+<div id="list"></div>
+<div id="left"></div>
+
+<script type="text/javascript">
+  function $(id) {
+    return document.getElementById(id);
+  }
+
+  var quantity = 0;
+  function addTodo() {
+    var todo = $('todo');
+    var msg = todo.value;
+    var list = $('list');
+    var left = $('left');
+    if (msg == '') {
+      console.warn('msg is empty');
+      return;
+    }
+    var node = document.createElement('div');
+    node.innerHTML = msg;
+    list.insertBefore(node, list.childNodes[0]);
+
+    quantity++;
+    left.innerHTML = quantity + ' items left';
+    todo.value = '';
+  }
+
+  $('add').addEventListener('click', addTodo, false);
+  $('todo').addEventListener('keyup', function(event) {
+    //console.log(event.keyCode);
+    if (event.keyCode != 13) return;
+    addTodo();
+  }, false);
+</script>
+</body>
+</html>

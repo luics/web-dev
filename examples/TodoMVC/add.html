@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Add</title>
+</head>
+<body>
+<input type="text" id="todo" placeholder="to do something">
+<button type="button" id="add">Add Todo Item</button>
+
+<script type="text/javascript">
+  function $(id) {
+    return document.getElementById(id);
+  }
+  $('add').addEventListener('click', function() {
+    var todo = $('todo');
+    console.log(todo.value);
+  }, false);
+</script>
+</body>
+</html>

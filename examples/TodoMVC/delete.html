@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Delete</title>
+  <style>
+    .list-item {
+      padding: 10px;
+    }
+
+    .list-item:hover {
+      background-color: #ddd;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<input type="text" id="todo" placeholder="to do something" autofocus>
+<button type="button" id="add">Add Todo Item</button>
+<div id="list"></div>
+<div id="left"></div>
+
+<script type="text/javascript">
+  function $(id) {
+    return document.getElementById(id);
+  }
+
+  var quantity = 0;
+
+  function updateLeft() {
+    var left = $('left');
+    left.innerHTML = quantity + ' items left';
+  }
+
+  function addTodo() {
+    var todo = $('todo');
+    var msg = todo.value;
+    var list = $('list');
+    if (msg == '') {
+      console.warn('msg is empty');
+      return;
+    }
+
+    var node = document.createElement('div');
+    node.className = 'list-item';
+    node.innerHTML = msg;
+    list.insertBefore(node, list.childNodes[0]);
+    node.addEventListener('click', function() {
+      list.removeChild(node);
+      --quantity;
+      updateLeft();
+    }, false);
+
+    todo.value = '';
+    ++quantity;
+    updateLeft();
+  }
+
+  $('add').addEventListener('click', addTodo, false);
+  $('todo').addEventListener('keyup', function(event) {
+    if (event.keyCode != 13) return;
+    addTodo();
+  }, false);
+</script>
+</body>
+</html>
