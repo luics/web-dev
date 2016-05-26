@@ -1,16 +1,19 @@
 (function() {
   var GET = 'get';
-  var Ajax = window.Ajax = {
+  window.Ajax = {
     /**
      * Basic Ajax
      * @param url {String}
-     * @param [onSuccess] {Function}
-     * @param [onFailure] {Function}
+     * @param [opt] {Object}
+     * @param [opt.onSuccess] {Function}
+     * @param [opt.onFailure] {Function}
+     * @param [opt.cached] {Boolean}
      */
-    get: function(url, onSuccess, onFailure) {
-      Ajax.io({method: GET, url: url, onSuccess: onSuccess, onFailure: onFailure});
-    },
-    io: function(opt) {
+    get: function(url, opt) {
+      opt = opt || {};
+      if (opt.cached) {
+        url += (url.indexOf('?') > -1 ? '&' : '?') + new Date().getTime() + 'r';
+      }
       var request = new XMLHttpRequest();
       request.onreadystatechange = function() {
         if (request.readyState === XMLHttpRequest.DONE) {
@@ -33,7 +36,7 @@
         }
       };
 
-      request.open(opt.method, opt.url, true);
+      request.open(GET, url, true);
       request.send(null);
     }
   }
