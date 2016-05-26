@@ -55,7 +55,7 @@
         data-chapter-title="JSONP"
         data-filepath="data/jsonp.md"
         data-basepath=".."
-        data-revision="Thu May 26 2016 15:21:08 GMT+0000 (UTC)"
+        data-revision="Thu May 26 2016 15:53:40 GMT+0000 (UTC)"
         data-innerlanguage="zh-hans">
     
 
@@ -503,11 +503,42 @@
 <h2 id="&#x8DE8;&#x57DF;">&#x8DE8;&#x57DF;</h2>
 <p>&#x53C2;&#x89C1;<a href="ajax.html#&#x8DE8;&#x57DF;&#x4E0E;-cors">&#x6B64;&#x5904;</a>&#x3002;</p>
 <h2 id="jsonp">JSONP</h2>
-<p>&#x6D4F;&#x89C8;&#x5668;&#x5BF9;&#x4E8E;&#x8BF7;&#x6C42;&#x5E76;&#x6267;&#x884C;&#x8DE8;&#x57DF;JS&#x811A;&#x672C;&#x5E76;&#x6CA1;&#x6709;&#x9650;&#x5236;, &#x6BD4;&#x5982;&#x6B63;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x9875;&#x9762;&#x662F; <code>http://example.com/a.html</code>, &#x9875;&#x9762;&#x4E2D;&#x5982;&#x4E0B;JS&#x5F15;&#x7528;&#x662F;&#x6709;&#x6548;&#x7684;:</p>
+<p>&#x6D4F;&#x89C8;&#x5668;&#x5BF9;&#x4E8E;&#x8BF7;&#x6C42;&#x5E76;&#x6267;&#x884C;&#x8DE8;&#x57DF;JS&#x811A;&#x672C;&#x5E76;&#x6CA1;&#x6709;&#x9650;&#x5236;&#xFF0C;&#x6BD4;&#x5982;&#x6B63;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x9875;&#x9762;&#x662F; <code>http://example.com/a.html</code>&#xFF0C;&#x9875;&#x9762;&#x4E2D;&#x5982;&#x4E0B;JS&#x5F15;&#x7528;&#x662F;&#x6709;&#x6548;&#x7684;&#xFF1A;</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;http://other.site.com/b.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 </code></pre>
-<p>&#x5229;&#x7528;&#x8FD9;&#x4E00;&#x70B9;, &#x914D;&#x5408; Server &#x7AEF;&#x7684;&#x7279;&#x6B8A;&#x54CD;&#x5E94;&#x7ED3;&#x679C;(&#x6267;&#x884C;&#x51FD;&#x6570;)&#x5C31;&#x53EF;&#x4EE5;&#x505A;&#x5230;&#x8DE8;&#x57DF;&#x8BF7;&#x6C42;:</p>
-<p>&#x4E3B;&#x6D41;&#x6846;&#x67B6;(&#x5982; JQuery, Zepto) &#x90FD;&#x63D0;&#x4F9B;&#x4E86; JSONP &#x652F;&#x6301;, &#x5F88;&#x591A;&#x65F6;&#x5019;&#x65E0;&#x9700;&#x5199;&#x539F;&#x751F;&#x7684; JSONP &#x8BF7;&#x6C42;, &#x4F46;&#x662F;&#x4ECD;&#x7136;&#x5E94;&#x8BE5;&#x4E86;&#x89E3;&#x5B83;&#x7684;&#x5DE5;&#x4F5C;&#x539F;&#x7406;, &#x5426;&#x5219;&#x4F60;&#x4F1A;&#x5BF9;&#x201C;JSONP &#x53EA;&#x652F;&#x6301; GET &#x8BF7;&#x6C42;&#x201D;&#x8FD9;&#x7C7B;&#x95EE;&#x9898;&#x611F;&#x5230;&#x8D39;&#x89E3;&#x3002;</p>
+<p>&#x5229;&#x7528;&#x8FD9;&#x4E00;&#x70B9;&#xFF0C;&#x914D;&#x5408; Server &#x7AEF;&#x7684;&#x7279;&#x6B8A;&#x54CD;&#x5E94;&#x7ED3;&#x679C;&#xFF08;&#x6267;&#x884C;&#x51FD;&#x6570;&#xFF09;&#x5C31;&#x53EF;&#x4EE5;&#x505A;&#x5230;&#x8DE8;&#x57DF;&#x8BF7;&#x6C42;&#xFF1A;</p>
+<p>TODO &#x7ED9;&#x51FA; JSONP &#x901A;&#x4FE1;&#x8FC7;&#x7A0B;</p>
+<p>&#x4EE3;&#x7801; - JSONP &#x7B80;&#x6613;&#x5C01;&#x88C5;</p>
+<pre><code class="lang-js">(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">var</span> guid = <span class="hljs-number">0</span>;
+  <span class="hljs-comment">/**
+   * Basic JSONP
+   * @param url {String}
+   * @param [opt] {Object}
+   * @param [opt.onSuccess] {Function}
+   * @param [opt.onFailure] {Function}
+   */</span>
+  <span class="hljs-built_in">window</span>.JSONP = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">url, opt</span>) </span>{
+    opt = opt || {};
+    <span class="hljs-keyword">var</span> script = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;script&apos;</span>);
+    <span class="hljs-keyword">var</span> id = guid++;
+    <span class="hljs-keyword">var</span> jsonp = <span class="hljs-string">&apos;__jsonp_&apos;</span> + id;
+    <span class="hljs-built_in">window</span>[jsonp] = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+      <span class="hljs-keyword">if</span> (opt.onSuccess) opt.onSuccess(res);
+      <span class="hljs-comment">// define error &amp; use opt.onFailure</span>
+    };
+    script.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+      <span class="hljs-built_in">document</span>.body.removeChild(script);
+      <span class="hljs-keyword">delete</span> <span class="hljs-built_in">window</span>[jsonp];
+    };
+
+    url += (url.indexOf(<span class="hljs-string">&apos;?&apos;</span>) &gt; -<span class="hljs-number">1</span> ? <span class="hljs-string">&apos;&amp;&apos;</span> : <span class="hljs-string">&apos;?&apos;</span>) + <span class="hljs-string">&apos;jsonp=&apos;</span> + jsonp;
+    script.setAttribute(<span class="hljs-string">&apos;src&apos;</span>, url);
+    <span class="hljs-built_in">document</span>.body.appendChild(script);
+  };
+})();
+</code></pre>
+<p>&#x4E3B;&#x6D41;&#x6846;&#x67B6;(&#x5982; JQuery&#xFF0C;Zepto) &#x90FD;&#x63D0;&#x4F9B;&#x4E86; JSONP &#x652F;&#x6301;&#xFF0C;&#x5F88;&#x591A;&#x65F6;&#x5019;&#x65E0;&#x9700;&#x5199;&#x539F;&#x751F;&#x7684; JSONP &#x8BF7;&#x6C42;&#xFF0C;&#x4F46;&#x662F;&#x4ECD;&#x7136;&#x5E94;&#x8BE5;&#x4E86;&#x89E3;&#x5B83;&#x7684;&#x5DE5;&#x4F5C;&#x539F;&#x7406;&#xFF0C;&#x5426;&#x5219;&#x4F60;&#x4F1A;&#x5BF9;&#x201C;JSONP &#x53EA;&#x652F;&#x6301; GET &#x8BF7;&#x6C42;&#x201D;&#x8FD9;&#x7C7B;&#x95EE;&#x9898;&#x611F;&#x5230;&#x8D39;&#x89E3;&#x3002;</p>
 
                     
                     </section>

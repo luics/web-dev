@@ -57,7 +57,7 @@
         data-chapter-title="Ajax"
         data-filepath="data/ajax.md"
         data-basepath=".."
-        data-revision="Thu May 26 2016 15:21:08 GMT+0000 (UTC)"
+        data-revision="Thu May 26 2016 15:53:40 GMT+0000 (UTC)"
         data-innerlanguage="zh-hans">
     
 
@@ -508,16 +508,35 @@
 <p>&#x4EE3;&#x7801; - AJAX &#x7B80;&#x6613;&#x5C01;&#x88C5;</p>
 <pre><code class="lang-js">(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">var</span> GET = <span class="hljs-string">&apos;get&apos;</span>;
-  <span class="hljs-keyword">var</span> Ajax = <span class="hljs-built_in">window</span>.Ajax = {
-    get: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">url, onSuccess, onFailure</span>) </span>{
-      Ajax.io({method: GET, url: url, onSuccess: onSuccess, onFailure: onFailure});
-    },
-    io: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">opt</span>) </span>{
+  <span class="hljs-built_in">window</span>.Ajax = {
+    <span class="hljs-comment">/**
+     * Basic Ajax
+     * @param url {String}
+     * @param [opt] {Object}
+     * @param [opt.onSuccess] {Function}
+     * @param [opt.onFailure] {Function}
+     * @param [opt.cached] {Boolean}
+     */</span>
+    get: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">url, opt</span>) </span>{
+      opt = opt || {};
+      <span class="hljs-keyword">if</span> (opt.cached) {
+        url += (url.indexOf(<span class="hljs-string">&apos;?&apos;</span>) &gt; -<span class="hljs-number">1</span> ? <span class="hljs-string">&apos;&amp;&apos;</span> : <span class="hljs-string">&apos;?&apos;</span>) + <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>().getTime() + <span class="hljs-string">&apos;r&apos;</span>;
+      }
       <span class="hljs-keyword">var</span> request = <span class="hljs-keyword">new</span> XMLHttpRequest();
       request.onreadystatechange = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
         <span class="hljs-keyword">if</span> (request.readyState === XMLHttpRequest.DONE) {
           <span class="hljs-keyword">if</span> (request.status &gt;= <span class="hljs-number">200</span> &amp;&amp; request.status &lt; <span class="hljs-number">400</span>) {
-            <span class="hljs-keyword">if</span> (opt.onSuccess) opt.onSuccess(request.responseText);
+            <span class="hljs-keyword">var</span> ret = request.responseText;
+            <span class="hljs-keyword">var</span> contentType = request.getResponseHeader(<span class="hljs-string">&apos;content-type&apos;</span>);
+            <span class="hljs-keyword">if</span> (contentType == <span class="hljs-string">&apos;application/json&apos;</span> || contentType == <span class="hljs-string">&apos;text/json&apos;</span>) {
+              <span class="hljs-keyword">try</span> {
+                ret = <span class="hljs-built_in">JSON</span>.parse(ret);
+              } <span class="hljs-keyword">catch</span> (e) {
+                <span class="hljs-built_in">console</span>.error(e);
+                <span class="hljs-keyword">if</span> (opt.onFailure) opt.onFailure(e);
+              }
+            }
+            <span class="hljs-keyword">if</span> (opt.onSuccess) opt.onSuccess(ret);
           }
           <span class="hljs-keyword">else</span> {
             <span class="hljs-keyword">if</span> (opt.onFailure) opt.onFailure();
@@ -525,7 +544,7 @@
         }
       };
 
-      request.open(opt.method, opt.url, <span class="hljs-literal">true</span>);
+      request.open(GET, url, <span class="hljs-literal">true</span>);
       request.send(<span class="hljs-literal">null</span>);
     }
   }
