@@ -20,6 +20,12 @@ Cookie: id=1
 
 `Cookie: id=1` 出现在了请求 HEADER 中, 同时也出现在了 Response 中, 继续刷新页面 `Cookie: id=1` 仍然存在; 换个角度理解: `Cookie: id=1` 好比是 HTTP 通信过程中的一个状态数据, 比如 `id=1` 可以标记一个用户或一台设备。Cookie 为无状态的 (Stateless) HTTP 添加了状态, 这就是 Cookie 存在的意义。
 
+{% mermaid %}
+sequenceDiagram
+    Browser->>Server: Cookie: id=1
+    Server-->>Browser: Cookie: id=1
+{% endmermaid %}
+
 使用 Cookie 来存储数据并不常见, 通常是针对非登录用户的, 如购物类站点存储购物车中的商品列表。但是更多的场景下我们并不使用 Cookie 来存储数据, 原因是:
  
  0. Cookie 存储容量是有上限的, 不同浏览器有差异, 典型值是 4KB, 容量非常小
@@ -55,6 +61,8 @@ document.cookie.replace(/(?:(?:^|.*;\s*)id\s*\=\s*([^;]*).*$)|^.*$/, "$1"); // "
 由于原生 Cookie API 非常繁琐, 这里提供了一个简单的 Cookie 库, 简化存取操作。
 
 代码 - Cookie 基础封装
+> [cookie.js](../../examples/data/cookie.js)
+
 ```js
 (function() {
   /**
