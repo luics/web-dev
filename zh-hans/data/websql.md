@@ -11,7 +11,7 @@ db.transaction(
       transaction.executeSql('CREATE TABLE IF NOT EXISTS CONF (k unique, v)');
       transaction.executeSql('INSERT INTO CONF (k, v) VALUES (?, ?)', ['msg', 'ok'], 
           function(t, result) {
-            console.log(result);
+            console.log('result', result);
           }, 
           function(t, error) {
             console.log(error);
@@ -22,7 +22,7 @@ db.transaction(
       console.log('error');
     },
     function() {
-      console.log('sucess');
+      console.log('success');
     }
 );
 ```

@@ -13,13 +13,18 @@
 
 ## 原理
 
-### 作用域
+### Execution Context
 
 TODO
 
-### 作用域链
+http://dmitrysoshnikov.com/ecmascript/chapter-1-execution-contexts/
+
+
+### Scope Chain
 
 TODO
+
+http://dmitrysoshnikov.com/ecmascript/chapter-4-scope-chain/
 
 ### 实例分析
 
