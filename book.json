@@ -7,7 +7,6 @@
   "plugins": [
     "disqus",
     "github",
-    "mermaid",
     "include-codeblock",
     "editlink"
   ],

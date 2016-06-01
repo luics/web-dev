@@ -14,13 +14,15 @@
 
 利用这一点，配合 Server 端的特殊响应结果（执行函数）就可以做到跨域请求，一次典型的 JSONP 通信过程如下：
 
-{% mermaid %}
+<div class="mermaid">
 sequenceDiagram
     Code->>Browser: &lt;script src="//host?jsonp=__jsonp" /&gt;
     Browser->>Server: GET host?jsonp=__jsonp HTTP/1.1
     Server-->>Browser: __jsonp({data:123});
     Browser-->>Code: onSuccess({data:123});
-{% endmermaid %}
+</div>
+<script src="../common/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
 
 代码 - JSONP 基础封装
 [import](../../examples/data/jsonp.js)

@@ -20,11 +20,14 @@ Cookie: id=1
 
 `Cookie: id=1` 出现在了请求 HEADER 中, 同时也出现在了 Response 中, 继续刷新页面 `Cookie: id=1` 仍然存在; 换个角度理解: `Cookie: id=1` 好比是 HTTP 通信过程中的一个状态数据, 比如 `id=1` 可以标记一个用户或一台设备。Cookie 为无状态的 (Stateless) HTTP 添加了状态, 这就是 Cookie 存在的意义。
 
-{% mermaid %}
+
+<div class="mermaid">
 sequenceDiagram
     Browser->>Server: Cookie: id=1
     Server-->>Browser: Cookie: id=1
-{% endmermaid %}
+</div>
+<script src="../common/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
 
 使用 Cookie 来存储数据并不常见, 通常是针对非登录用户的, 如购物类站点存储购物车中的商品列表。但是更多的场景下我们并不使用 Cookie 来存储数据, 原因是:
  
