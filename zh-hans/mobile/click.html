@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>JSONP | Web Dev Course</title>
+        <title>click 延迟 | Web Dev Course</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -41,10 +41,10 @@
         
     
     
-    <link rel="next" href="../more.html" />
+    <link rel="next" href="../mobile/todo.html" />
     
     
-    <link rel="prev" href="../data/ajax.html" />
+    <link rel="prev" href="../mobile/viewport.html" />
     
 
         
@@ -53,9 +53,9 @@
         
         
     <div class="book"
-        data-level="2.7.2"
-        data-chapter-title="JSONP"
-        data-filepath="data/jsonp.md"
+        data-level="4.2"
+        data-chapter-title="click 延迟"
+        data-filepath="mobile/click.md"
         data-basepath=".."
         data-revision="Wed Jun 01 2016 11:53:08 GMT+0000 (UTC)"
         data-innerlanguage="zh-hans">
@@ -443,7 +443,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.7.2" data-path="data/jsonp.html">
+        <li class="chapter " data-level="2.7.2" data-path="data/jsonp.html">
             
                 
                     <a href="../data/jsonp.html">
@@ -514,7 +514,7 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2" data-path="mobile/click.html">
+        <li class="chapter active" data-level="4.2" data-path="mobile/click.html">
             
                 
                     <a href="../mobile/click.html">
@@ -582,58 +582,7 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="jsonp">JSONP</h1>
-<h2 id="&#x8DE8;&#x57DF;">&#x8DE8;&#x57DF;</h2>
-<p>&#x53C2;&#x89C1;<a href="ajax.html#&#x8DE8;&#x57DF;&#x4E0E;-cors">&#x6B64;&#x5904;</a>&#x3002;</p>
-<h2 id="jsonp">JSONP</h2>
-<p>&#x6D4F;&#x89C8;&#x5668;&#x5BF9;&#x4E8E;&#x8BF7;&#x6C42;&#x5E76;&#x6267;&#x884C;&#x8DE8;&#x57DF;JS&#x811A;&#x672C;&#x5E76;&#x6CA1;&#x6709;&#x9650;&#x5236;&#xFF0C;&#x6BD4;&#x5982;&#x6B63;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x9875;&#x9762;&#x662F; <code>http://example.com/a.html</code>&#xFF0C;&#x9875;&#x9762;&#x4E2D;&#x5982;&#x4E0B;JS&#x5F15;&#x7528;&#x662F;&#x6709;&#x6548;&#x7684;&#xFF1A;</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;http://other.site.com/b.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
-</code></pre>
-<p>&#x5229;&#x7528;&#x8FD9;&#x4E00;&#x70B9;&#xFF0C;&#x914D;&#x5408; Server &#x7AEF;&#x7684;&#x7279;&#x6B8A;&#x54CD;&#x5E94;&#x7ED3;&#x679C;&#xFF08;&#x6267;&#x884C;&#x51FD;&#x6570;&#xFF09;&#x5C31;&#x53EF;&#x4EE5;&#x505A;&#x5230;&#x8DE8;&#x57DF;&#x8BF7;&#x6C42;&#xFF0C;&#x4E00;&#x6B21;&#x5178;&#x578B;&#x7684; JSONP &#x901A;&#x4FE1;&#x8FC7;&#x7A0B;&#x5982;&#x4E0B;&#xFF1A;</p>
-<p><div class="mermaid">
-sequenceDiagram
-    Code-&gt;&gt;Browser: &lt;script src=&quot;//host?jsonp=__jsonp&quot; /&gt;
-    Browser-&gt;&gt;Server: GET host?jsonp=__jsonp HTTP/1.1
-    Server--&gt;&gt;Browser: __jsonp({data:123});
-    Browser--&gt;&gt;Code: onSuccess({data:123});
-</div></p>
-<script src="../common/mermaid.min.js"></script>
-<script>mermaid.initialize({startOnLoad:true});</script>
-
-<p>&#x4EE3;&#x7801; - JSONP &#x57FA;&#x7840;&#x5C01;&#x88C5;</p>
-<blockquote>
-<p><a id="jsonp.js" href="../../examples/data/jsonp.js">jsonp.js</a></p>
-</blockquote>
-<pre><code class="lang-javascript">(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-keyword">var</span> guid = <span class="hljs-number">0</span>;
-  <span class="hljs-comment">/**
-   * Basic JSONP
-   * @param url {String}
-   * @param [opt] {Object}
-   * @param [opt.onSuccess] {Function}
-   * @param [opt.onFailure] {Function}
-   */</span>
-  <span class="hljs-built_in">window</span>.JSONP = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">url, opt</span>) </span>{
-    opt = opt || {};
-    <span class="hljs-keyword">var</span> script = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;script&apos;</span>);
-    <span class="hljs-keyword">var</span> id = guid++;
-    <span class="hljs-keyword">var</span> jsonp = <span class="hljs-string">&apos;__jsonp_&apos;</span> + id;
-    <span class="hljs-built_in">window</span>[jsonp] = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-      <span class="hljs-keyword">if</span> (opt.onSuccess) opt.onSuccess(res);
-      <span class="hljs-comment">// define error &amp; use opt.onFailure</span>
-    };
-    script.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-      <span class="hljs-built_in">document</span>.body.removeChild(script);
-      <span class="hljs-keyword">delete</span> <span class="hljs-built_in">window</span>[jsonp];
-    };
-
-    url += (url.indexOf(<span class="hljs-string">&apos;?&apos;</span>) &gt; -<span class="hljs-number">1</span> ? <span class="hljs-string">&apos;&amp;&apos;</span> : <span class="hljs-string">&apos;?&apos;</span>) + <span class="hljs-string">&apos;jsonp=&apos;</span> + jsonp;
-    script.setAttribute(<span class="hljs-string">&apos;src&apos;</span>, url);
-    <span class="hljs-built_in">document</span>.body.appendChild(script);
-  };
-})();
-</code></pre>
-<p>&#x4E3B;&#x6D41;&#x6846;&#x67B6;(&#x5982; JQuery&#xFF0C;Zepto) &#x90FD;&#x63D0;&#x4F9B;&#x4E86; JSONP &#x652F;&#x6301;&#xFF0C;&#x5F88;&#x591A;&#x65F6;&#x5019;&#x65E0;&#x9700;&#x5199;&#x539F;&#x751F;&#x7684; JSONP &#x8BF7;&#x6C42;&#xFF0C;&#x4F46;&#x662F;&#x4ECD;&#x7136;&#x5E94;&#x8BE5;&#x4E86;&#x89E3;&#x5B83;&#x7684;&#x5DE5;&#x4F5C;&#x539F;&#x7406;&#xFF0C;&#x5426;&#x5219;&#x4F60;&#x4F1A;&#x5BF9;&#x201C;JSONP &#x53EA;&#x652F;&#x6301; GET &#x8BF7;&#x6C42;&#x201D;&#x8FD9;&#x7C7B;&#x95EE;&#x9898;&#x611F;&#x5230;&#x8D39;&#x89E3;&#x3002;</p>
+                        <h1 id="click-&#x5EF6;&#x8FDF;">click &#x5EF6;&#x8FDF;</h1>
 
                     
                     </section>
@@ -644,10 +593,10 @@ sequenceDiagram
         </div>
 
         
-        <a href="../data/ajax.html" class="navigation navigation-prev " aria-label="Previous page: Ajax"><i class="fa fa-angle-left"></i></a>
+        <a href="../mobile/viewport.html" class="navigation navigation-prev " aria-label="Previous page: viewport"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../more.html" class="navigation navigation-next " aria-label="Next page: 深度阅读"><i class="fa fa-angle-right"></i></a>
+        <a href="../mobile/todo.html" class="navigation navigation-next " aria-label="Next page: 改造 TodoMVC"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

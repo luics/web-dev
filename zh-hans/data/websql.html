@@ -57,7 +57,7 @@
         data-chapter-title="Web SQL Database"
         data-filepath="data/websql.md"
         data-basepath=".."
-        data-revision="Thu May 26 2016 16:38:23 GMT+0000 (UTC)"
+        data-revision="Wed Jun 01 2016 11:53:08 GMT+0000 (UTC)"
         data-innerlanguage="zh-hans">
     
 
@@ -468,6 +468,87 @@
             
         </li>
     
+        <li class="chapter " data-level="3" data-path="more.html">
+            
+                
+                    <a href="../more.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        深度阅读
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="mobile/index.html">
+            
+                
+                    <a href="../mobile/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Mobile
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="mobile/viewport.html">
+            
+                
+                    <a href="../mobile/viewport.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        viewport
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="mobile/click.html">
+            
+                
+                    <a href="../mobile/click.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        click 延迟
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="mobile/todo.html">
+            
+                
+                    <a href="../mobile/todo.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        改造 TodoMVC
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
 
             
@@ -510,7 +591,7 @@ db.transaction(
       transaction.executeSql(<span class="hljs-string">&apos;CREATE TABLE IF NOT EXISTS CONF (k unique, v)&apos;</span>);
       transaction.executeSql(<span class="hljs-string">&apos;INSERT INTO CONF (k, v) VALUES (?, ?)&apos;</span>, [<span class="hljs-string">&apos;msg&apos;</span>, <span class="hljs-string">&apos;ok&apos;</span>], 
           <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">t, result</span>) </span>{
-            <span class="hljs-built_in">console</span>.log(result);
+            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;result&apos;</span>, result);
           }, 
           <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">t, error</span>) </span>{
             <span class="hljs-built_in">console</span>.log(error);
@@ -521,7 +602,7 @@ db.transaction(
       <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;error&apos;</span>);
     },
     <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;sucess&apos;</span>);
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;success&apos;</span>);
     }
 );
 </code></pre>
