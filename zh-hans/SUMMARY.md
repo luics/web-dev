@@ -31,7 +31,6 @@
     0. [Server](data/server.md)
         0. [Ajax](data/ajax.md)
         0. [JSONP](data/jsonp.md)
-0. [深度阅读](more.md)
 0. [Mobile](mobile/index.md)
     0. [viewport](mobile/viewport.md)
     0. [click 延迟](mobile/click.md)
@@ -40,3 +39,4 @@
         0. [Responsive Web Design](data/rwd.md)
         0. [Flexbox](data/flexbox.md)
         -->
+0. [深度阅读](more.md)
