@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width" name="viewport"/>
+  <title>Touch</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    #box {
+      width: 100px;
+      height: 100px;
+      background: #7BA3A8;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+
+<div id="box"></div>
+
+<script>
+  var box = document.getElementById('box');
+  var oldTouch;
+  touchHandler = {
+    start: function(ev) {
+      console.log(ev.type, ev);
+      var style = box.style;
+      style.backgroundColor = '#F35A4A';
+      oldTouch = ev.touches[0];
+    },
+    move: function(ev) {
+      var newTouch = ev.touches[0];
+      var style = box.style;
+      var left = parseFloat(style.left || 0) + (newTouch.clientX - oldTouch.clientX) + 'px';
+      var top = parseFloat(style.top || 0) + (newTouch.clientY - oldTouch.clientY) + 'px';
+      oldTouch = ev.touches[0];
+      console.log(ev.type, left, top);
+      style.left = left;
+      style.top = top;
+    },
+    end: function(ev) {
+      console.log(ev.type);
+      var style = box.style;
+      style.backgroundColor = '#7BA3A8';
+    },
+    cancel: function(ev) {
+      console.log(ev.type);
+      var style = box.style;
+      style.backgroundColor = '#7BA3A8';
+    }
+  };
+
+  box.addEventListener('touchstart', touchHandler.start, false);
+  box.addEventListener('touchmove', touchHandler.move, false);
+  box.addEventListener('touchend', touchHandler.end, false);
+  box.addEventListener('touchcancel', touchHandler.cancel, false);
+  
+</script>
+</body>
+</html>

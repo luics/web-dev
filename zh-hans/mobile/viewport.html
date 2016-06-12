@@ -53,11 +53,11 @@
         
         
     <div class="book"
-        data-level="4.1"
+        data-level="3.1"
         data-chapter-title="viewport"
         data-filepath="mobile/viewport.md"
         data-basepath=".."
-        data-revision="Wed Jun 01 2016 11:53:08 GMT+0000 (UTC)"
+        data-revision="Sun Jun 12 2016 12:20:28 GMT+0000 (UTC)"
         data-innerlanguage="zh-hans">
     
 
@@ -468,29 +468,14 @@
             
         </li>
     
-        <li class="chapter " data-level="3" data-path="more.html">
-            
-                
-                    <a href="../more.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.</b>
-                        
-                        深度阅读
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="4" data-path="mobile/index.html">
+        <li class="chapter " data-level="3" data-path="mobile/index.html">
             
                 
                     <a href="../mobile/index.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>4.</b>
+                            <b>3.</b>
                         
                         Mobile
                     </a>
@@ -499,14 +484,14 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="4.1" data-path="mobile/viewport.html">
+        <li class="chapter active" data-level="3.1" data-path="mobile/viewport.html">
             
                 
                     <a href="../mobile/viewport.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>4.1.</b>
+                            <b>3.1.</b>
                         
                         viewport
                     </a>
@@ -514,14 +499,14 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2" data-path="mobile/click.html">
+        <li class="chapter " data-level="3.2" data-path="mobile/click.html">
             
                 
                     <a href="../mobile/click.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>4.2.</b>
+                            <b>3.2.</b>
                         
                         click 延迟
                     </a>
@@ -529,14 +514,14 @@
             
         </li>
     
-        <li class="chapter " data-level="4.3" data-path="mobile/todo.html">
+        <li class="chapter " data-level="3.3" data-path="mobile/todo.html">
             
                 
                     <a href="../mobile/todo.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>4.3.</b>
+                            <b>3.3.</b>
                         
                         改造 TodoMVC
                     </a>
@@ -546,6 +531,21 @@
     
 
             </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="more.html">
+            
+                
+                    <a href="../more.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        深度阅读
+                    </a>
+            
             
         </li>
     
@@ -584,7 +584,7 @@
                     
                         <h1 id="viewport">Viewport</h1>
 <h2 id="meta">Meta</h2>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">&quot; width=device-width,initial-scale=1,user-scalable=no,maximum-scale=1&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;viewport&quot;</span>/&gt;</span>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">&quot;width=device-width,initial-scale=1,user-scalable=no,maximum-scale=1&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;viewport&quot;</span>/&gt;</span>
 </code></pre>
 <p>&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x662F;Mobile&#x9875;&#x9762;&#x4F7F;&#x7528;Viewport&#x7684;&#x901A;&#x7528;&#x65B9;&#x5F0F;&#x3002;&#x5927;&#x610F;&#x662F;&#xFF1A;&#x9875;&#x9762; CSS &#x8BA1;&#x7B97;&#x65F6;&#x4F7F;&#x7528;&#x7684;&#x5BBD;&#x5EA6;&#xFF08;<code>width</code>&#xFF09;&#x6839;&#x636E;&#x8BBE;&#x5907;&#x7ED9;&#x5B9A;&#x503C;&#xFF08;<code>device-width</code>&#xFF09;&#x3001;&#x521D;&#x59CB;&#x4E0D;&#x7F29;&#x653E;&#xFF08;<code>initial-scale=1</code>&#xFF09;&#x3001;&#x4E0D;&#x5141;&#x8BB8;&#x7528;&#x6237;&#x7F29;&#x653E;&#xFF08;<code>user-scalable=no</code>&#xFF09;&#x3001;&#x6700;&#x5927;&#x7F29;&#x653E;&#x56E0;&#x5B50;&#x4E3A;1&#xFF08;<code>maximum-scale=1</code>&#xFF09;&#x3002; </p>
 <p>Viewport&#x6700;&#x521D;&#x662F;iOS Safari&#x7684;&#x79C1;&#x6709;&#x5C5E;&#x6027;&#xFF0C;&#x4EE5;&#x4E0B;&#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#x6458;&#x81EA;<a href="https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html" target="_blank">iOS Developer Library</a>&#x3002;</p>
@@ -596,62 +596,39 @@
 <li><code>minimum-scale</code>&#xFF1A;&#x5141;&#x8BB8;&#x7528;&#x6237;&#x7F29;&#x653E;&#x5230;&#x7684;&#x6700;&#x5C0F;&#x6BD4;&#x4F8B;&#x3002;</li>
 <li><code>user-scalable</code>&#xFF1A;&#x7528;&#x6237;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x624B;&#x52A8;&#x7F29;&#x653E;&#x3002;</li>
 </ol>
-<h3 id="width">width</h3>
-<p>Viewport &#x4E2D;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;<code>width</code>&#x4E3A;&#x56FA;&#x5B9A;&#x503C;&#xFF1A;</p>
-<blockquote>
-<p><a id="viewport-width.html" href="../../examples/mobile/viewport-width.html">viewport-width.html</a></p>
-</blockquote>
-<pre><code class="lang-html"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">html</span> <span class="hljs-attribute">lang</span>=<span class="hljs-value">&quot;en&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">&quot;width=320&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;viewport&quot;</span>/&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Viewport width = 320<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
-</code></pre>
-<p>&#x5728;&#x4E0D;&#x540C;&#x7684;&#x8BBE;&#x5907;&#x4E0A;&#xFF08;&#x7528;&#x6A2A;&#x7AD6;&#x5C4F;&#x6A21;&#x62DF;&#xFF09;&#x5207;&#x6362;&#x540E;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x660E;&#x663E;&#x7684;&#x5DEE;&#x5F02;&#xFF1A;</p>
-<p>TODO &#x622A;&#x56FE;</p>
-<p><code>width</code>&#x66F4;&#x4E3A;&#x5E38;&#x7528;&#x7684;&#x503C;&#x662F;<code>device-width</code>&#xFF1A;</p>
-<blockquote>
-<p><a id="viewport-device-width.html" href="../../examples/mobile/viewport-device-width.html">viewport-device-width.html</a></p>
-</blockquote>
-<pre><code class="lang-html"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">html</span> <span class="hljs-attribute">lang</span>=<span class="hljs-value">&quot;en&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">&quot;width=device-width&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;viewport&quot;</span>/&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Viewport width = device-width<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
-</code></pre>
-<p>&#x6A2A;&#x7AD6;&#x5C4F;&#x5207;&#x6362;&#x540E;&#xFF1A;</p>
-<p>TODO &#x622A;&#x56FE;</p>
 <h3 id="&#x52A8;&#x6001;&#x8F7D;&#x5165;">&#x52A8;&#x6001;&#x8F7D;&#x5165;</h3>
 <p>&#x67D0;&#x4E9B;&#x573A;&#x666F;&#x4E0B;&#x4F1A;&#x9700;&#x8981;&#x52A8;&#x6001;&#x8F7D;&#x5165; Viewport&#xFF0C;&#x4EE5;&#x4FBF;&#x8BA9;&#x9875;&#x9762;&#x80FD;&#x591F;&#x66F4;&#x597D;&#x5730;&#x5448;&#x73B0;&#x5728; Mobile &#x6D4F;&#x89C8;&#x5668;&#x6216; WebView &#x4E2D;:</p>
-<blockquote>
-<p><a id="viewport-load.html" href="../../examples/mobile/viewport-load.html">viewport-load.html</a></p>
-</blockquote>
-<pre><code class="lang-html"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">html</span> <span class="hljs-attribute">lang</span>=<span class="hljs-value">&quot;en&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Viewport Load<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">&quot;width: 200px;height: 60px;&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
-  setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">addViewportSupport</span>(<span class="hljs-params"></span>) </span>{
-    <span class="hljs-keyword">var</span> viewport = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;meta&apos;</span>);
-    viewport.name = <span class="hljs-string">&apos;viewport&apos;</span>;
-    viewport.content = <span class="hljs-string">&apos;initial-scale=1,maximum-scale=1,user-scalable=no, width=device-width&apos;</span>;
-    <span class="hljs-built_in">document</span>.head.appendChild(viewport);
-  }, <span class="hljs-number">2000</span>);
-</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
-</code></pre>
+<p> </p><p data-height="265" data-theme-id="0" data-slug-hash="LZVOoG" data-default-tab="html,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/LZVOoG/" target="_blank">mobile-vp-load</a> by luics (<a href="http://codepen.io/luics" target="_blank">@luics</a>) on <a href="http://codepen.io" target="_blank">CodePen</a>.</p>
+ <script async src="//assets.codepen.io/assets/embed/ei.js"></script><p></p>
 <p>&#x8FD9;&#x91CC;&#x505A;&#x4E86; 2000ms &#x7684;&#x5EF6;&#x65F6;&#x52A0;&#x8F7D;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x754C;&#x9762;&#x4E2D;&#x6587;&#x6848;&#x548C;&#x6309;&#x94AE;&#x7684;&#x660E;&#x663E;&#x53D8;&#x5316;&#xFF1A;</p>
-<p>TODO &#x622A;&#x56FE;</p>
+<p><img style="box-shadow: 0 0 5px #ddd;" src="http://gw.alicdn.com/tps/TB1k9vTKXXXXXbbXXXXXXXXXXXX-764-580.png" height="290"> <img style="box-shadow: 0 0 5px #ddd;" src="http://gw.alicdn.com/tps/TB1oB2pKXXXXXb2XVXXXXXXXXXX-764-580.png" height="290"></p>
+<p><img src="https://gw.alicdn.com/tps/TB1R6AzKXXXXXarXFXXXXXXXXXX-280-280.png" width="200" ali="qr"></p>
+<h3 id="width">width</h3>
+<p>&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x611F;&#x53D7;<code>width</code>&#x7684;&#x610F;&#x4E49;&#xFF1A;width/height &#x662F;&#x8BBE;&#x7F6E; CSS &#x4E2D;&#x7528;&#x4E8E;&#x8BA1;&#x7B97;&#x7684;&#x5168;&#x5C4F;&#x5BBD;&#x5EA6;&#x3002;</p>
+<p></p><p data-height="265" data-theme-id="0" data-slug-hash="VjLrom" data-default-tab="html,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/VjLrom/" target="_blank">mobile-init</a> by luics (<a href="http://codepen.io/luics" target="_blank">@luics</a>) on <a href="http://codepen.io" target="_blank">CodePen</a>.</p><p></p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<p><img src="https://gw.alicdn.com/tps/TB1EaAVKXXXXXXBXXXXXXXXXXXX-280-280.png" width="200" ali="qr"></p>
+<h3 id="&#x56FA;&#x5B9A;&#x503C;">&#x56FA;&#x5B9A;&#x503C;</h3>
+<p>Viewport &#x4E2D;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;<code>width</code>&#x4E3A;&#x56FA;&#x5B9A;&#x503C;&#xFF1A;</p>
+<p></p><p data-height="265" data-theme-id="0" data-slug-hash="WxvdjL" data-default-tab="html,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/WxvdjL/" target="_blank">mobile-width-320</a> by luics (<a href="http://codepen.io/luics" target="_blank">@luics</a>) on <a href="http://codepen.io" target="_blank">CodePen</a>.</p><p></p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<p><img src="https://gw.alicdn.com/tps/TB1IlsCKXXXXXXRXFXXXXXXXXXX-280-280.png" width="200" ali="qr"></p>
+<p>&#x5728;&#x4E0D;&#x540C;&#x7684;&#x8BBE;&#x5907;&#x4E0A;&#xFF08;&#x7528;&#x6A2A;&#x7AD6;&#x5C4F;&#x6A21;&#x62DF;&#xFF09;&#x5207;&#x6362;&#x540E;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x660E;&#x663E;&#x7684;&#x5DEE;&#x5F02;&#xFF1A;</p>
+<p><img style="box-shadow: 0 0 5px #ddd;" src="https://gw.alicdn.com/tps/TB1upvfKXXXXXctaXXXXXXXXXXX-1080-1920.png" width="240"> <img style="box-shadow: 0 0 5px #ddd;" src="https://gw.alicdn.com/tps/TB1QCTTKXXXXXbOXXXXXXXXXXXX-1920-1080.png" height="240"></p>
+<h3 id="devicewidth">device-width</h3>
+<p><code>width</code>&#x66F4;&#x4E3A;&#x5E38;&#x7528;&#x7684;&#x503C;&#x662F;<code>device-width</code>&#xFF1A;</p>
+<p></p><p data-height="265" data-theme-id="0" data-slug-hash="yJNpbd" data-default-tab="html,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/yJNpbd/" target="_blank">mobile-vp-decivewidth</a> by luics (<a href="http://codepen.io/luics" target="_blank">@luics</a>) on <a href="http://codepen.io" target="_blank">CodePen</a>.</p><p></p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<p><img src="https://gw.alicdn.com/tps/TB1h4cTKXXXXXaFXXXXXXXXXXXX-280-280.png" width="200" ali="qr"></p>
+<p>&#x6A2A;&#x7AD6;&#x5C4F;&#x5207;&#x6362;&#x540E;&#xFF1A;</p>
+<p><img style="box-shadow: 0 0 5px #ddd;" src="https://gw.alicdn.com/tps/TB1V66MKXXXXXa7XpXXXXXXXXXX-1080-1920.png" width="240"> <img style="box-shadow: 0 0 5px #ddd;" src="https://gw.alicdn.com/tps/TB1VezmKXXXXXX_aXXXXXXXXXXX-1920-1080.png" height="240"></p>
+<h2 id="&#x7EC3;&#x4E60;">&#x7EC3;&#x4E60;</h2>
+<ul>
+<li>&#x5C1D;&#x8BD5;&#x4E3A;<code>height</code>&#x5B9E;&#x73B0;<code>width</code>&#x7AE0;&#x8282;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x4F8B;&#x5B50;&#x3002;</li>
+</ul>
 
                     
                     </section>
