@@ -21,29 +21,50 @@ Viewport最初是iOS Safari的私有属性，以下属性定义摘自[iOS Develo
 
 某些场景下会需要动态载入 Viewport，以便让页面能够更好地呈现在 Mobile 浏览器或 WebView 中:
 
-[import](../../examples/mobile/viewport-load.html) 
+ <p data-height="265" data-theme-id="0" data-slug-hash="LZVOoG" data-default-tab="html,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/LZVOoG/">mobile-vp-load</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+ <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 这里做了 2000ms 的延时加载，可以看到界面中文案和按钮的明显变化：
 
 <img style="box-shadow: 0 0 5px #ddd;" src="http://gw.alicdn.com/tps/TB1k9vTKXXXXXbbXXXXXXXXXXXX-764-580.png" height="290"> <img style="box-shadow: 0 0 5px #ddd;" src="http://gw.alicdn.com/tps/TB1oB2pKXXXXXb2XVXXXXXXXXXX-764-580.png" height="290">
 
+<img src="https://gw.alicdn.com/tps/TB1R6AzKXXXXXarXFXXXXXXXXXX-280-280.png" width="200" ali="qr">
+
 ### width
 
+通过一个例子感受`width`的意义：width/height 是设置 CSS 中用于计算的全屏宽度。
+
+<p data-height="265" data-theme-id="0" data-slug-hash="VjLrom" data-default-tab="html,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/VjLrom/">mobile-init</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<img src="https://gw.alicdn.com/tps/TB1EaAVKXXXXXXBXXXXXXXXXXXX-280-280.png" width="200" ali="qr">
+
+### 固定值
 Viewport 中可以设置`width`为固定值：
 
-[import](../../examples/mobile/viewport-width.html)
+<p data-height="265" data-theme-id="0" data-slug-hash="WxvdjL" data-default-tab="html,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/WxvdjL/">mobile-width-320</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<img src="https://gw.alicdn.com/tps/TB1IlsCKXXXXXXRXFXXXXXXXXXX-280-280.png" width="200" ali="qr">
 
 在不同的设备上（用横竖屏模拟）切换后可以看到明显的差异：
 
 <img style="box-shadow: 0 0 5px #ddd;" src="https://gw.alicdn.com/tps/TB1upvfKXXXXXctaXXXXXXXXXXX-1080-1920.png" width="240"> <img style="box-shadow: 0 0 5px #ddd;" src="https://gw.alicdn.com/tps/TB1QCTTKXXXXXbOXXXXXXXXXXXX-1920-1080.png" height="240">
 
+
+### device-width
 `width`更为常用的值是`device-width`：
 
-[import](../../examples/mobile/viewport-device-width.html)
+<p data-height="265" data-theme-id="0" data-slug-hash="yJNpbd" data-default-tab="html,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/yJNpbd/">mobile-vp-decivewidth</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<img src="https://gw.alicdn.com/tps/TB1h4cTKXXXXXaFXXXXXXXXXXXX-280-280.png" width="200" ali="qr">
 
 横竖屏切换后：
 
 <img style="box-shadow: 0 0 5px #ddd;" src="https://gw.alicdn.com/tps/TB1V66MKXXXXXa7XpXXXXXXXXXX-1080-1920.png" width="240"> <img style="box-shadow: 0 0 5px #ddd;" src="https://gw.alicdn.com/tps/TB1VezmKXXXXXX_aXXXXXXXXXXX-1920-1080.png" height="240">
 
 
+## 练习
 
+* 尝试为`height`实现`width`章节中的所有例子。

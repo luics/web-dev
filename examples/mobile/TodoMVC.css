@@ -367,12 +367,22 @@ html .clear-completed:active {
     }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 375px) {
     .footer {
-        height: 50px;
+        /*height: 50px;*/
+        padding: 10px 5px;
+    }
+
+    .todo-count {
+        font-size: 80%;
+    }
+
+    .clear-completed {
+        font-size: 80%;
     }
 
     .filters {
-        bottom: 10px;
+        /*bottom: 10px;*/
     }
 }
+
