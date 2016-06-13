@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Ajax | Web Dev Course</title>
+        <title>Web Development | Web Dev Course</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -41,10 +41,10 @@
         
     
     
-    <link rel="next" href="../data/jsonp.html" />
+    <link rel="next" href="../TodoMVC/index.html" />
     
     
-    <link rel="prev" href="../data/server.html" />
+    <link rel="prev" href="../index.html" />
     
 
         
@@ -53,9 +53,9 @@
         
         
     <div class="book"
-        data-level="3.7.1"
-        data-chapter-title="Ajax"
-        data-filepath="data/ajax.md"
+        data-level="1"
+        data-chapter-title="Web Development"
+        data-filepath="toolkit/README.md"
         data-basepath=".."
         data-revision="Mon Jun 13 2016 14:58:33 GMT+0000 (UTC)"
         data-innerlanguage="zh-hans">
@@ -86,7 +86,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1" data-path="toolkit/index.html">
+        <li class="chapter active" data-level="1" data-path="toolkit/index.html">
             
                 
                     <a href="../toolkit/index.html">
@@ -443,7 +443,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="3.7.1" data-path="data/ajax.html">
+        <li class="chapter " data-level="3.7.1" data-path="data/ajax.html">
             
                 
                     <a href="../data/ajax.html">
@@ -597,71 +597,8 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="ajax">AJAX</h1>
-<h2 id="ajax--http-request"><strong><em>AJAX == HTTP Request</em></strong></h2>
-<p>TODO &#x7ED9;&#x51FA; HTTP &#x901A;&#x4FE1;&#x8FC7;&#x7A0B;</p>
-<p>AJAX (Asynchronous JavaScript and XML) &#x5C31;&#x662F; HTTP &#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x3002;&#x65E9;&#x5E74; Web &#x6CA1;&#x6709; AJAX &#x65F6;, &#x901A;&#x5E38;&#x662F;&#x6574;&#x4F53;&#x5237;&#x65B0;&#x9875;&#x9762;&#x7684;, &#x5C40;&#x90E8;&#x5237;&#x65B0;&#x9700;&#x8981;&#x901A;&#x8FC7; iframe &#x7B49; tricky &#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#x3002;AJAX &#x51FA;&#x73B0;&#x540E;&#x4EE5; Gmail &#x4E3A;&#x4EE3;&#x8868;&#x7684;&#x7AD9;&#x70B9;&#x89E6;&#x53D1;&#x4E86;&#x5927;&#x89C4;&#x6A21;&#x7684;&#x9875;&#x9762;&#x4F53;&#x9A8C;&#x6539;&#x9020; (&#x53F2;&#x79F0;&quot;Web 2.0&quot;)&#x3002;</p>
-<p>&#x4EE3;&#x7801; - AJAX &#x57FA;&#x7840;&#x5C01;&#x88C5;</p>
-<blockquote>
-<p><a id="ajax.js" href="../../examples/data/ajax.js">ajax.js</a></p>
-</blockquote>
-<pre><code class="lang-javascript">(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-keyword">var</span> GET = <span class="hljs-string">&apos;get&apos;</span>;
-  <span class="hljs-built_in">window</span>.Ajax = {
-    <span class="hljs-comment">/**
-     * Basic Ajax
-     * @param url {String}
-     * @param [opt] {Object}
-     * @param [opt.onSuccess] {Function}
-     * @param [opt.onFailure] {Function}
-     * @param [opt.cached] {Boolean}
-     */</span>
-    get: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">url, opt</span>) </span>{
-      opt = opt || {};
-      <span class="hljs-keyword">if</span> (opt.cached) {
-        url += (url.indexOf(<span class="hljs-string">&apos;?&apos;</span>) &gt; -<span class="hljs-number">1</span> ? <span class="hljs-string">&apos;&amp;&apos;</span> : <span class="hljs-string">&apos;?&apos;</span>) + <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>().getTime() + <span class="hljs-string">&apos;r&apos;</span>;
-      }
-      <span class="hljs-keyword">var</span> request = <span class="hljs-keyword">new</span> XMLHttpRequest();
-      request.onreadystatechange = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-        <span class="hljs-keyword">if</span> (request.readyState === XMLHttpRequest.DONE) {
-          <span class="hljs-keyword">if</span> (request.status &gt;= <span class="hljs-number">200</span> &amp;&amp; request.status &lt; <span class="hljs-number">400</span>) {
-            <span class="hljs-keyword">var</span> ret = request.responseText;
-            <span class="hljs-keyword">var</span> contentType = request.getResponseHeader(<span class="hljs-string">&apos;content-type&apos;</span>);
-            <span class="hljs-keyword">if</span> (contentType == <span class="hljs-string">&apos;application/json&apos;</span> || contentType == <span class="hljs-string">&apos;text/json&apos;</span>) {
-              <span class="hljs-keyword">try</span> {
-                ret = <span class="hljs-built_in">JSON</span>.parse(ret);
-              } <span class="hljs-keyword">catch</span> (e) {
-                <span class="hljs-built_in">console</span>.error(e);
-                <span class="hljs-keyword">if</span> (opt.onFailure) opt.onFailure(e);
-              }
-            }
-            <span class="hljs-keyword">if</span> (opt.onSuccess) opt.onSuccess(ret);
-          }
-          <span class="hljs-keyword">else</span> {
-            <span class="hljs-keyword">if</span> (opt.onFailure) opt.onFailure();
-          }
-        }
-      };
-
-      request.open(GET, url, <span class="hljs-literal">true</span>);
-      request.send(<span class="hljs-literal">null</span>);
-    }
-  }
-})();
-</code></pre>
-<h2 id="&#x8DE8;&#x57DF;&#x4E0E;-cors">&#x8DE8;&#x57DF;&#x4E0E; CORS</h2>
-<p>&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x7684;<a href="https://www.w3.org/Security/wiki/Same_Origin_Policy" target="_blank">&#x540C;&#x6E90;&#x7B56;&#x7565;</a>&#x662F;&#x4E00;&#x79CD;&#x5B89;&#x5168;&#x624B;&#x6BB5;, &#x7F51;&#x7EDC;&#x8BF7;&#x6C42;, &#x6570;&#x636E;&#x5B58;&#x53D6; &#x7B49;&#x591A;&#x4E2A;&#x65B9;&#x9762;&#x90FD;&#x80FD;&#x770B;&#x5230;&#x540C;&#x6E90;&#x7B56;&#x7565;&#x7684;&#x5F71;&#x5B50;&#x3002;&#x540C;&#x6E90;&#x7684;&#x5224;&#x65AD;&#x6761;&#x4EF6;&#x662F; hostname &#x548C; port &#x90FD;&#x5FC5;&#x987B;&#x76F8;&#x540C;, &#x6BD4;&#x5982;: </p>
-<ul>
-<li><code>example.com</code> &#x548C; <code>example.com:3000</code> &#x4E0D;&#x540C;&#x6E90;, &#x56E0;&#x4E3A; port &#x4E0D;&#x540C;</li>
-<li><code>example.com</code> &#x548C; <code>blog.example.com</code> &#x4E0D;&#x540C;&#x6E90;, &#x56E0;&#x4E3A; hostname &#x4E0D;&#x540C;</li>
-</ul>
-<p>&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x963B;&#x6B62; AJAX &#x8BF7;&#x6C42;&#x975E;&#x540C;&#x6E90;&#x8D44;&#x6E90;, &#x9664;&#x975E;&#x670D;&#x52A1;&#x7AEF;&#x7ED9;&#x51FA;&#x5408;&#x9002;&#x7684; CORS (Cross Origin Resource Sharing) Header, &#x6BD4;&#x5982;:</p>
-<pre><code class="lang-bash">HTTP/<span class="hljs-number">1.1</span> <span class="hljs-number">200</span> OK
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST, GET
-</code></pre>
-<p>&#x5B8C;&#x6574;&#x7684; CORS &#x8BBE;&#x7F6E;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS#The_HTTP_response_headers" target="_blank">&#x6587;&#x6863;</a>&#x3002;</p>
-<p>&#x4E3B;&#x6D41;&#x6846;&#x67B6;(&#x5982; JQuery, Zepto) &#x90FD;&#x63D0;&#x4F9B;&#x4E86; AJAX &#x652F;&#x6301;, &#x5F88;&#x591A;&#x65F6;&#x5019;&#x65E0;&#x9700;&#x5199;&#x539F;&#x751F;&#x7684; AJAX &#x8BF7;&#x6C42;, &#x4F46;&#x662F;&#x4ECD;&#x7136;&#x5E94;&#x8BE5;&#x4E86;&#x89E3;&#x5B83;&#x7684;&#x5DE5;&#x4F5C;&#x539F;&#x7406;&#x3002;&#x53E6;&#x4E00;&#x79CD;&#x901A;&#x7528;&#x7684;&#x8DE8;&#x57DF;&#x65B9;&#x6848;&#x662F; <a href="jsonp.html">JSONP</a>&#x3002;</p>
+                        <h1 id="web-dev">Web Dev</h1>
+<p><strong><a href="http://pan.baidu.com/s/1o7Nvufo" target="_blank">&#x8BFE;&#x4EF6;&#x4E0B;&#x8F7D;</a></strong></p>
 
                     
                     </section>
@@ -672,10 +609,10 @@ Access-Control-Allow-Methods: POST, GET
         </div>
 
         
-        <a href="../data/server.html" class="navigation navigation-prev " aria-label="Previous page: Server"><i class="fa fa-angle-left"></i></a>
+        <a href="../index.html" class="navigation navigation-prev " aria-label="Previous page: 介绍"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../data/jsonp.html" class="navigation navigation-next " aria-label="Next page: JSONP"><i class="fa fa-angle-right"></i></a>
+        <a href="../TodoMVC/index.html" class="navigation navigation-next " aria-label="Next page: TodoMVC"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
