@@ -1,12 +1,6 @@
 # Summary
 
-<!--0. [Web Development](toolkit/README.md)
-    0. [Building house](toolkit/building.md)
-        0. [Structure: HTML](toolkit/html.md)
-        0. [Decoration: CSS](toolkit/css.md)
-        0. [Interaction: Javascript](toolkit/js.md)
-    0. [toolkit](toolkit/toolkit.md)
-    0. [Debug](toolkit/debug.md)-->
+0. [Web Development](toolkit/README.md)
 0. [TodoMVC](TodoMVC/README.md)
     0. [需求分解](TodoMVC/requirements.md)
     0. [基础版](TodoMVC/basic.md)
@@ -35,8 +29,4 @@
     0. [viewport](mobile/viewport.md)
     0. [click 延迟](mobile/click.md)
     0. [改造 TodoMVC](mobile/todo.md)
-<!--0. 扩展知识
-        0. [Responsive Web Design](data/rwd.md)
-        0. [Flexbox](data/flexbox.md)
-        -->
 0. [深度阅读](more.md)
