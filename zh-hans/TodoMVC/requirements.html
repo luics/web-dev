@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>需求分解 | Web Dev Course</title>
+        <title>需求 &amp; 设计 | Web Dev Course</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -41,7 +41,7 @@
         
     
     
-    <link rel="next" href="../TodoMVC/basic.html" />
+    <link rel="next" href="../TodoMVC/basic-add.html" />
     
     
     <link rel="prev" href="../TodoMVC/index.html" />
@@ -54,10 +54,10 @@
         
     <div class="book"
         data-level="2.1"
-        data-chapter-title="需求分解"
+        data-chapter-title="需求 &amp; 设计"
         data-filepath="TodoMVC/requirements.md"
         data-basepath=".."
-        data-revision="Mon Apr 10 2017 09:46:48 GMT+0000 (UTC)"
+        data-revision="Fri Apr 14 2017 08:40:56 GMT+0000 (UTC)"
         data-innerlanguage="zh-hans">
     
 
@@ -126,23 +126,15 @@
                         
                             <b>2.1.</b>
                         
-                        需求分解
+                        需求 &amp; 设计
                     </a>
             
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="TodoMVC/basic.html">
+        <li class="chapter " data-level="2.2" >
             
-                
-                    <a href="../TodoMVC/basic.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.2.</b>
-                        
-                        基础版
-                    </a>
+            <span><b>2.2.</b> 基础版</span>
             
             
             <ul class="articles">
@@ -251,14 +243,29 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4.2" data-path="common/event.html">
+        <li class="chapter " data-level="2.4.2" data-path="common/dom.html">
+            
+                
+                    <a href="../common/dom.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.2.</b>
+                        
+                        DOM
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="common/event.html">
             
                 
                     <a href="../common/event.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.4.2.</b>
+                            <b>2.4.3.</b>
                         
                         Event
                     </a>
@@ -266,29 +273,29 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4.3" data-path="common/closure.html">
+        <li class="chapter " data-level="2.4.4" data-path="common/closure.html">
             
                 
                     <a href="../common/closure.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.4.3.</b>
+                            <b>2.4.4.</b>
                         
-                        closure
+                        闭包（Closure）
                     </a>
             
             
         </li>
     
-        <li class="chapter " data-level="2.4.4" data-path="common/this.html">
+        <li class="chapter " data-level="2.4.5" data-path="common/this.html">
             
                 
                     <a href="../common/this.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.4.4.</b>
+                            <b>2.4.5.</b>
                         
                         this
                     </a>
@@ -597,44 +604,44 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="&#x9700;&#x6C42;&#x5206;&#x89E3;">&#x9700;&#x6C42;&#x5206;&#x89E3;</h1>
+                        <h1 id="&#x9700;&#x6C42;--&#x8BBE;&#x8BA1;">&#x9700;&#x6C42; &amp; &#x8BBE;&#x8BA1;</h1>
 <h2 id="&#x9700;&#x6C42;">&#x9700;&#x6C42;</h2>
 <p>&#x5BF9; TodoMVC &#x7684;&#x6838;&#x5FC3;&#x529F;&#x80FD;&#x8FDB;&#x884C;&#x7B80;&#x5355;&#x5730;&#x62C6;&#x89E3;:</p>
 <p><img src="http://gtms02.alicdn.com/tps/i2/TB15D1RJFXXXXaEXFXX6QFS3VXX-1430-814.png" width="607" height=""></p>
 <ol>
 <li>Add<ol>
-<li>input todo item msg</li>
+<li>&#x8F93;&#x5165; todo item&#xFF08;&#x4EE5;&#x4E0B;&#x7B80;&#x79F0; item&#xFF09;&#x4FE1;&#x606F;</li>
 </ol>
 </li>
 <li>List<ol>
-<li>display items</li>
-<li>[left] display quantity of active items</li>
-<li>[filter] display all/active/completed items</li>
+<li>&#x663E;&#x793A; items</li>
+<li>&#x663E;&#x793A; active&#xFF08;&#x5B8C;&#x6210;&#x4E2D;&#x7684;&#xFF09; items &#x6570;&#x91CF;</li>
+<li>&#x8FC7;&#x6EE4;&#x663E;&#x793A; all/active/completed&#xFF08;&#x5DF2;&#x5B8C;&#x6210;&#xFF09; items</li>
 </ol>
 </li>
 <li>Delete<ol>
-<li>delete single item</li>
-<li>[clear] delete completed items</li>
+<li>&#x5220;&#x9664;&#x5355;&#x4E2A; item</li>
+<li>&#x5220;&#x9664;&#x6240;&#x6709; completed items</li>
 </ol>
 </li>
 <li>Update<ol>
-<li>complete single item</li>
-<li>[all] complete all items</li>
-<li>[edit] edit an item msg</li>
+<li>&#x5B8C;&#x6210;&#x5355;&#x4E2A; item</li>
+<li>&#x5B8C;&#x6210;&#x6240;&#x6709; items</li>
+<li>&#x7F16;&#x8F91;&#x5355;&#x4E2A; item</li>
 </ol>
 </li>
 </ol>
 <h2 id="&#x8BBE;&#x8BA1;">&#x8BBE;&#x8BA1;</h2>
 <p>&#x9700;&#x6C42;&#x5206;&#x6790;&#x7684;&#x7ED3;&#x679C;&#x8BA9;&#x6211;&#x4EEC;&#x6E05;&#x6670;&#x5730;&#x770B;&#x5230;:</p>
 <ol>
-<li>TodoMVC &#x7684;&#x6838;&#x5FC3;&#x529F;&#x80FD;&#x4E4B;&#x95F4;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x6E10;&#x8FDB;&#x4F9D;&#x5B58;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x53EF;&#x4EE5;&#x4F9D;&#x6B21;&#x5F00;&#x53D1;: Add&#xFF0C;List&#xFF0C;Delete&#xFF0C;Update &#x4E2D;&#x7684;&#x6838;&#x5FC3;&#x529F;&#x80FD;</li>
-<li>&#x90E8;&#x5206;&#x590D;&#x6742;&#x7684;&#x529F;&#x80FD;&#xFF08;&#x5982;<code>[filter]</code>&#xFF09;&#x53EF;&#x4EE5;&#x7A0D;&#x665A;&#x5F00;&#x53D1;</li>
+<li>TodoMVC &#x7684;&#x6838;&#x5FC3;&#x529F;&#x80FD;&#x4E4B;&#x95F4;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x6E10;&#x8FDB;&#x4F9D;&#x5B58;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x53EF;&#x4EE5;&#x4F9D;&#x6B21;&#x5F00;&#x53D1;: Add&#x3001;List&#x3001;Delete&#x3001;Update</li>
+<li>&#x90E8;&#x5206;&#x590D;&#x6742;&#x7684;&#x529F;&#x80FD;&#xFF08;&#x5982;&#x8FC7;&#x6EE4;&#x529F;&#x80FD;&#xFF09;&#x53EF;&#x4EE5;&#x7A0D;&#x665A;&#x5F00;&#x53D1;</li>
 </ol>
-<p>&#x56E0;&#x4E3A;&#x8FD8;&#x4E0D;&#x6D89;&#x53CA;&#x7F51;&#x7EDC;&#x4EA4;&#x4E92;&#xFF0C;&#x672C;&#x5730;&#x6570;&#x636E;&#x5B58;&#x50A8;&#xFF0C;&#x4E5F;&#x672A;&#x8003;&#x8651;&#x66F4;&#x590D;&#x6742;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x8FD9;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x8BBE;&#x8BA1;&#x5DF2;&#x7ECF;&#x8DB3;&#x591F;&#x652F;&#x6491;&#x5F00;&#x53D1;&#x4E00;&#x4E2A;&#x57FA;&#x672C;&#x7248;&#x7684; TodoMVC&#x3002;</p>
+<p>&#x56E0;&#x4E3A;&#x8FD8;&#x4E0D;&#x6D89;&#x53CA;&#x7F51;&#x7EDC;&#x4EA4;&#x4E92;&#xFF0C;&#x672C;&#x5730;&#x6570;&#x636E;&#x5B58;&#x50A8;&#xFF0C;&#x4E5F;&#x672A;&#x8003;&#x8651;&#x66F4;&#x590D;&#x6742;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x5DF2;&#x7ECF;&#x53EF;&#x4EE5;&#x7740;&#x624B;&#x539F;&#x578B;&#x5F00;&#x53D1;&#x4E86;&#x3002;</p>
 <h2 id="&#x5F00;&#x53D1;">&#x5F00;&#x53D1;</h2>
 <ol>
-<li><a href="basic.html">&#x5F00;&#x53D1;&#x57FA;&#x7840;&#x7248;</a></li>
-<li><a href="full.html">&#x5F00;&#x53D1;&#x5B8C;&#x6574;&#x7248;</a></li>
+<li><a href="basic.html">&#x57FA;&#x7840;&#x7248;</a></li>
+<li><a href="full.html">&#x5B8C;&#x6574;&#x7248;</a></li>
 </ol>
 
                     
@@ -649,7 +656,7 @@
         <a href="../TodoMVC/index.html" class="navigation navigation-prev " aria-label="Previous page: TodoMVC"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../TodoMVC/basic.html" class="navigation navigation-next " aria-label="Next page: 基础版"><i class="fa fa-angle-right"></i></a>
+        <a href="../TodoMVC/basic-add.html" class="navigation navigation-next " aria-label="Next page: Add"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>closure | Web Dev Course</title>
+        <title>闭包（Closure） | Web Dev Course</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -53,11 +53,11 @@
         
         
     <div class="book"
-        data-level="2.4.3"
-        data-chapter-title="closure"
+        data-level="2.4.4"
+        data-chapter-title="闭包（Closure）"
         data-filepath="common/closure.md"
         data-basepath=".."
-        data-revision="Mon Apr 10 2017 09:46:48 GMT+0000 (UTC)"
+        data-revision="Fri Apr 14 2017 08:40:56 GMT+0000 (UTC)"
         data-innerlanguage="zh-hans">
     
 
@@ -126,23 +126,15 @@
                         
                             <b>2.1.</b>
                         
-                        需求分解
+                        需求 &amp; 设计
                     </a>
             
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="TodoMVC/basic.html">
+        <li class="chapter " data-level="2.2" >
             
-                
-                    <a href="../TodoMVC/basic.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.2.</b>
-                        
-                        基础版
-                    </a>
+            <span><b>2.2.</b> 基础版</span>
             
             
             <ul class="articles">
@@ -251,14 +243,29 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4.2" data-path="common/event.html">
+        <li class="chapter " data-level="2.4.2" data-path="common/dom.html">
+            
+                
+                    <a href="../common/dom.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.2.</b>
+                        
+                        DOM
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="common/event.html">
             
                 
                     <a href="../common/event.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.4.2.</b>
+                            <b>2.4.3.</b>
                         
                         Event
                     </a>
@@ -266,29 +273,29 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.4.3" data-path="common/closure.html">
+        <li class="chapter active" data-level="2.4.4" data-path="common/closure.html">
             
                 
                     <a href="../common/closure.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.4.3.</b>
+                            <b>2.4.4.</b>
                         
-                        closure
+                        闭包（Closure）
                     </a>
             
             
         </li>
     
-        <li class="chapter " data-level="2.4.4" data-path="common/this.html">
+        <li class="chapter " data-level="2.4.5" data-path="common/this.html">
             
                 
                     <a href="../common/this.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.4.4.</b>
+                            <b>2.4.5.</b>
                         
                         this
                     </a>
@@ -597,12 +604,13 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="&#x95ED;&#x5305;">&#x95ED;&#x5305;</h1>
-<p>&#x6709;&#x4E00;&#x6BB5;&#x5BF9;&#x95ED;&#x5305;(Closure)&#x7684;&#x7CBE;&#x8F9F;&#x6CE8;&#x89E3;&#xFF1A;</p>
+                        <h1 id="&#x95ED;&#x5305;&#xFF08;closure&#xFF09;">&#x95ED;&#x5305;&#xFF08;Closure&#xFF09;</h1>
+<p>&#x6709;&#x4E00;&#x6BB5;&#x5BF9;&#x95ED;&#x5305;&#xFF08;Closure&#xFF09;&#x7684;&#x7CBE;&#x8F9F;&#x6CE8;&#x89E3;&#xFF1A;</p>
 <blockquote>
-<p>A closure is a special kind of object that combines two things: a function, and the environment in which that function was created.  (from <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures#Closure" target="_blank">MDN</a>)</p>
+<p>A closure is a special kind of object that combines two things: a function, and the environment in which that function was created.  (from <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures#Closure" target="_blank">MDN</a>)
+&#xFF08;&#x95ED;&#x5305;&#x662F;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5305;&#x542B;&#x4E86;&#x4E00;&#x4E2A; function &#x4EE5;&#x53CA;&#x521B;&#x5EFA;&#x5B83;&#x7684;&#x73AF;&#x5883;&#x3002;&#xFF09;</p>
 </blockquote>
-<p>&#x95ED;&#x5305;&#x662F;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5305;&#x542B;&#x4E86;&#x4E00;&#x4E2A; function &#x4EE5;&#x53CA;&#x521B;&#x5EFA;&#x5B83;&#x7684;&#x73AF;&#x5883;&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;<strong>&#x95ED;&#x5305;&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x201C;&#x8BB0;&#x4F4F;&#x201D;&#x521B;&#x5EFA;&#x5B83;&#x7684;&#x73AF;&#x5883;</strong>&#x3002;</p>
+<p>&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;<strong>&#x95ED;&#x5305;&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x201C;&#x8BB0;&#x4F4F;&#x201D;&#x521B;&#x5EFA;&#x5B83;&#x7684;&#x73AF;&#x5883;</strong>&#x3002;</p>
 <p>&#x5148;&#x770B;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;</p>
 <p></p><p data-height="300" data-theme-id="0" data-slug-hash="LNKVLR" data-default-tab="js" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/LNKVLR/" target="_blank">closure-1</a> by luics (<a href="http://codepen.io/luics" target="_blank">@luics</a>) on <a href="http://codepen.io" target="_blank">CodePen</a>.</p><p></p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>

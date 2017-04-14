@@ -1,0 +1,684 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>IndexedDB | Web Dev Course</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="luics">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-disqus/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../data/cookie.html" />
+    
+    
+    <link rel="prev" href="../data/websql.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="3.5"
+        data-chapter-title="IndexedDB"
+        data-filepath="data/idb.md"
+        data-basepath=".."
+        data-revision="Fri Apr 14 2017 08:40:57 GMT+0000 (UTC)"
+        data-innerlanguage="en">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="toolkit/index.html">
+            
+                
+                    <a href="../toolkit/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Web Development
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="TodoMVC/index.html">
+            
+                
+                    <a href="../TodoMVC/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        TodoMVC
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="TodoMVC/requirements.html">
+            
+                
+                    <a href="../TodoMVC/requirements.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        需求分解
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="TodoMVC/basic.html">
+            
+                
+                    <a href="../TodoMVC/basic.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        基础版
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="TodoMVC/basic-add.html">
+            
+                
+                    <a href="../TodoMVC/basic-add.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.1.</b>
+                        
+                        Add
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="TodoMVC/basic-list.html">
+            
+                
+                    <a href="../TodoMVC/basic-list.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.2.</b>
+                        
+                        List
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="TodoMVC/basic-delete.html">
+            
+                
+                    <a href="../TodoMVC/basic-delete.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.3.</b>
+                        
+                        Delete
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="TodoMVC/basic-update.html">
+            
+                
+                    <a href="../TodoMVC/basic-update.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.4.</b>
+                        
+                        Update
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="TodoMVC/full.html">
+            
+                
+                    <a href="../TodoMVC/full.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        完整版
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" >
+            
+            <span><b>2.4.</b> 扩展知识</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="common/input.html">
+            
+                
+                    <a href="../common/input.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.1.</b>
+                        
+                        Input
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="common/event.html">
+            
+                
+                    <a href="../common/event.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.2.</b>
+                        
+                        Event
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="common/closure.html">
+            
+                
+                    <a href="../common/closure.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.3.</b>
+                        
+                        闭包（Closure）
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="common/this.html">
+            
+                
+                    <a href="../common/this.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.4.</b>
+                        
+                        this
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="TodoMVC/exercise.html">
+            
+                
+                    <a href="../TodoMVC/exercise.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        练习
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="data/index.html">
+            
+                
+                    <a href="../data/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        数据持久化
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="data/memory.html">
+            
+                
+                    <a href="../data/memory.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        改造 TodoMVC
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="data/localStorage.html">
+            
+                
+                    <a href="../data/localStorage.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        localStorage
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="data/sessionStorage.html">
+            
+                
+                    <a href="../data/sessionStorage.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        sessionStorage
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="data/websql.html">
+            
+                
+                    <a href="../data/websql.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        Web SQL Database
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.5" data-path="data/idb.html">
+            
+                
+                    <a href="../data/idb.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        IndexedDB
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="data/cookie.html">
+            
+                
+                    <a href="../data/cookie.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        Cookie
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="data/server.html">
+            
+                
+                    <a href="../data/server.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        Server
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.7.1" data-path="data/ajax.html">
+            
+                
+                    <a href="../data/ajax.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.1.</b>
+                        
+                        Ajax
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.2" data-path="data/jsonp.html">
+            
+                
+                    <a href="../data/jsonp.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.2.</b>
+                        
+                        JSONP
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="mobile/index.html">
+            
+                
+                    <a href="../mobile/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Mobile
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="mobile/viewport.html">
+            
+                
+                    <a href="../mobile/viewport.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        viewport
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="mobile/click.html">
+            
+                
+                    <a href="../mobile/click.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        click 延迟
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="mobile/todo.html">
+            
+                
+                    <a href="../mobile/todo.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        改造 TodoMVC
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="more.html">
+            
+                
+                    <a href="../more.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        深度阅读
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Web Dev Course</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="indexeddb">IndexedDB</h1>
+<h2 id="indexeddb">IndexedDB</h2>
+<p>&#x51E0;&#x4E2A;<a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#concepts" target="_blank">&#x91CD;&#x8981;&#x6982;&#x5FF5;</a>:</p>
+<ol>
+<li>IndexedDB &#x6570;&#x636E;&#x5E93;&#x5B58;&#x50A8;&#x952E;&#x503C;&#x5BF9;(k-v pairs), &#x5E76;&#x4E14;&#x662F;&#x5BF9;&#x8C61;&#x6570;&#x636E;&#x5E93;(&#x4E0D;&#x540C;&#x4E8E; mysql &#x8FD9;&#x7C7B;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x5E93;)</li>
+<li>&#x51E0;&#x4E4E;&#x6240;&#x6709;&#x64CD;&#x4F5C;&#x90FD;&#x5728; transaction(&#x4E8B;&#x52A1;)&#x4E2D;&#x6267;&#x884C;&#x3002;<ul>
+<li>&#x4E8B;&#x52A1;: &#x5C31;&#x662F;&#x5C06;&#x4E00;&#x7EC4;&#x64CD;&#x4F5C;&#x770B;&#x505A;&#x539F;&#x5B50;&#x64CD;&#x4F5C;, &#x8981;&#x4E48;&#x5168;&#x90E8;&#x6210;&#x529F;, &#x5426;&#x5219;&#x5982;&#x6709;&#x4E00;&#x4E2A;&#x5931;&#x8D25;&#x5219;&#x6574;&#x4F53;&#x5931;&#x8D25;, &#x8FD9;&#x5BF9;&#x6570;&#x636E;&#x7684;&#x5B8C;&#x5907;&#x6027;&#x5F88;&#x91CD;&#x8981;</li>
+</ul>
+</li>
+<li>&#x5927;&#x90E8;&#x5206; API &#x90FD;&#x662F;&#x5F02;&#x6B65;&#x7684;</li>
+<li>&#x9075;&#x5B88;&#x540C;&#x6E90;&#x7B56;&#x7565;, &#x4E0D;&#x80FD;&#x4ECE;&#x5176;&#x4ED6;&#x6E90;&#x5B58;&#x53D6;&#x6570;&#x636E;</li>
+</ol>
+<p>&#x8BE6;&#x89C1;<a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB" target="_blank">&#x4F7F;&#x7528;&#x6587;&#x6863;</a>, &#x4EE5;&#x53CA;<a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API" target="_blank">&#x6240;&#x6709; API</a>&#x3002;</p>
+<p>&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x4F8B;&#x5B50;</p>
+<p></p><p data-height="500" data-theme-id="0" data-slug-hash="KzOGaR" data-default-tab="js" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/KzOGaR/" target="_blank">data-idb</a> by luics (<a href="http://codepen.io/luics" target="_blank">@luics</a>) on <a href="http://codepen.io" target="_blank">CodePen</a>.</p><p></p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<p>DevTools &#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x7C7B;&#x4F3C;&#x7684;&#x53D8;&#x5316;:</p>
+<p><img src="http://gtms03.alicdn.com/tps/i3/TB1mukPJVXXXXcaXVXXRzC09FXX-1550-272.png" width="775"></p>
+<h2 id="&#x6539;&#x9020;-todomvc">&#x6539;&#x9020; TodoMVC</h2>
+<p>&#x8BE6;&#x89C1;<a href="https://github.com/luics/web-dev/blob/master/examples/data/TodoMVC-idb.html" target="_blank">&#x4EE3;&#x7801;</a>&#x3002;</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../data/websql.html" class="navigation navigation-prev " aria-label="Previous page: Web SQL Database"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../data/cookie.html" class="navigation navigation-next " aria-label="Next page: Cookie"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-disqus/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-github/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-editlink/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"disqus":{"shortName":"web-dev12","useIdentifier":false},"github":{"url":"https://github.com/luics/web-dev"},"github-buttons":{"repo":"luics/web-dev","types":["star","fork"]},"editlink":{"base":"https://github.com/luics/web-dev/blob/master/zh-hans","label":"","multilingual":false},"include-codeblock":{"check":false,"edit":false,"lang":"","fixlang":false,"template":"default","theme":"chrome","unindent":false},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

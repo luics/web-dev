@@ -44,7 +44,7 @@
     <link rel="next" href="../TodoMVC/basic-list.html" />
     
     
-    <link rel="prev" href="../TodoMVC/basic.html" />
+    <link rel="prev" href="../TodoMVC/requirements.html" />
     
 
         
@@ -57,7 +57,7 @@
         data-chapter-title="Add"
         data-filepath="TodoMVC/basic-add.md"
         data-basepath=".."
-        data-revision="Mon Apr 10 2017 09:46:48 GMT+0000 (UTC)"
+        data-revision="Fri Apr 14 2017 08:40:56 GMT+0000 (UTC)"
         data-innerlanguage="zh-hans">
     
 
@@ -126,23 +126,15 @@
                         
                             <b>2.1.</b>
                         
-                        需求分解
+                        需求 &amp; 设计
                     </a>
             
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="TodoMVC/basic.html">
+        <li class="chapter " data-level="2.2" >
             
-                
-                    <a href="../TodoMVC/basic.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.2.</b>
-                        
-                        基础版
-                    </a>
+            <span><b>2.2.</b> 基础版</span>
             
             
             <ul class="articles">
@@ -251,14 +243,29 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4.2" data-path="common/event.html">
+        <li class="chapter " data-level="2.4.2" data-path="common/dom.html">
+            
+                
+                    <a href="../common/dom.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.2.</b>
+                        
+                        DOM
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="common/event.html">
             
                 
                     <a href="../common/event.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.4.2.</b>
+                            <b>2.4.3.</b>
                         
                         Event
                     </a>
@@ -266,29 +273,29 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4.3" data-path="common/closure.html">
+        <li class="chapter " data-level="2.4.4" data-path="common/closure.html">
             
                 
                     <a href="../common/closure.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.4.3.</b>
+                            <b>2.4.4.</b>
                         
-                        closure
+                        闭包（Closure）
                     </a>
             
             
         </li>
     
-        <li class="chapter " data-level="2.4.4" data-path="common/this.html">
+        <li class="chapter " data-level="2.4.5" data-path="common/this.html">
             
                 
                     <a href="../common/this.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.4.4.</b>
+                            <b>2.4.5.</b>
                         
                         this
                     </a>
@@ -598,23 +605,26 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="basic-todomvc--add">Basic TodoMVC - Add</h1>
-<p>features:</p>
+<p>&#x529F;&#x80FD;&#xFF1A;</p>
 <ol>
-<li>input todo msg</li>
+<li>&#x8F93;&#x5165; todo item &#x4FE1;&#x606F;</li>
 </ol>
-<p></p><p data-height="266" data-theme-id="0" data-slug-hash="wGRoXz" data-default-tab="html,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/wGRoXz/" target="_blank">TodoMVC-basic-add</a> by luics (<a href="http://codepen.io/luics" target="_blank">@luics</a>) on <a href="http://codepen.io" target="_blank">CodePen</a>.</p><p></p>
+<p></p><p data-height="266" data-theme-id="0" data-slug-hash="wGRoXz" data-default-tab="js,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/wGRoXz/" target="_blank">TodoMVC-basic-add</a> by luics (<a href="http://codepen.io/luics" target="_blank">@luics</a>) on <a href="http://codepen.io" target="_blank">CodePen</a>.</p><p></p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
-<p>Code analysis:</p>
+<p>&#x4EE3;&#x7801;&#x5206;&#x6790;:</p>
 <ul>
 <li>input<ul>
 <li><code>type=&quot;text&quot;</code>, input &#x6709;&#x4F17;&#x591A;&#x7C7B;&#x578B;, &#x5982; radio, checkbox, datetime, email...</li>
 <li><code>id=&quot;todo&quot;</code>, &#x901A;&#x8FC7; <code>document.getElementById(&apos;todo&apos;)</code> &#x83B7;&#x53D6; dom node </li>
-<li><code>placeholder=&quot;&quot;</code>, &#x5360;&#x4F4D;&#x4FE1;&#x606F; </li>
+<li><code>placeholder=&quot;&quot;</code>, &#x5360;&#x4F4D;&#x4FE1;&#x606F;</li>
+<li><code>autofocus</code>, &#x81EA;&#x52A8;&#x805A;&#x7126;</li>
+<li>&#x6587;&#x6863; <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" target="_blank">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input</a> </li>
 </ul>
 </li>
 <li>button<ul>
 <li>&#x666E;&#x901A;&#x6309;&#x94AE;, &#x89E6;&#x53D1; <code>click</code> &#x4E8B;&#x4EF6;</li>
+<li>&#x6587;&#x6863; <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button" target="_blank">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button</a> </li>
 </ul>
 </li>
 </ul>
@@ -628,7 +638,7 @@
         </div>
 
         
-        <a href="../TodoMVC/basic.html" class="navigation navigation-prev " aria-label="Previous page: 基础版"><i class="fa fa-angle-left"></i></a>
+        <a href="../TodoMVC/requirements.html" class="navigation navigation-prev " aria-label="Previous page: 需求 &amp; 设计"><i class="fa fa-angle-left"></i></a>
         
         
         <a href="../TodoMVC/basic-list.html" class="navigation navigation-next " aria-label="Next page: List"><i class="fa fa-angle-right"></i></a>
