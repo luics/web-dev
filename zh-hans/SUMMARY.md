@@ -2,8 +2,8 @@
 
 0. [Web Development](toolkit/README.md)
 0. [TodoMVC](TodoMVC/README.md)
-    0. [需求分解](TodoMVC/requirements.md)
-    0. [基础版](TodoMVC/basic.md)
+    0. [需求 & 设计](TodoMVC/requirements.md)
+    0. 基础版
         0. [Add](TodoMVC/basic-add.md)
         0. [List](TodoMVC/basic-list.md)
         0. [Delete](TodoMVC/basic-delete.md)
@@ -11,8 +11,9 @@
     0. [完整版](TodoMVC/full.md)
     0. 扩展知识
         0. [Input](common/input.md)
+        0. [DOM](common/dom.md)
         0. [Event](common/event.md)
-        0. [closure](common/closure.md)
+        0. [闭包（Closure）](common/closure.md)
         0. [this](common/this.md)
     0. [练习](TodoMVC/exercise.md)
 0. [数据持久化](data/index.md)
