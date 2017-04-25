@@ -1,0 +1,20 @@
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <title>TodoMVC-basic-add</title>
+</head>
+<body>
+    <input id="todo" type="text" placeholder="to do something">
+    <button id="add" type="button">Add Todo Item</button>
+    <script>
+        var add = document.getElementById('add');
+        add.addEventListener('click', function() {
+            var todo = document.getElementById('todo');
+            console.log(todo.value);
+            alert(todo.value);
+        }, false);
+    </script>
+</body>
+</html>
+
+
