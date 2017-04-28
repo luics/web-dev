@@ -14,8 +14,13 @@
     * `id="todo"`, 通过 `document.getElementById('todo')` 获取 dom node 
     * `placeholder=""`, 占位信息
     * `autofocus`, 自动聚焦
-    * 文档 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input 
+    * [更多文档](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)  
 * button
-  * 普通按钮, 触发 `click` 事件
-  * 文档 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button 
-  
+    * 普通按钮, 触发 `click` 事件
+    * [更多文档](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)  
+
+## 调试
+
+0. `Elements`：查看页面结构、CSS
+0. `console.log`：查看开发日志
+0. `Breakpoint`：设置断点
