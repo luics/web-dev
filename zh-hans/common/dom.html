@@ -57,7 +57,7 @@
         data-chapter-title="DOM"
         data-filepath="common/dom.md"
         data-basepath=".."
-        data-revision="Fri Apr 14 2017 08:40:56 GMT+0000 (UTC)"
+        data-revision="Fri Apr 28 2017 07:38:53 GMT+0000 (UTC)"
         data-innerlanguage="zh-hans">
     
 
@@ -605,16 +605,49 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="dom">DOM</h1>
-<p>DOM&#xFF08;Document Object Model&#xFF09;&#x5728; Web &#x73AF;&#x5883;&#x4E2D;&#x7528;&#x4E8E;&#x63CF;&#x8FF0;&#x9875;&#x9762;&#x7ED3;&#x6784;&#xFF0C;&#x5E76;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x7EC4;&#x64CD;&#x4F5C;&#xFF08;&#x589E;&#x5220;&#x6539;&#x67E5;&#xFF09;DOM node&#xFF08;&#x8282;&#x70B9;&#xFF09;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
-<h2 id="dom-tree">DOM Tree</h2>
-<p>TODO</p>
-<h2 id="dom-node">DOM Node</h2>
-<p>// node.innerHTML
-// node.className</p>
-<h2 id="dom-&#x64CD;&#x4F5C;">DOM &#x64CD;&#x4F5C;</h2>
-<p>// document.createElement
-// node.insertBefore
-// node.appendChild</p>
+<p>DOM&#xFF08;Document Object Model&#xFF09;&#x5728; Web &#x73AF;&#x5883;&#x4E2D;&#x7528;&#x4E8E;&#x63CF;&#x8FF0;&#x9875;&#x9762;&#x7ED3;&#x6784;&#xFF08;Tree&#xFF09;&#xFF0C;&#x5E76;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x7EC4;&#x64CD;&#x4F5C;&#xFF08;&#x589E;&#x5220;&#x6539;&#x67E5;&#xFF09;DOM &#x8282;&#x70B9;&#xFF08;Node&#xFF09;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x901A;&#x8FC7; DOM Node&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x3001;&#x4EE5;&#x53CA; DOM &#x64CD;&#x4F5C;&#xFF0C;&#x53EF;&#x4EE5;&#x81EA;&#x7531;&#x6539;&#x53D8;&#x9875;&#x9762;&#x7684;&#x7ED3;&#x6784;&#x3001;&#x6837;&#x5F0F;&#x53CA;&#x5185;&#x5BB9;&#x3002;DOM &#x64CD;&#x4F5C;&#x9891;&#x7E41;&#x51FA;&#x73B0;&#x5728;&#x5B9E;&#x9645;&#x7684;&#x524D;&#x7AEF;&#x9879;&#x76EE;&#x4E2D;&#xFF0C;&#x5373;&#x4F7F;&#x53EA;&#x4F7F;&#x7528; MVVM &#x6846;&#x67B6;&#xFF08;&#x5982; React&#x3001;Angular&#xFF0C;&#x5C01;&#x88C5;&#x4E86;&#x5927;&#x90E8;&#x5206; DOM &#x64CD;&#x4F5C;&#x63D0;&#x4F9B;&#x4E0A;&#x5C42;&#x6570;&#x636E;&#x9A71;&#x52A8;&#x7684;&#x5F00;&#x53D1;&#x65B9;&#x5F0F;&#xFF09;&#xFF0C;&#x4E5F;&#x5E94;&#x8BE5;&#x4E86;&#x89E3; DOM&#x3002;</p>
+<p>DOM &#x662F;&#x72EC;&#x7ACB;&#x4E8E; JS &#x7684;&#x4E00;&#x5957;&#x89C4;&#x8303;&#xFF0C;&#x5728; HTML&#x3001;XML&#x3001;SVG &#x4E2D;&#x90FD;&#x6709; DOM API &#x7684;&#x5B9E;&#x73B0;&#x3002;</p>
+<p><img src="https://gw.alicdn.com/tfs/TB1LTh.QVXXXXbxXXXXXXXXXXXX-1598-588.png" alt="">
+&#x56FE; - DOM Tree &#x548C; HTML</p>
+<h2 id="node">Node</h2>
+<p>&#x4EE5;&#x4E0A;&#x6587;&#x4F8B;&#x5B50;&#x4E2D;&#x7684; <code>body</code> &#x8282;&#x70B9;&#x4E3A;&#x4F8B;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;<code>HTMLBodyElement</code>&#xFF0C;&#x5B83;&#x7684;&#x7EE7;&#x627F;&#x94FE;&#x8DEF;&#x662F;&#xFF1A;<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLBodyElement" target="_blank"><code>HTMLBodyElement</code></a>-&gt;<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement" target="_blank"><code>HTMLElement</code></a>-&gt;<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element" target="_blank"><code>Element</code></a>-&gt;<a href="https://developer.mozilla.org/en-US/docs/Web/API/Node" target="_blank"><code>Node</code></a>-&gt;<a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget" target="_blank"><code>EventTarget</code></a>&#x3002;&#x4ECE;&#x4E0B;&#x56FE;&#x53EF;&#x4EE5;&#x770B;&#x5230;<code>HTMLElement</code>&#x540C;&#x65F6;&#x8FD8;&#x5B9E;&#x73B0;&#x4E86;<code>TouchEventHandlers</code>&#x3001;<code>GlobalEventHandlers</code>&#xFF0C;<code>Node</code>&#x540C;&#x65F6;&#x8FD8;&#x5B9E;&#x73B0;&#x4E86;<code>ParentNode</code>&#x3002;&#x4E0B;&#x56FE;&#x662F; DOM &#x76F8;&#x5173;&#x63A5;&#x53E3;&#x7684;&#x7B80;&#x5316;&#x7248;&#x7EE7;&#x627F;&#x56FE;&#x8C31;&#xFF0C;&#x53EA;&#x5217;&#x51FA;&#x4E86;&#x6838;&#x5FC3;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>JS &#x4E5F;&#x662F;&#x4E00;&#x95E8;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#xFF08;OOP&#xFF09;&#x8BED;&#x8A00;&#xFF0C;&#x5728;&#x63A5;&#x53E3;&#x3001;&#x7EE7;&#x627F;&#x8FD9;&#x4E9B;&#x6982;&#x5FF5;&#x4E0A;&#x662F;&#x76F8;&#x901A;&#x7684;&#xFF0C;JS &#x4E2D;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x591A;&#x4E2A;&#x63A5;&#x53E3;&#x3002;&#x4E00;&#x4E2A;<code>HTMLHeadElement</code>&#x672C;&#x8EAB;&#x867D;&#x7136;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x6761;&#x7EE7;&#x627F;&#x94FE;&#x663E;&#x793A;&#x51FA;&#x5B83;&#x5177;&#x6709;&#x8BF8;&#x5982;<code>id</code>&#x3001;<code>style</code>&#x3001;<code>innerHTML</code>&#x8FD9;&#x6837;&#x7684;&#x5E38;&#x7528;&#x5C5E;&#x6027;&#xFF0C;&#x5B83;&#x4EEC;&#x5206;&#x5E03;&#x5728;<code>HTMLElement</code>&#x548C;<code>Element</code>&#x4E2D;&#x7684;&#xFF1B;&#x5B83;&#x5177;&#x6709;&#x8BF8;&#x5982;<code>click()</code>&#x3001;<code>appendChild()</code>&#x3001;<code>querySelector()</code>&#x8FD9;&#x6837;&#x7684;&#x5E38;&#x7528;&#x65B9;&#x6CD5;&#xFF0C;&#x5B83;&#x4EEC;&#x5206;&#x5E03;&#x5728;<code>HTMLElement</code>&#x3001;<code>Node</code>&#x3001;<code>ParentNode</code>&#x4E2D;&#x3002;</p>
+<p><img src="https://gw.alicdn.com/tfs/TB14wx9QVXXXXbSXXXXXXXXXXXX-1824-1052.png"></p>
+<p>&#x56FE; - Node &#x7EE7;&#x627F;&#x94FE;&#xFF08;&#x52A0;&#x4EAE;&#x90E8;&#x5206;&#x662F;&#x5E38;&#x7528;&#x5C5E;&#x6027;&#x6216;&#x65B9;&#x6CD5;&#xFF09;</p>
+<h3 id="node-&#x5C5E;&#x6027;">Node &#x5C5E;&#x6027;</h3>
+<p>&#x4EE5; <code>body</code> &#x8282;&#x70B9;</p>
+<p><img src="https://gw.alicdn.com/tfs/TB1G1lPQVXXXXXEXFXXXXXXXXXX-1202-594.png" height="297"></p>
+<p>&#x56FE; - Node &#x5C5E;&#x6027;</p>
+<p></p><p data-height="265" data-theme-id="0" data-slug-hash="zwrGXN" data-default-tab="html,result" data-user="luics" data-embed-version="2" data-pen-title="DOM" class="codepen">See the Pen <a href="https://codepen.io/luics/pen/zwrGXN/" target="_blank">DOM</a> by luics (<a href="http://codepen.io/luics" target="_blank">@luics</a>) on <a href="http://codepen.io" target="_blank">CodePen</a>.</p><p></p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<h2 id="dom-&#x65B9;&#x6CD5;&#xFF08;method&#xFF09;">DOM &#x65B9;&#x6CD5;&#xFF08;Method&#xFF09;</h2>
+<ol>
+<li>&#x67E5;<ol>
+<li>document.getElementById</li>
+<li>document.getElementsByTagName</li>
+<li>document.queryElements</li>
+<li>document.queryElement</li>
+</ol>
+</li>
+<li>&#x6539;<ol>
+<li>node.insertBefore</li>
+<li>node.appendChild
+0.</li>
+</ol>
+</li>
+<li>&#x589E;<ol>
+<li>document.createElement</li>
+</ol>
+</li>
+<li>&#x5220;<ol>
+<li>node.removeChild</li>
+</ol>
+</li>
+</ol>
+<p></p><p data-height="265" data-theme-id="0" data-slug-hash="zwrGXN" data-default-tab="html,result" data-user="luics" data-embed-version="2" data-pen-title="DOM" class="codepen">See the Pen <a href="https://codepen.io/luics/pen/zwrGXN/" target="_blank">DOM</a> by luics (<a href="http://codepen.io/luics" target="_blank">@luics</a>) on <a href="http://codepen.io" target="_blank">CodePen</a>.</p><p></p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
 
                     
                     </section>
