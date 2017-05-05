@@ -28,9 +28,8 @@ JS 也是一门面向对象（OOP）语言，在接口、继承这些概念上�
 图 - Node 属性
 
 
-
-<p data-height="265" data-theme-id="0" data-slug-hash="zwrGXN" data-default-tab="html,result" data-user="luics" data-embed-version="2" data-pen-title="DOM" class="codepen">See the Pen <a href="https://codepen.io/luics/pen/zwrGXN/">DOM</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<p data-height="266" data-theme-id="0" data-slug-hash="wGRoXz" data-default-tab="js,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/wGRoXz/">TodoMVC-basic-add</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 ## DOM 方法（Method）
 

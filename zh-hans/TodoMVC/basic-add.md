@@ -19,8 +19,15 @@
     * 普通按钮, 触发 `click` 事件
     * [更多文档](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)  
 
+## CodePen
+
+[CodePen](https://codepen.io) 是高效的代码展示平台，易于编写、演示和分享，本书 Demo 默认都放在 CodePen。
+
 ## 调试
+
+上节课介绍了 Devtools 调试工具，现在我们将在这个 Demo 中实践一下调试。
 
 0. `Elements`：查看页面结构、CSS
 0. `console.log`：查看开发日志
 0. `Breakpoint`：设置断点
+
