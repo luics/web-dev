@@ -11,8 +11,8 @@
         0. [练习](TodoMVC/basic-exercise.md)
         0. 扩展知识
             0. [Input](common/input.md)
-            0. [DOM](common/dom.md)
             0. [Event](common/event.md)
+            0. [DOM](common/dom.md)
     0. [完整版](TodoMVC/full.md)
         0. [练习](TodoMVC/full-exercise.md)
         0. 扩展知识

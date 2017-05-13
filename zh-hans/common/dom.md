@@ -21,9 +21,9 @@ JS 也是一门面向对象（OOP）语言，在接口、继承这些概念上�
 
 ### Node 属性
 
-以 `body` 节点
+以 `body` 节点为例，来看一下 Node 常用属性。
 
-<img src="https://gw.alicdn.com/tfs/TB1G1lPQVXXXXXEXFXXXXXXXXXX-1202-594.png" height="297" />
+<img src="https://gw.alicdn.com/tfs/TB1ww5MRXXXXXccXFXXXXXXXXXX-1156-616.png" height="297" />
 
 图 - Node 属性
 
