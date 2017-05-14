@@ -53,11 +53,11 @@
         
         
     <div class="book"
-        data-level="2.2.6.3"
+        data-level="2.2.5.3"
         data-chapter-title="DOM"
         data-filepath="common/dom.md"
         data-basepath=".."
-        data-revision="Sat May 13 2017 02:41:32 GMT+0000 (UTC)"
+        data-revision="Sun May 14 2017 04:39:46 GMT+0000 (UTC)"
         data-innerlanguage="zh-hans">
     
 
@@ -200,37 +200,22 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.5" data-path="TodoMVC/basic-exercise.html">
+        <li class="chapter " data-level="2.2.5" >
             
-                
-                    <a href="../TodoMVC/basic-exercise.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.2.5.</b>
-                        
-                        练习
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="2.2.6" >
-            
-            <span><b>2.2.6.</b> 扩展知识</span>
+            <span><b>2.2.5.</b> 扩展知识</span>
             
             
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.2.6.1" data-path="common/input.html">
+        <li class="chapter " data-level="2.2.5.1" data-path="common/input.html">
             
                 
                     <a href="../common/input.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.2.6.1.</b>
+                            <b>2.2.5.1.</b>
                         
                         Input
                     </a>
@@ -238,14 +223,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.6.2" data-path="common/event.html">
+        <li class="chapter " data-level="2.2.5.2" data-path="common/event.html">
             
                 
                     <a href="../common/event.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.2.6.2.</b>
+                            <b>2.2.5.2.</b>
                         
                         Event
                     </a>
@@ -253,14 +238,14 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.2.6.3" data-path="common/dom.html">
+        <li class="chapter active" data-level="2.2.5.3" data-path="common/dom.html">
             
                 
                     <a href="../common/dom.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.2.6.3.</b>
+                            <b>2.2.5.3.</b>
                         
                         DOM
                     </a>
@@ -652,34 +637,63 @@
 <p>&#x4EE5; <code>body</code> &#x8282;&#x70B9;&#x4E3A;&#x4F8B;&#xFF0C;&#x6765;&#x770B;&#x4E00;&#x4E0B; Node &#x5E38;&#x7528;&#x5C5E;&#x6027;&#x3002;</p>
 <p><img src="https://gw.alicdn.com/tfs/TB1ww5MRXXXXXccXFXXXXXXXXXX-1156-616.png" height="297"></p>
 <p>&#x56FE; - Node &#x5C5E;&#x6027;</p>
-<p></p><p data-height="266" data-theme-id="0" data-slug-hash="wGRoXz" data-default-tab="js,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/wGRoXz/" target="_blank">TodoMVC-basic-add</a> by luics (<a href="http://codepen.io/luics" target="_blank">@luics</a>) on <a href="http://codepen.io" target="_blank">CodePen</a>.</p><p></p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<p>&#x5728;&#x672C;&#x5730;&#x8FD0;&#x884C;&#x4EE5;&#x4E0B; demo&#xFF0C;&#x6253;&#x5F00; Console &#x67E5;&#x770B;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>DOM Node<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;todo&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;to do something&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;add&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;button&quot;</span>&gt;</span>Add Todo Item<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">var</span> body = <span class="hljs-built_in">document</span>.body;
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;body.nodeName&apos;</span>, body.nodeName);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;body.nodeType&apos;</span>, body.nodeType);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;body.firstChild&apos;</span>, body.firstChild);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;body.lastChild&apos;</span>, body.lastChild);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;body.childNodes&apos;</span>, body.childNodes);
+    <span class="hljs-keyword">var</span> textNode = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;add&apos;</span>).firstChild;
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;textNode&apos;</span>, textNode);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;textNode.nodeName&apos;</span>, textNode.nodeName);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;textNode.nodeType&apos;</span>, textNode.nodeType);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;body.parentNode&apos;</span>, body.parentNode);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;body.previousSibling&apos;</span>, body.previousSibling);
 
+    <span class="hljs-comment">/***************************************************************/</span>
+    <span class="hljs-keyword">var</span> add = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;add&apos;</span>);
+    add.addEventListener(<span class="hljs-string">&apos;click&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">var</span> todo = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;todo&apos;</span>);
+        <span class="hljs-built_in">console</span>.log(todo.value);
+        alert(todo.value);
+    }, <span class="hljs-literal">false</span>);
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</code></pre>
 <h2 id="dom-&#x65B9;&#x6CD5;&#xFF08;method&#xFF09;">DOM &#x65B9;&#x6CD5;&#xFF08;Method&#xFF09;</h2>
 <ol>
 <li>&#x67E5;<ol>
-<li>document.getElementById</li>
-<li>document.getElementsByTagName</li>
-<li>document.queryElements</li>
-<li>document.queryElement</li>
+<li><code>document.getElementById</code></li>
+<li><code>document.getElementsByTagName</code></li>
+<li><code>document.querySelectorAll</code></li>
+<li><code>document.querySelector</code></li>
 </ol>
 </li>
 <li>&#x6539;<ol>
-<li>node.insertBefore</li>
-<li>node.appendChild
-0.</li>
+<li><code>node.insertBefore</code></li>
+<li><code>node.appendChild</code></li>
 </ol>
 </li>
 <li>&#x589E;<ol>
-<li>document.createElement</li>
+<li><code>document.createElement</code></li>
 </ol>
 </li>
 <li>&#x5220;<ol>
-<li>node.removeChild</li>
+<li><code>node.removeChild</code></li>
 </ol>
 </li>
 </ol>
-<p></p><p data-height="265" data-theme-id="0" data-slug-hash="zwrGXN" data-default-tab="html,result" data-user="luics" data-embed-version="2" data-pen-title="DOM" class="codepen">See the Pen <a href="https://codepen.io/luics/pen/zwrGXN/" target="_blank">DOM</a> by luics (<a href="http://codepen.io/luics" target="_blank">@luics</a>) on <a href="http://codepen.io" target="_blank">CodePen</a>.</p><p></p>
+<p></p><p data-height="600" data-theme-id="0" data-slug-hash="zwrGXN" data-default-tab="js,result" data-user="luics" data-embed-version="2" data-pen-title="DOM" class="codepen">See the Pen <a href="https://codepen.io/luics/pen/zwrGXN/" target="_blank">DOM</a> by luics (<a href="http://codepen.io/luics" target="_blank">@luics</a>) on <a href="http://codepen.io" target="_blank">CodePen</a>.</p><p></p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 

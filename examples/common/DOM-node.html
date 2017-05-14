@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>DOM Node</title>
+</head>
+<body>
+<input id="todo" type="text" placeholder="to do something">
+<button id="add" type="button">Add Todo Item</button>
+<script>
+    var body = document.body;
+    console.log('body.nodeName', body.nodeName);
+    console.log('body.nodeType', body.nodeType);
+    console.log('body.firstChild', body.firstChild);
+    console.log('body.lastChild', body.lastChild);
+    console.log('body.childNodes', body.childNodes);
+    var textNode = document.getElementById('add').firstChild;
+    console.log('textNode', textNode);
+    console.log('textNode.nodeName', textNode.nodeName);
+    console.log('textNode.nodeType', textNode.nodeType);
+    console.log('body.parentNode', body.parentNode);
+    console.log('body.previousSibling', body.previousSibling);
+
+    /***************************************************************/
+    var add = document.getElementById('add');
+    add.addEventListener('click', function() {
+        var todo = document.getElementById('todo');
+        console.log(todo.value);
+        alert(todo.value);
+    }, false);
+</script>
+</body>
+</html>
+
+
