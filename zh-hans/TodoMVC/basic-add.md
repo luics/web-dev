@@ -31,3 +31,10 @@
 0. `console.log`：查看开发日志
 0. `Breakpoint`：设置断点
 
+## 练习
+
+要求：
+
+0. 在本地实现一个最简化的 Todo，包含 input 和 button
+0. 点击 button，展示 input 中的值
+

@@ -27,26 +27,57 @@ JS 也是一门面向对象（OOP）语言，在接口、继承这些概念上�
 
 图 - Node 属性
 
+在本地运行以下 demo，打开 Console 查看运行结果。
 
-<p data-height="266" data-theme-id="0" data-slug-hash="wGRoXz" data-default-tab="js,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/wGRoXz/">TodoMVC-basic-add</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+```html
+<html>
+<head>
+    <title>DOM Node</title>
+</head>
+<body>
+<input id="todo" type="text" placeholder="to do something">
+<button id="add" type="button">Add Todo Item</button>
+<script>
+    var body = document.body;
+    console.log('body.nodeName', body.nodeName);
+    console.log('body.nodeType', body.nodeType);
+    console.log('body.firstChild', body.firstChild);
+    console.log('body.lastChild', body.lastChild);
+    console.log('body.childNodes', body.childNodes);
+    var textNode = document.getElementById('add').firstChild;
+    console.log('textNode', textNode);
+    console.log('textNode.nodeName', textNode.nodeName);
+    console.log('textNode.nodeType', textNode.nodeType);
+    console.log('body.parentNode', body.parentNode);
+    console.log('body.previousSibling', body.previousSibling);
+
+    /***************************************************************/
+    var add = document.getElementById('add');
+    add.addEventListener('click', function() {
+        var todo = document.getElementById('todo');
+        console.log(todo.value);
+        alert(todo.value);
+    }, false);
+</script>
+</body>
+</html>
+```
 
 ## DOM 方法（Method）
 
 0. 查
-      0. document.getElementById
-      1. document.getElementsByTagName
-      2. document.queryElements
-      3. document.queryElement
+    0. `document.getElementById`
+    1. `document.getElementsByTagName`
+    2. `document.querySelectorAll`
+    3. `document.querySelector`
 1. 改
-    0. node.insertBefore
-    1. node.appendChild
-       0.
+    0. `node.insertBefore`
+    1. `node.appendChild`
 2. 增
-    0. document.createElement
+    0. `document.createElement`
 3. 删
-    0. node.removeChild
+    0. `node.removeChild`
 
-<p data-height="265" data-theme-id="0" data-slug-hash="zwrGXN" data-default-tab="html,result" data-user="luics" data-embed-version="2" data-pen-title="DOM" class="codepen">See the Pen <a href="https://codepen.io/luics/pen/zwrGXN/">DOM</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="600" data-theme-id="0" data-slug-hash="zwrGXN" data-default-tab="js,result" data-user="luics" data-embed-version="2" data-pen-title="DOM" class="codepen">See the Pen <a href="https://codepen.io/luics/pen/zwrGXN/">DOM</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
