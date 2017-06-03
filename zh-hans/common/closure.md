@@ -1,4 +1,4 @@
-# 闭包（Closure）
+# 闭包
 
 有一段对闭包（Closure）的精辟注解：
 
@@ -7,53 +7,64 @@
 
 换句话说，**闭包中的函数可以“记住”创建它的环境**。
 
-先看一个例子：
-
-<p data-height="300" data-theme-id="0" data-slug-hash="LNKVLR" data-default-tab="js" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/LNKVLR/">closure-1</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-
 ## 原理
 
-### Execution Context
+### 词法作用域
 
-TODO
+<p data-height="265" data-theme-id="0" data-slug-hash="qjWLeW" data-default-tab="js,result" data-user="luics" data-embed-version="2" data-pen-title="closure-lexical" class="codepen">See the Pen <a href="https://codepen.io/luics/pen/qjWLeW/">closure-lexical</a> by luics (<a href="https://codepen.io/luics">@luics</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-http://dmitrysoshnikov.com/ecmascript/chapter-1-execution-contexts/
+通过这个例子，可以将词法作用域理解为：JS 中作用域范围为函数，"词法"强调作用域和源码的对应关系，表现为嵌套的函数可以访问外层函数中的变量。
+
+<img src="https://gw.alicdn.com/tfs/TB1Ex.wRpXXXXXbaFXXXXXXXXXX-712-202.png" width="356">  
+
+图 - 例子中的词法作用域链 
+
+多个词法作用域之间形成一个链条，也称作词法作用域链或作用域链。
+
+### 闭包
 
 
-### Scope Chain
+对上一个例子做微调：
 
-TODO
+<p data-height="300" data-theme-id="0" data-slug-hash="LNKVLR" data-default-tab="js,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/LNKVLR/">closure-1</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
-http://dmitrysoshnikov.com/ecmascript/chapter-4-scope-chain/
+将`displayName()`函数作为返回值，这事：
 
-### 实例分析
 
-TODO
+再看一个例子：
 
-实例 1
+<p data-height="300" data-theme-id="0" data-slug-hash="KqPbRy" data-default-tab="js" data-user="luics" data-embed-version="2" data-pen-title="closure-adder" class="codepen">See the Pen <a href="https://codepen.io/luics/pen/KqPbRy/">closure-adder</a> by luics (<a href="https://codepen.io/luics">@luics</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-<p data-height="265" data-theme-id="0" data-slug-hash="jqjoBv" data-default-tab="js" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/jqjoBv/">closure-basic</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+这里的`makeAdder`是一个函数工厂（function factory），`add5`、`add10`是两个闭包（再次回顾文章开头对闭包的定义），他们共享函数体，但是具有不同的词法环境。
+
+<img src="https://gw.alicdn.com/tfs/TB1g3EJRpXXXXXzaXXXXXXXXXXX-992-440.png" width="496">  
+
+图 - 本例中的闭包
+
+### 练习
+
+练习 1，输出结果是？
+
+<p data-height="320" data-theme-id="0" data-slug-hash="jqjoBv" data-default-tab="js" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/jqjoBv/">closure-basic</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+练习 2，请点击按钮，并解释这个结果。
+
+<p data-height="200" data-theme-id="0" data-slug-hash="MogLEx" data-default-tab="js,result" data-user="luics" data-embed-version="2" data-pen-title="closure-error-binding" class="codepen">See the Pen <a href="https://codepen.io/luics/pen/MogLEx/">closure-error-binding</a> by luics (<a href="https://codepen.io/luics">@luics</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<p data-height="320" data-theme-id="0" data-slug-hash="KzjLvr" data-default-tab="js,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/KzjLvr/">closure-error</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 
-TODO
 
-实例 2
-
-<p data-height="265" data-theme-id="0" data-slug-hash="VaJOaa" data-default-tab="js,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/VaJOaa/">closure-func</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-
-
-TODO
-
-常见错误
-
-<p data-height="265" data-theme-id="0" data-slug-hash="KzjLvr" data-default-tab="js,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/KzjLvr/">closure-error</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-
+<!--
 ## 应用
 
-### 模块
-
 ### 私有成员
+
+### 模块
+-->

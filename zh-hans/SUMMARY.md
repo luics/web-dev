@@ -15,7 +15,7 @@
     0. [完整版](TodoMVC/full.md)
         0. [练习](TodoMVC/full-exercise.md)
         0. 扩展知识
-            0. [闭包（Closure）](common/closure.md)
+            0. [闭包](common/closure.md)
             0. [this](common/this.md)
 0. [数据持久化](data/index.md)
     0. [改造 TodoMVC](data/memory.md)
