@@ -115,6 +115,8 @@ document.cookie.replace(/(?:(?:^|.*;\s*)id\s*\=\s*([^;]*).*$)|^.*$/, "$1"); // "
 })();
 ```
 
+正则表达式请参考[此处](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)。 
+
 ## 改造 TodoMVC
 
 详见[代码](https://github.com/luics/web-dev/blob/master/examples/data/TodoMVC-cookie.html)。

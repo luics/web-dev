@@ -11,10 +11,10 @@ DevTools 中可以看到类似的变化:
 
 ## localStorage 完整
 
+* **`getItem()`**
+* **`setItem()`**
 * `length`
 * `key()`
-* `getItem()`
-* `setItem()`
 * `removeItem()`
 * `clear()`
 
@@ -23,6 +23,11 @@ DevTools 中可以看到类似的变化:
 <p data-height="300" data-theme-id="0" data-slug-hash="BKEByq" data-default-tab="js,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/BKEByq/">data-localStorage-full</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
+## 练习
+
+写一个 Demo，验证 localStorage 的存储上限。这个 Demo 要注意规避大字符串拼接或 LocalStorage 高频读写.
+
+（请尽量独立完成，如有困难再[参考示例](https://codepen.io/luics/pen/EXKgEP)。）
 
 ## 改造 TodoMVC
 

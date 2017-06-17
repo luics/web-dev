@@ -21,7 +21,9 @@ function update() {
 
     // filters
     display = 'none';
-    if (filter == 'All' || (filter == 'Active' && !item.classList.contains(CL_COMPLETED)) || (filter == 'Completed' && item.classList.contains(CL_COMPLETED))) {
+    if (filter == 'All' 
+        || (filter == 'Active' && !item.classList.contains(CL_COMPLETED)) 
+        || (filter == 'Completed' && item.classList.contains(CL_COMPLETED))) {
 
       display = '';
     }

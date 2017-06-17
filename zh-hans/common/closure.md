@@ -62,6 +62,10 @@
 
 
 <!--
+TODO ES6 解释
+ 
+http://ryanmorr.com/understanding-scope-and-context-in-javascript/
+https://johnresig.com/apps/learn/#53
 ## 应用
 
 ### 私有成员

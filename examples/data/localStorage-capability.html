@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>localStorage Capability</title>
+</head>
+<body>
+<h1>localStorage Capability</h1>
+<button id="run">Run Test</button>
+<div id="result"></div>
+
+<script>
+    function testCapability() {
+        var str = '1234567890', i, seg = [];
+        for (i = 0; i < Math.pow(2, 10); ++i) {
+            seg.push(str);
+        }
+        str = seg.join(''); // 10KB
+
+        var capability = 0;
+        localStorage.clear();
+        for (i = 0; i < Math.pow(2, 10); ++i) {
+            try {
+                localStorage['_' + i + 'test'] = str;
+            } catch (e) {
+                capability = str.length * i;
+                console.error(e);
+                break;
+            }
+        }
+        localStorage.clear();
+        return capability;
+    }
+
+    document.getElementById('run').addEventListener('click', function() {
+        var result = document.getElementById('result');
+        result.innerHTML = 'Testing...';
+        var capability = testCapability();
+        result.innerHTML = 'Capability is about <b>'
+            + capability / (1024 * 1024) + '</b> MB';
+    }, false);
+</script>
+</body>
+</html>
