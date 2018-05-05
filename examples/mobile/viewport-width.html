@@ -1,9 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta content="width=320" name="viewport"/>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    #width {
+      width: 60px;
+      height: 30px;
+      line-height: 30px;
+      font-size: 24px;
+      margin-top: 5px;
+    }
+
+    #change {
+      font-size:24px;
+      width: 180px;
+      height: 48px;
+      margin-top: 5px;
+    }
+  </style>
 </head>
 <body>
-<h1>Viewport width = 320</h1>
+<meta id="viewport" content="" name="viewport"/>
+
+<div style="width:490px;height:60px;background-color:red"></div>
+
+Viewport Width: <input type="text" id="width" value="980" /> <br />
+<button id="change">Change </button>
+
+
+<script>
+    var width = document.querySelector('#width');
+    var change = document.querySelector('#change');
+    var viewport = document.querySelector('#viewport');
+
+    function changeViewport() {
+        viewport.setAttribute('content', 'width=' + width.value);
+    }
+
+    change.onclick = changeViewport;
+    changeViewport();
+</script>
 </body>
 </html>
