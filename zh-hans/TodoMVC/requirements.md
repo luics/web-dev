@@ -31,5 +31,5 @@
 
 ## 开发
 
-0. [基础版](./basic.html)
+0. [基础版](./basic-add.html)
 0. [完整版](./full.html)
