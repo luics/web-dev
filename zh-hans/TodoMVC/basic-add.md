@@ -23,6 +23,9 @@
 
 [CodePen](https://codepen.io) 是高效的代码展示平台，易于编写、演示和分享，本书 Demo 默认都放在 CodePen。
 
+[Live Demo](https://codepen.io/luics/pen/gzzBVO)。
+
+
 ## 调试
 
 上节课介绍了 Devtools 调试工具，现在我们将在这个 Demo 中实践一下调试。
