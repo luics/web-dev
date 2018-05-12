@@ -21,7 +21,7 @@
     var msg = todo.value;
     var list = $('list');
     var left = $('left');
-    if (msg == '') {
+    if (msg === '') {
       console.warn('msg is empty');
       return;
     }
@@ -37,7 +37,7 @@
   $('add').addEventListener('click', addTodo, false);
   $('todo').addEventListener('keyup', function(event) {
     //console.log(event.keyCode);
-    if (event.keyCode != 13) return;
+    if (event.keyCode !== 13) return;
     addTodo();
   }, false);
 </script>

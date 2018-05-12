@@ -21,9 +21,9 @@ function update() {
 
     // filters
     display = 'none';
-    if (filter == 'All' 
-        || (filter == 'Active' && !item.classList.contains(CL_COMPLETED)) 
-        || (filter == 'Completed' && item.classList.contains(CL_COMPLETED))) {
+    if (filter === 'All' 
+        || (filter === 'Active' && !item.classList.contains(CL_COMPLETED)) 
+        || (filter === 'Completed' && item.classList.contains(CL_COMPLETED))) {
 
       display = '';
     }
@@ -39,7 +39,7 @@ function update() {
 
   var toggleAll = $('.toggle-all');
   toggleAll.style.visibility = items.length > 0 ? 'visible' : 'hidden';
-  toggleAll.checked = items.length == completedNum;
+  toggleAll.checked = items.length === completedNum;
 }
 
 function addTodo(msg) {
@@ -78,9 +78,9 @@ function addTodo(msg) {
     }, false);
 
     edit.addEventListener('keyup', function(ev) {
-      if (ev.keyCode == 27) { // Esc
+      if (ev.keyCode === 27) { // Esc
         finish();
-      } else if (ev.keyCode == 13) {
+      } else if (ev.keyCode === 13) {
         label.innerHTML = this.value;
         finish();
       }
@@ -135,7 +135,7 @@ function toggleAllTodoList() {
   for (var i = 0; i < items.length; ++i) {
     var item = items[i];
     var toggle = item.querySelector('.toggle');
-    if (toggle.checked != checked) {
+    if (toggle.checked !== checked) {
       toggle.checked = checked;
       if (checked) item.classList.add(CL_COMPLETED);
       else item.classList.remove(CL_COMPLETED);
@@ -148,10 +148,10 @@ window.onload = function init() {
   var newTodo = $('.new-todo');
   newTodo.addEventListener('keyup', function(ev) {
     // Enter
-    if (ev.keyCode != 13) return;
+    if (ev.keyCode !== 13) return;
 
     var msg = newTodo.value;
-    if (msg == '') {
+    if (msg === '') {
       console.warn('msg is empty');
       return;
     }
