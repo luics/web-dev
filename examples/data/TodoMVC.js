@@ -68,7 +68,7 @@ function update() {
           if (ev.keyCode == 27) { // Esc
             finish();
           }
-          else if (ev.keyCode == 13) {
+          else if (ev.keyCode == 13) {// Enter
             label.innerHTML = this.value;
             itemData.msg = this.value;
             update();

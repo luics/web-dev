@@ -1,0 +1,23 @@
+<html>
+
+<body>
+    <script>
+
+        var network = {
+            send: function (url, callback) {
+                console.log('in init', url);
+                // do something
+                if (callback) callback({a:1});
+            }
+        }
+
+        var cb = function (data) {
+            console.log('in cb', data);
+        }
+        
+        network.send("http://abc.com", cb);
+
+    </script>
+</body>
+
+</html>
