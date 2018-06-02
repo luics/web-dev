@@ -24,3 +24,7 @@ DevTools 中可以看到类似的变化:
 ## 改造 TodoMVC
 
 详见[代码](https://github.com/luics/web-dev/blob/master/examples/data/TodoMVC-idb.html)。
+
+## 资料
+
+* [对比 WebSql & IndexedDB](https://www.html5rocks.com/en/tutorials/webdatabase/websql-indexeddb/)

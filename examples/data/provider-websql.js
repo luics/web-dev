@@ -23,6 +23,7 @@
         function(transaction) {
           KEYS.forEach(function(key) {
             transaction.executeSql('SELECT v FROM CONF WHERE k=?', [key], function(t, r) {
+              console.log(r);
               model.data[key] = JSON.parse(r.rows[0].v);
             });
           });
