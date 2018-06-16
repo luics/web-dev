@@ -30,5 +30,6 @@
 0. [Mobile](mobile/index.md)
     0. [viewport](mobile/viewport.md)
     0. [click 延迟](mobile/click.md)
+    0. [touch 事件](mobile/touch.md)
     0. [改造 TodoMVC](mobile/todo.md)
 0. [深度阅读](more.md)
