@@ -28,7 +28,7 @@ Viewport最初是iOS Safari的私有属性，以下属性定义摘自[iOS Develo
 
 <img style="box-shadow: 0 0 5px #ddd;" src="http://gw.alicdn.com/tps/TB1k9vTKXXXXXbbXXXXXXXXXXXX-764-580.png" height="290"> <img style="box-shadow: 0 0 5px #ddd;" src="http://gw.alicdn.com/tps/TB1oB2pKXXXXXb2XVXXXXXXXXXX-764-580.png" height="290">
 
-<img src="https://gw.alicdn.com/tps/TB1R6AzKXXXXXarXFXXXXXXXXXX-280-280.png" width="200" ali="qr">
+<img src="https://ws1.sinaimg.cn/large/006tNc79ly1fscu9r9dyxj307s07swe9.jpg" width="200" ali="qr">
 
 ### width
 
@@ -37,7 +37,7 @@ Viewport最初是iOS Safari的私有属性，以下属性定义摘自[iOS Develo
 <p data-height="265" data-theme-id="0" data-slug-hash="VjLrom" data-default-tab="html,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/VjLrom/">mobile-init</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
-<img src="https://gw.alicdn.com/tps/TB1EaAVKXXXXXXBXXXXXXXXXXXX-280-280.png" width="200" ali="qr">
+<img src="https://ws1.sinaimg.cn/large/006tNc79ly1fscuatlmmsj307s07swe9.jpg" width="200" ali="qr">
 
 ### 固定值
 Viewport 中可以设置`width`为固定值：
@@ -45,7 +45,7 @@ Viewport 中可以设置`width`为固定值：
 <p data-height="265" data-theme-id="0" data-slug-hash="WxvdjL" data-default-tab="html,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/WxvdjL/">mobile-width-320</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
-<img src="https://gw.alicdn.com/tps/TB1IlsCKXXXXXXRXFXXXXXXXXXX-280-280.png" width="200" ali="qr">
+<img src="https://ws3.sinaimg.cn/large/006tNc79ly1fscub9y3nwj307s07s742.jpg" width="200" ali="qr">
 
 在不同的设备上（用横竖屏模拟）切换后可以看到明显的差异：
 
@@ -58,7 +58,7 @@ Viewport 中可以设置`width`为固定值：
 <p data-height="265" data-theme-id="0" data-slug-hash="yJNpbd" data-default-tab="html,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/yJNpbd/">mobile-vp-decivewidth</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
-<img src="https://gw.alicdn.com/tps/TB1h4cTKXXXXXaFXXXXXXXXXXXX-280-280.png" width="200" ali="qr">
+<img src="https://ws4.sinaimg.cn/large/006tNc79ly1fscubjkfglj307s07s742.jpg" width="200" ali="qr">
 
 横竖屏切换后：
 
