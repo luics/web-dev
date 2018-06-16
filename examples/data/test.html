@@ -1,22 +1,13 @@
 <html>
 
 <body>
+    <script src="./ajax.js"></script>
     <script>
-
-        var network = {
-            send: function (url, callback) {
-                console.log('in init', url);
-                // do something
-                if (callback) callback({a:1});
+        Ajax.get('https://httpbin.org/get', {
+            onSuccess: function (ret) {
+                console.log(ret);
             }
-        }
-
-        var cb = function (data) {
-            console.log('in cb', data);
-        }
-        
-        network.send("http://abc.com", cb);
-
+        });
     </script>
 </body>
 
