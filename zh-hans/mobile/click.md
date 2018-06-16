@@ -9,7 +9,7 @@ Mobile 默认浏览器（Mobile Safari 或 Mobile Chrome）click 事件有 300ms
 
 在手机浏览器中访问这个页面：
 
-<img src="https://ws4.sinaimg.cn/large/006tNc79ly1fscubjkfglj307s07s742.jpg" width="200" ali="qr">
+<img src="https://ws3.sinaimg.cn/large/006tNc79ly1fscxxte815j307s07st8h.jpg" width="200" ali="qr">
 
 
 通常使用 touch 事件模拟点击来减少延迟：
