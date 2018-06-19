@@ -11,5 +11,5 @@
 
 <br /><br />
 
-<p data-height="500" data-theme-id="0" data-slug-hash="OExawR" data-default-tab="js" data-user="luics" data-embed-version="2" data-pen-title="touch" class="codepen">See the Pen <a href="https://codepen.io/luics/pen/OExawR/">touch</a> by luics (<a href="https://codepen.io/luics">@luics</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="0" data-slug-hash="OExawR" data-default-tab="js" data-user="luics" data-embed-version="2" data-pen-title="touch" data-preview="false" class="codepen">See the Pen <a href="https://codepen.io/luics/pen/OExawR/">touch</a> by luics (<a href="https://codepen.io/luics">@luics</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
