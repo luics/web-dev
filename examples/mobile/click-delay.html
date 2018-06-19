@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+  <button id="btn" style="width: 200px; height: 80px;">Click me!!!</button>
+
+  <script>
+    var btn = document.querySelector('#btn');
+    var t0 = 0,
+      t1 = 0;
+
+    function compare() {
+      console.log('delay =', t1 - t0,
+        'touchstart =', t0, 'click =', t1);
+      alert('delay = ' + (t1 - t0));
+    }
+
+    btn.addEventListener('click', function () {
+      t1 = new Date().getTime();
+      compare();
+    });
+    btn.addEventListener('touchstart', function () {
+      t0 = new Date().getTime();
+      //compare();
+    });
+  </script>
+</body>
+
+</html>
