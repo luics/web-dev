@@ -1,6 +1,6 @@
 (function() {
   /**
-   * Cookie
+   * Cookie Util
    * @see https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie#Syntax
    */
   var Cookie = window.Cookie = {
