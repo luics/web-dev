@@ -3,7 +3,6 @@
   "description": "",
   "author": "luics",
   "language": "zh-hans",
-  "gitbook": "2.6.7",
   "plugins": [
     "disqus",
     "github",
