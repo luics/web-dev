@@ -19,7 +19,7 @@ JS 也是一门面向对象（OOP）语言，在接口、继承这些概念上�
 
 ### 练习
 
-<p data-height="300" data-theme-id="0" data-slug-hash="JvwKMb" data-default-tab="result" data-user="luics" data-embed-version="2" data-pen-title="dom-basic-exercise" class="codepen">See the Pen <a href="https://codepen.io/luics/pen/JvwKMb/">dom-basic-exercise</a> by luics (<a href="https://codepen.io/luics">@luics</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="400" data-theme-id="0" data-slug-hash="JvwKMb" data-default-tab="result" data-user="luics" data-embed-version="2" data-pen-title="dom-basic-exercise" class="codepen">See the Pen <a href="https://codepen.io/luics/pen/JvwKMb/">dom-basic-exercise</a> by luics (<a href="https://codepen.io/luics">@luics</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ## Node 属性
@@ -68,9 +68,7 @@ JS 也是一门面向对象（OOP）语言，在接口、继承这些概念上�
 
 ### 练习
 
-请使用 node 相关属性获取所有车门玻璃`Glass`节点，并将文字颜色设置为红色。初始的`car`对象请参见 js 代码：
-
-<p data-height="520" data-theme-id="0" data-slug-hash="erbzNw" data-default-tab="html,result" data-user="luics" data-embed-version="2" data-pen-title="dom-exercise" class="codepen">See the Pen <a href="https://codepen.io/luics/pen/erbzNw/">dom-exercise</a> by luics (<a href="https://codepen.io/luics">@luics</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="520" data-theme-id="0" data-slug-hash="erbzNw" data-default-tab="result" data-user="luics" data-embed-version="2" data-pen-title="dom-exercise" class="codepen">See the Pen <a href="https://codepen.io/luics/pen/erbzNw/">dom-exercise</a> by luics (<a href="https://codepen.io/luics">@luics</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ## DOM 方法（Method）
@@ -93,15 +91,5 @@ JS 也是一门面向对象（OOP）语言，在接口、继承这些概念上�
 
 ### 练习
 
-请将所有`Wheel`文字颜色设置为红色。
-
-请使用以上 DOM 方法获取所有车门玻璃`Glass`节点，并将文字颜色设置为红色。初始的`car`对象请参见 js 代码：
-
-<p data-height="520" data-theme-id="0" data-slug-hash="erbzNw" data-default-tab="html,result" data-user="luics" data-embed-version="2" data-pen-title="dom-exercise" class="codepen">See the Pen <a href="https://codepen.io/luics/pen/erbzNw/">dom-exercise</a> by luics (<a href="https://codepen.io/luics">@luics</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="520" data-theme-id="0" data-slug-hash="XwaYVo" data-default-tab="result" data-user="luics" data-embed-version="2" data-pen-title="dom-exercise" class="codepen">See the Pen <a href="https://codepen.io/luics/pen/XwaYVo/">dom-exercise</a> by luics (<a href="https://codepen.io/luics">@luics</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-
-<!--
-## `document`
-
-TODO
--->
