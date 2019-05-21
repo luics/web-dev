@@ -11,7 +11,7 @@
 
 ### 词法作用域
 
-<p data-height="265" data-theme-id="0" data-slug-hash="qjWLeW" data-default-tab="js,result" data-user="luics" data-embed-version="2" data-pen-title="closure-lexical" class="codepen">See the Pen <a href="https://codepen.io/luics/pen/qjWLeW/">closure-lexical</a> by luics (<a href="https://codepen.io/luics">@luics</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="300" data-theme-id="0" data-slug-hash="qjWLeW" data-default-tab="js,result" data-user="luics" data-embed-version="2" data-pen-title="closure-lexical" class="codepen">See the Pen <a href="https://codepen.io/luics/pen/qjWLeW/">closure-lexical</a> by luics (<a href="https://codepen.io/luics">@luics</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 通过这个例子，可以将词法作用域理解为：JS 中作用域范围为函数，"词法"强调作用域和源码的对应关系，表现为嵌套的函数可以访问外层函数中的变量。
@@ -27,7 +27,7 @@
 
 对上一个例子做微调：
 
-<p data-height="300" data-theme-id="0" data-slug-hash="LNKVLR" data-default-tab="js,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/LNKVLR/">closure-1</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="360" data-theme-id="0" data-slug-hash="LNKVLR" data-default-tab="js,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/LNKVLR/">closure-1</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 将`displayName()`函数作为返回值，这事：
@@ -35,7 +35,7 @@
 
 再看一个例子：
 
-<p data-height="300" data-theme-id="0" data-slug-hash="KqPbRy" data-default-tab="js" data-user="luics" data-embed-version="2" data-pen-title="closure-adder" class="codepen">See the Pen <a href="https://codepen.io/luics/pen/KqPbRy/">closure-adder</a> by luics (<a href="https://codepen.io/luics">@luics</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="360" data-theme-id="0" data-slug-hash="KqPbRy" data-default-tab="js" data-user="luics" data-embed-version="2" data-pen-title="closure-adder" class="codepen">See the Pen <a href="https://codepen.io/luics/pen/KqPbRy/">closure-adder</a> by luics (<a href="https://codepen.io/luics">@luics</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 这里的`makeAdder`是一个函数工厂（function factory），`add5`、`add10`是两个闭包（再次回顾文章开头对闭包的定义），他们共享函数体，但是具有不同的词法环境。
@@ -46,17 +46,17 @@
 
 ### 练习
 
-练习 1，输出结果是？
+* 练习 1
 
-<p data-height="320" data-theme-id="0" data-slug-hash="jqjoBv" data-default-tab="js" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/jqjoBv/">closure-basic</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="400" data-theme-id="0" data-slug-hash="jqjoBv" data-default-tab="js" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/jqjoBv/">closure-basic</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
-练习 2，请点击按钮，并解释这个结果。
+* 练习 2
 
-<p data-height="200" data-theme-id="0" data-slug-hash="MogLEx" data-default-tab="js,result" data-user="luics" data-embed-version="2" data-pen-title="closure-error-binding" class="codepen">See the Pen <a href="https://codepen.io/luics/pen/MogLEx/">closure-error-binding</a> by luics (<a href="https://codepen.io/luics">@luics</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="300" data-theme-id="0" data-slug-hash="MogLEx" data-default-tab="js,result" data-user="luics" data-embed-version="2" data-pen-title="closure-error-binding" class="codepen">See the Pen <a href="https://codepen.io/luics/pen/MogLEx/">closure-error-binding</a> by luics (<a href="https://codepen.io/luics">@luics</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-<p data-height="320" data-theme-id="0" data-slug-hash="KzjLvr" data-default-tab="js,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/KzjLvr/">closure-error</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="340" data-theme-id="0" data-slug-hash="KzjLvr" data-default-tab="js,result" data-user="luics" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/luics/pen/KzjLvr/">closure-error</a> by luics (<a href="http://codepen.io/luics">@luics</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 
