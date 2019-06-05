@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Memory</title>
+</head>
+
+<body>
+    <h1>Memory</h1>
+    <p id="msg">Running...</p>
+    <script>
+        function getBigString() {
+            var str = '0123456789';
+            var N = 1000 * 1000;
+            var arr = [];
+            for (let i = 0; i < N; i++) {
+                arr.push(str);
+            }
+            return arr.join('');
+        }
+
+        var start = new Date().getTime();
+        var bigString = getBigString();
+        document.getElementById('msg').innerHTML = new Date().getTime() - start + 'ms';
+    </script>
+</body>
+
+</html>
