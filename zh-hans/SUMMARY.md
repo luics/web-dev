@@ -4,7 +4,7 @@
     0. [盖房子](toolkit/build.md)
     0. [工具](toolkit/toolkit.md)
     0. [调试](toolkit/debug.md)
-    0. [练习](toolkit/exercise.md)
+    0. [开发环境](toolkit/env.md)
 0. [TodoMVC](TodoMVC/README.md)
     0. [需求 & 设计](TodoMVC/requirements.md)
     0. 基础版

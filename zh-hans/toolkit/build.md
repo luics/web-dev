@@ -44,13 +44,3 @@
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-
-### Node
-
-在本地运行（请确保已下载了[课程资源](../toolkit)）：
-
-```bash
-node examples/web-dev/multiply.js
-```
-
-本地需要安装[ node 环境](https://nodejs.org)。
