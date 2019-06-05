@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>CPU Performance</title>
+    <title>Memory</title>
 </head>
-<body>
-<h1>CPU Performance</h1>
-<p id="msg">Running...</p>
-<script>
-    function hardWorking() {
-        var N = 1000 * 1000 * 1000;
-        var result = 0;
-        var i = 0;
-        while (i++ < N) {
-            // Is Math.pow heavy time consuming? Let's profile!
-//            result += Math.pow(2, 3);
-            result += 2 * 2 * 2;
-        }
-    }
 
-    var start = new Date().getTime();
-    hardWorking();
-    document.getElementById('msg').innerHTML = new Date().getTime() - start + 'ms';
-</script>
+<body>
+    <h1>Memory</h1>
+    <p id="msg">Running...</p>
+    <script>
+        function getBigString() {
+            var str = '0123456789';
+            var N = 1000 * 1000;
+            var arr = [];
+            for (let i = 0; i < N; i++) {
+                arr.push(str);
+            }
+            return arr.join('');
+        }
+
+        var start = new Date().getTime();
+        var bigString = getBigString();
+        document.getElementById('msg').innerHTML = new Date().getTime() - start + 'ms';
+    </script>
 </body>
+
 </html>
