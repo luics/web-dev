@@ -2,7 +2,7 @@
 
 ***请不要滥用 Cookie, 除非确实理解 Cookie 存在的意义***
 
-## Stateless HTTP
+## 无状态 HTTP
 
 在任意页面中执行如下代码:
 
@@ -10,7 +10,7 @@
 document.cookie = 'id=1';
 ```
 
-刷新页面, 通过 Dev Tools Network 或抓包软件 (Windows Fiddler, Mac Charles) 获取到的 HTTP Request 类似:
+刷新页面, 通过 DevTools Network 或抓包软件 (Windows Fiddler, Mac Charles) 获取到的 HTTP Request 类似:
 
 ```bash
 GET /index.html HTTP/1.1
@@ -116,6 +116,14 @@ document.cookie.replace(/(?:(?:^|.*;\s*)id\s*\=\s*([^;]*).*$)|^.*$/, "$1"); // "
 ```
 
 正则表达式请参考[此处](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)。 
+
+
+## 练习
+
+1. 本地新建 HTML 文件，Copy 以上代码到本地；
+2. `Cookie.setItem('id', 1)`；
+3. 通过 DevTools Network 面板查看 http request header 中的 Cookie 信息。
+
 
 ## 改造 TodoMVC
 

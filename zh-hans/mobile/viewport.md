@@ -67,4 +67,5 @@ Viewport 中可以设置`width`为固定值：
 
 ## 练习
 
-* 尝试为`height`实现`width`章节中的所有例子。
+<!-- * 尝试为`height`实现`width`章节中的所有例子。 -->
+* 实现一个 Mobile 页面，改写 viewport width，让按钮宽度为屏幕宽度一半。

@@ -16,7 +16,7 @@
 
 通过这个例子，可以将词法作用域理解为：JS 中作用域范围为函数，"词法"强调作用域和源码的对应关系，表现为嵌套的函数可以访问外层函数中的变量。
 
-<img src="http://ww4.sinaimg.cn/large/006tNc79ly1g3o37fyinoj30nw05sdge.jpg" width="356">  
+<img src="https://luics-image.oss-cn-hangzhou.aliyuncs.com/006tNc79ly1g3o2bkfwc9j30oc05ggm5.jpg" width="356">  
 
 图 - 例子中的词法作用域链 
 
@@ -40,7 +40,7 @@
 
 这里的`makeAdder`是一个函数工厂（function factory），`add5`、`add10`是两个闭包（再次回顾文章开头对闭包的定义），他们共享函数体，但是具有不同的词法环境。
 
-<img src="http://ww3.sinaimg.cn/large/006tNc79ly1g3o37m1dzrj30nk0a4t9m.jpg" width="496">  
+<img src="https://luics-image.oss-cn-hangzhou.aliyuncs.com/006tNc79ly1g3o2bprf4xj30ou09q0tl.jpg" width="496">  
 
 图 - 本例中的闭包
 
