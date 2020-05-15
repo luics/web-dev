@@ -33,10 +33,10 @@ node examples/web-dev/multiply.js
 
 NPM 全称是 Node Package Manager，是 node 包管理器，可类比 Maven（Java）、Cocoapods(iOS)、GEM(Ruby)、PIP(Python)。我们会接触到 npm 命令和 npm 站点。
 
-![npm](http://ww3.sinaimg.cn/large/006tNc79ly1g3q529oyn4j30pu06uq3j.jpg)
+![npm cli](https://luics-image.oss-cn-hangzhou.aliyuncs.com/20200515223931.png)
 
-![npmjs.org](http://ww4.sinaimg.cn/large/006tNc79ly1g3q545w9tzj31qf0u0ahi.jpg)  
-*[npmjs.org](http://npmjs.org) 20190605*
+![npmjs.com](https://luics-image.oss-cn-hangzhou.aliyuncs.com/20200515223705.png)  
+*[npmjs.com](http://npmjs.com) 20200515*
 
 
 ## 开发手册
@@ -45,13 +45,13 @@ NPM 全称是 Node Package Manager，是 node 包管理器，可类比 Maven（J
 
 [MDN](http://developer.mozilla.org) 全称 Mozilla Development Network，也是专业且活跃的 Web 技术社区。
 
-![MDN](http://ww3.sinaimg.cn/large/006tNc79ly1g3p0lmh5tmj325k0u0k0e.jpg)
-*[MDN](http://developer.mozilla.org) 20190605*
+![MDN](https://luics-image.oss-cn-hangzhou.aliyuncs.com/20200515224214.png)
+*[MDN](http://developer.mozilla.org) 20200515*
 
 ### caniuse.com - 兼容手册
 
 查询HTML、CSS、JS 特性在不同浏览器版本上的兼容性。
 
-![caniuse.com](http://ww1.sinaimg.cn/large/006tNc79ly1g3q59cphtrj31v50u0dsm.jpg)
+![caniuse.com](https://luics-image.oss-cn-hangzhou.aliyuncs.com/20200515224153.png)
 
-*[caniuse.com](https://caniuse.com/#search=indexedDB) 20190605*
+*[caniuse.com](https://caniuse.com/#search=indexedDB) 20200515*
