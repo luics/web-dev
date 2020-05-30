@@ -30,45 +30,18 @@ JS 也是一门面向对象（OOP）语言，在接口、继承这些概念上�
 
 图 - Node 属性
 
-在本地运行以下 demo，打开 Console 查看运行结果。
+打开 Console 查看运行结果。
 
-```html
-<html>
-<head>
-    <title>DOM Node</title>
-</head>
-<body>
-<input id="todo" type="text" placeholder="to do something">
-<button id="add" type="button">Add Todo Item</button>
-<script>
-    var body = document.body;
-    console.log('body.nodeName', body.nodeName);
-    console.log('body.nodeType', body.nodeType);
-    console.log('body.firstChild', body.firstChild);
-    console.log('body.lastChild', body.lastChild);
-    console.log('body.childNodes', body.childNodes);
-    var textNode = document.getElementById('add').firstChild;
-    console.log('textNode', textNode);
-    console.log('textNode.nodeName', textNode.nodeName);
-    console.log('textNode.nodeType', textNode.nodeType);
-    console.log('body.parentNode', body.parentNode);
-    console.log('body.previousSibling', body.previousSibling);
-
-    /***************************************************************/
-    var add = document.getElementById('add');
-    add.addEventListener('click', function() {
-        var todo = document.getElementById('todo');
-        console.log(todo.value);
-        alert(todo.value);
-    }, false);
-</script>
-</body>
-</html>
-```
+<p class="codepen" data-height="500" data-theme-id="dark" data-default-tab="js,result" data-user="luics" data-slug-hash="ExVqWVY" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="DOM-API">
+  <span>See the Pen <a href="https://codepen.io/luics/pen/ExVqWVY">
+  DOM-API</a> by luics (<a href="https://codepen.io/luics">@luics</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ### 练习
 
-<p data-height="520" data-theme-id="0" data-slug-hash="erbzNw" data-default-tab="result" data-user="luics" data-embed-version="2" data-pen-title="dom-exercise" class="codepen">See the Pen <a href="https://codepen.io/luics/pen/erbzNw/">dom-exercise</a> by luics (<a href="https://codepen.io/luics">@luics</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="300" data-theme-id="0" data-slug-hash="erbzNw" data-default-tab="result" data-user="luics" data-embed-version="2" data-pen-title="dom-exercise" class="codepen">See the Pen <a href="https://codepen.io/luics/pen/erbzNw/">dom-exercise</a> by luics (<a href="https://codepen.io/luics">@luics</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ## DOM 方法（Method）
