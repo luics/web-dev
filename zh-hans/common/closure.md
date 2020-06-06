@@ -9,7 +9,7 @@
 
 ## 原理
 
-### 词法作用域
+### 作用域链
 
 <p data-height="300" data-theme-id="0" data-slug-hash="qjWLeW" data-default-tab="js,result" data-user="luics" data-embed-version="2" data-pen-title="closure-lexical" class="codepen">See the Pen <a href="https://codepen.io/luics/pen/qjWLeW/">closure-lexical</a> by luics (<a href="https://codepen.io/luics">@luics</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
@@ -21,6 +21,13 @@
 图 - 例子中的词法作用域链 
 
 多个词法作用域之间形成一个链条，也称作词法作用域链或作用域链。
+
+#### 练习
+
+请用纸笔（或软件）画出下面例子中的作用域链：
+
+<p data-height="300" data-theme-id="0" data-slug-hash="PoZqqmJ" data-default-tab="js,result" data-user="luics" data-embed-version="2" data-pen-title="closure-lexical" class="codepen">See the Pen <a href="https://codepen.io/luics/pen/PoZqqmJ/">closure-lexical</a> by luics (<a href="https://codepen.io/luics">@luics</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ### 闭包
 
