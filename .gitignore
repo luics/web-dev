@@ -8,6 +8,7 @@ gh-pages/
 archive/
 out/
 deploy_key
+examples/demo*
 
 # Logs
 logs
